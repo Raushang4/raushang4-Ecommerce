@@ -1,0 +1,16 @@
+{
+  "name": "raushang4 E-Commerce Digital Agency",
+  "short_name": "raushang4",
+  "description": "raushang4 E-Commerce builds digital growth systems for D2C brands, manufacturers, and service businesses in India.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0A0A0A",
+  "theme_color": "#D4AF37",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ]
+}
