@@ -1,5 +1,6 @@
 "use client";
 import React from 'react';
+import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function SidebarDrawer({ id, isOpen, onClose }) {
@@ -17,7 +18,7 @@ export default function SidebarDrawer({ id, isOpen, onClose }) {
         >
           <div id={`${id}-inner`} className="mobile-nav-inner">
             <div id={`${id}-scroll`} className="mobile-nav-scroll">
-              <a id={`${id}-link-home`} href="/" className="mobile-nav-link" onClick={onClose}>Home</a>
+              <Link id={`${id}-link-home`} href="/" className="mobile-nav-link" onClick={onClose}>Home</Link>
               <div id={`${id}-group-solutions`} className="mobile-nav-group">
                 <button id={`${id}-btn-solutions`} className="mobile-nav-section-toggle" type="button" aria-expanded="false">
                   <span id={`${id}-span-solutions`}>Solutions</span>
