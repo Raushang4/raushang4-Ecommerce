@@ -33,7 +33,7 @@ export default function WhoWeWorkWith() {
             Built for founders serious<br /><em id="wwww-title-em">about growing online</em>
           </motion.h2>
           <motion.p id="wwww-subtitle" className="section-sub" variants={itemVariants}>
-            We work best with businesses that want outcomes — not just deliverables. Here's where we specialise.
+            We work best with businesses that want outcomes — not just deliverables. Here&apos;s where we specialise.
           </motion.p>
         </motion.div>
         
