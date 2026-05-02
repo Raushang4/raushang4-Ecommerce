@@ -59,8 +59,8 @@ export default function ContactSection() {
         variants={containerVariants}
       >
         <div id="contact-left" className="contact-left">
-          <motion.p id="contact-eyebrow" className="section-eyebrow" variants={itemVariants}>Let's Talk</motion.p>
-          <motion.h2 id="contact-title" className="contact-h2" variants={itemVariants}>Tell us what's not working.<br />We'll tell you if we can fix it.</motion.h2>
+          <motion.p id="contact-eyebrow" className="section-eyebrow" variants={itemVariants}>Let&apos;s Talk</motion.p>
+          <motion.h2 id="contact-title" className="contact-h2" variants={itemVariants}>Tell us what&apos;s not working.<br />We&apos;ll tell you if we can fix it.</motion.h2>
           <motion.p id="contact-subtitle" className="contact-sub" variants={itemVariants}>No pitch decks. No hard sell. Just an honest conversation about your business and where we can genuinely help.</motion.p>
         </div>
         
@@ -68,16 +68,16 @@ export default function ContactSection() {
           <div id="contact-form-card" className="contact-form-card" style={{ backdropFilter: 'blur(12px)', border: '1px solid rgba(255,255,255,0.05)' }}>
             <form id="contact-form" className="contact-form" onSubmit={handleSubmit}>
               <div id="form-group-name" className="form-group">
-                <label id="label-name" className="form-label" htmlFor="name">Your Name</label>
-                <input id="input-name" className="form-input" type="text" name="name" required disabled={isSubmitting} />
+                <label id="label-name" className="form-label" htmlFor="input-name">Your Name <span className="text-red-500">*</span></label>
+                <input id="input-name" className="form-input" type="text" name="name" required aria-required="true" disabled={isSubmitting} />
               </div>
               <div id="form-group-email" className="form-group">
-                <label id="label-email" className="form-label" htmlFor="email">Email Address</label>
-                <input id="input-email" className="form-input" type="email" name="email" required disabled={isSubmitting} />
+                <label id="label-email" className="form-label" htmlFor="input-email">Email Address <span className="text-red-500">*</span></label>
+                <input id="input-email" className="form-input" type="email" name="email" required aria-required="true" disabled={isSubmitting} />
               </div>
               <div id="form-group-message" className="form-group">
-                <label id="label-message" className="form-label" htmlFor="message">Message</label>
-                <textarea id="input-message" className="form-textarea" name="message" required disabled={isSubmitting}></textarea>
+                <label id="label-message" className="form-label" htmlFor="input-message">Message <span className="text-red-500">*</span></label>
+                <textarea id="input-message" className="form-textarea" name="message" required aria-required="true" disabled={isSubmitting}></textarea>
               </div>
               <motion.button 
                 id="form-submit-btn" 
