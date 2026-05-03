@@ -59,8 +59,8 @@ export default function ContactSection() {
         variants={containerVariants}
       >
         <div id="contact-left" className="contact-left">
-          <motion.p id="contact-eyebrow" className="section-eyebrow" variants={itemVariants}>Let's Talk</motion.p>
-          <motion.h2 id="contact-title" className="contact-h2" variants={itemVariants}>Tell us what's not working.<br />We'll tell you if we can fix it.</motion.h2>
+          <motion.p id="contact-eyebrow" className="section-eyebrow" variants={itemVariants}>Let&apos;s Talk</motion.p>
+          <motion.h2 id="contact-title" className="contact-h2" variants={itemVariants}>Tell us what&apos;s not working.<br />We&apos;ll tell you if we can fix it.</motion.h2>
           <motion.p id="contact-subtitle" className="contact-sub" variants={itemVariants}>No pitch decks. No hard sell. Just an honest conversation about your business and where we can genuinely help.</motion.p>
         </div>
         
