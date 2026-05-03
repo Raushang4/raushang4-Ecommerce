@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from 'react';
+import Link from 'next/link';
 import SidebarDrawer from './SidebarDrawer';
 
 export default function GlobalNavigation() {
@@ -8,14 +9,15 @@ export default function GlobalNavigation() {
   return (
     <div id="global-nav-wrap" className={`nav-wrap ${isMobileOpen ? 'is-mobile-open' : ''}`}>
       <nav id="global-nav-container">
-        <a id="nav-logo-link" href="/" className="nav-logo-link">
+        <Link id="nav-logo-link" href="/" className="nav-logo-link">
           <img id="nav-logo-img" src="/mainlogo.svg" alt="raushang4 E-Commerce" width="140" height="26" className="nav-logo-img" />
-        </a>
+        </Link>
         <button 
           id="mobile-nav-toggle-btn" 
           className="mobile-nav-toggle" 
           type="button" 
           aria-expanded={isMobileOpen} 
+          aria-label="Toggle mobile menu"
           onClick={() => setIsMobileOpen(!isMobileOpen)}
         >
           <span id="nav-toggle-bar-1"></span>

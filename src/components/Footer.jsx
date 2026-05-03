@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 export default function Footer() {
   return (
@@ -6,9 +7,9 @@ export default function Footer() {
       <div id="footer-inner" className="footer-inner">
         <div id="footer-top" className="footer-top">
           <div id="footer-brand" className="footer-brand">
-            <a id="footer-logo-link" href="/">
+            <Link id="footer-logo-link" href="/">
               <img id="footer-logo" src="/mainlogo.svg" alt="raushang4 E-Commerce" loading="lazy" decoding="async" width="140" height="28" className="footer-logo-img-dark" />
-            </a>
+            </Link>
             <p id="footer-tagline" className="footer-tagline">Digital systems for growing businesses. One partner. Full accountability.</p>
             <div id="footer-social-links" className="footer-social">
               <a id="social-linkedin" href="https://www.linkedin.com/company/webimpetus/" aria-label="LinkedIn" target="_blank" rel="noreferrer">

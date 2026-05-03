@@ -37,11 +37,11 @@ export default function HeroSection() {
         
         <motion.h1 id="hero-title" variants={itemVariants}>
           Your website is live.<br/>
-          <em id="hero-title-em">Your revenue isn't.</em>
+          <em id="hero-title-em">Your revenue isn&apos;t.</em>
         </motion.h1>
         
         <motion.p id="hero-subtitle" className="hero-sub" variants={itemVariants}>
-          raushang4 E-Commerce builds the digital systems behind growing businesses — stores that convert, campaigns that pay, and the analytics to tell you what's actually working.
+          raushang4 E-Commerce builds the digital systems behind growing businesses — stores that convert, campaigns that pay, and the analytics to tell you what&apos;s actually working.
         </motion.p>
         
         <motion.div id="hero-buttons" className="hero-btns" variants={itemVariants}>
@@ -52,7 +52,7 @@ export default function HeroSection() {
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.3 }}
           >
-            Let's Get to Work
+            Let&apos;s Get to Work
             <svg id="hero-btn-primary-icon" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round">
               <path d="M5 12h14M12 5l7 7-7 7"></path>
             </svg>
@@ -64,7 +64,7 @@ export default function HeroSection() {
             whileHover={{ scale: 1.05, backdropFilter: "blur(20px)" }}
             transition={{ duration: 0.3 }}
           >
-            See What We've Built
+            See What We&apos;ve Built
           </motion.a>
         </motion.div>
       </motion.div>
