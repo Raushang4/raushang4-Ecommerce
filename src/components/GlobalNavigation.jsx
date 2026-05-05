@@ -15,7 +15,8 @@ export default function GlobalNavigation() {
           id="mobile-nav-toggle-btn" 
           className="mobile-nav-toggle" 
           type="button" 
-          aria-expanded={isMobileOpen} 
+          aria-expanded={isMobileOpen}
+          aria-label="Toggle mobile menu"
           onClick={() => setIsMobileOpen(!isMobileOpen)}
         >
           <span id="nav-toggle-bar-1"></span>

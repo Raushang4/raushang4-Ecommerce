@@ -68,15 +68,15 @@ export default function ContactSection() {
           <div id="contact-form-card" className="contact-form-card" style={{ backdropFilter: 'blur(12px)', border: '1px solid rgba(255,255,255,0.05)' }}>
             <form id="contact-form" className="contact-form" onSubmit={handleSubmit}>
               <div id="form-group-name" className="form-group">
-                <label id="label-name" className="form-label" htmlFor="name">Your Name</label>
+                <label id="label-name" className="form-label" htmlFor="input-name">Your Name</label>
                 <input id="input-name" className="form-input" type="text" name="name" required disabled={isSubmitting} />
               </div>
               <div id="form-group-email" className="form-group">
-                <label id="label-email" className="form-label" htmlFor="email">Email Address</label>
+                <label id="label-email" className="form-label" htmlFor="input-email">Email Address</label>
                 <input id="input-email" className="form-input" type="email" name="email" required disabled={isSubmitting} />
               </div>
               <div id="form-group-message" className="form-group">
-                <label id="label-message" className="form-label" htmlFor="message">Message</label>
+                <label id="label-message" className="form-label" htmlFor="input-message">Message</label>
                 <textarea id="input-message" className="form-textarea" name="message" required disabled={isSubmitting}></textarea>
               </div>
               <motion.button 
