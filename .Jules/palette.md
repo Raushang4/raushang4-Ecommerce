@@ -1,0 +1,3 @@
+## 2024-05-18 - Form Accessibility: htmlFor must match id
+**Learning:** When creating forms, the `<label>` element's `htmlFor` attribute must strictly match the `id` of its corresponding `<input>` or `<textarea>`. In this app, many inputs use an `input-` prefix (e.g., `id="input-name"`), but labels were incorrectly targeting the `name` attribute (e.g., `htmlFor="name"`). This breaks the accessibility connection and click-to-focus behavior.
+**Action:** Always verify that `<label htmlFor="X">` corresponds exactly to `<input id="X">`, rather than relying on the input's `name` attribute. Check for custom prefixes like `input-` in the ID.
