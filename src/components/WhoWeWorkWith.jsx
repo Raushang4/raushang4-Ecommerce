@@ -33,7 +33,7 @@ export default function WhoWeWorkWith() {
             Built for founders serious<br /><em id="wwww-title-em">about growing online</em>
           </motion.h2>
           <motion.p id="wwww-subtitle" className="section-sub" variants={itemVariants}>
-            We work best with businesses that want outcomes — not just deliverables. Here's where we specialise.
+            We work best with businesses that want outcomes — not just deliverables. Here&apos;s where we specialise.
           </motion.p>
         </motion.div>
         
@@ -58,9 +58,9 @@ export default function WhoWeWorkWith() {
                   {type === 'd2c' ? 'D2C & Ecommerce Brands' : type === 'mfg' ? 'Manufacturers' : 'Service Businesses'}
                 </p>
                 <p id={`wwww-copy-${type}`} className="wwww-copy">
-                  {type === 'd2c' ? "You're spending on ads but the store isn't converting. Traffic comes in — revenue doesn't follow. You need someone who understands the full revenue loop, not just one piece of it." : 
+                  {type === 'd2c' ? "You&apos;re spending on ads but the store isn&apos;t converting. Traffic comes in — revenue doesn&apos;t follow. You need someone who understands the full revenue loop, not just one piece of it." :
                    type === 'mfg' ? "Your leads come from IndiaMart or referrals — no owned presence, no predictability. We build the direct inbound pipeline that gives you control over your own growth." : 
-                   "Word of mouth built your business. But it won't scale it. You have a website — it does nothing. We build the digital engine that generates qualified leads predictably."}
+                   "Word of mouth built your business. But it won&apos;t scale it. You have a website — it does nothing. We build the digital engine that generates qualified leads predictably."}
                 </p>
                 <a id={`wwww-link-${type}`} href={`/${type === 'd2c' ? 'd2c-ecommerce' : type === 'mfg' ? 'manufacturers' : 'service-businesses'}`} className="wwww-link">
                   See how we help 
