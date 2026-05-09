@@ -25,7 +25,7 @@ export default function ServicesGrid() {
     {
       id: "svc-perf-marketing",
       name: "Performance Marketing",
-      desc: "Meta and Google campaigns built around contribution margin — not vanity ROAS. We structure your account so you can see what's actually profitable.",
+      desc: "Meta and Google campaigns built around contribution margin — not vanity ROAS. We structure your account so you can see what&apos;s actually profitable.",
       bullets: ["Campaign strategy and setup", "Creative briefing and direction", "Profitability-first reporting"],
       url: "/performance-marketing",
       className: "s2",
@@ -87,7 +87,7 @@ export default function ServicesGrid() {
         >
           <motion.p id="services-eyebrow" className="section-eyebrow" variants={itemVariants}>What we do</motion.p>
           <motion.h2 id="services-title" className="section-h2" variants={itemVariants}>Services built around <em id="services-em">your growth</em></motion.h2>
-          <motion.p id="services-subtitle" className="section-sub" variants={itemVariants}>We scope tight because that's what works. Every service is built to connect to the next — so the store, the traffic, the tracking, and the optimisation reinforce each other.</motion.p>
+          <motion.p id="services-subtitle" className="section-sub" variants={itemVariants}>We scope tight because that&apos;s what works. Every service is built to connect to the next — so the store, the traffic, the tracking, and the optimisation reinforce each other.</motion.p>
         </motion.div>
         
         <motion.div 
