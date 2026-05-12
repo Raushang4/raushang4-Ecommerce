@@ -1,6 +1,9 @@
 "use client";
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
+
+const MotionLink = motion(Link);
 
 export default function ServicesGrid() {
   const services = [
@@ -99,7 +102,7 @@ export default function ServicesGrid() {
           variants={containerVariants}
         >
           {services.map((svc, idx) => (
-            <motion.a 
+            <MotionLink 
               key={idx} 
               id={svc.id} 
               href={svc.url} 
@@ -117,7 +120,7 @@ export default function ServicesGrid() {
                   <li key={bIdx} id={`${svc.id}-bullet-${bIdx}`}>{bullet}</li>
                 ))}
               </ul>
-            </motion.a>
+            </MotionLink>
           ))}
         </motion.div>
       </div>

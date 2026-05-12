@@ -1,0 +1,8 @@
+{
+  "slug": "priced-right-auto",
+  "title": "Priced Right Auto — raushang4 E-Commerce Portfolio",
+  "description": " ",
+  "content": "<section className=\"work-hero\"> <div className=\"work-inner\"> <div className=\"work-breadcrumb\"> <a href=\"/our-work\">Our Work</a> <span>›</span> <span>Priced Right Auto</span> </div> <div className=\"work-meta-pills\"> <span className=\"work-pill\">Web Design</span>  </div> <h1>Priced Right Auto</h1> <p className=\"work-excerpt\"> </p>  </div> </section> <div className=\"screenshots-strip\"> <div className=\"screenshots-scroll\"> <img src=\"https://cdn.sanity.io/images/zcj1brqz/production/84b5c11d0c2f405d87ac120ed262714fbb5ec915-2048x1365.heif?w=960&#38;auto=format&#38;fit=max&#38;q=75\" alt=\"Priced Right Auto screenshot\" width=\"960\" height=\"600\" loading=\"lazy\" decoding=\"async\" /> </div> </div><div className=\"work-back\"> <div className=\"work-back-inner\"> <a href=\"/our-work\"> <svg viewBox=\"0 0 24 24\"><path d=\"M19 12H5M12 5l-7 7 7 7\"></path></svg>\nBack to our work\n</a> <a href=\"/contact\">Start a project with us →</a> </div> </div> ",
+  "authorId": "rahul-mehta",
+  "image": "https://cdn.sanity.io/images/zcj1brqz/production/84b5c11d0c2f405d87ac120ed262714fbb5ec915-2048x1365.heif?w=960&#38;auto=format&#38;fit=max&#38;q=75"
+}

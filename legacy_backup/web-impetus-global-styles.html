@@ -1,0 +1,1205 @@
+<!DOCTYPE html><html lang="en" data-astro-cid-37fxchfa> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="robots" content="noindex, nofollow, noarchive"><meta name="googlebot" content="noindex, nofollow, noarchive"><title>Web Impetus — Global Styles</title><meta name="description" content="Internal design-style reference for the Web Impetus website."><meta name="author" content="Web Impetus"><meta name="generator" content="Astro"><meta name="theme-color" content="#00A896"><link rel="icon" type="image/svg+xml" href="favicon.svg"><link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"><link rel="canonical" href="../webimpetus.com/web-impetus-global-styles.html"><meta property="og:site_name" content="Web Impetus"><meta property="og:type" content="website"><meta property="og:title" content="Web Impetus — Global Styles"><meta property="og:description" content="Internal design-style reference for the Web Impetus website."><meta property="og:url" content="https://webimpetus.com/web-impetus-global-styles"><meta property="og:image" content="https://webimpetus.com/og-default.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:type" content="image/png"><meta property="og:image:alt" content="Web Impetus — Digital growth for serious businesses"><meta property="og:locale" content="en_US"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Web Impetus — Global Styles"><meta name="twitter:description" content="Internal design-style reference for the Web Impetus website."><meta name="twitter:image" content="https://webimpetus.com/og-default.png"><meta name="twitter:image:alt" content="Web Impetus — Digital growth for serious businesses"><link rel="alternate" type="application/rss+xml" title="Web Impetus Blog" href="rss.xml"><link rel="preload" href="fonts/plus-jakarta-sans-normal-latin.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="fonts/instrument-serif-italic-latin.woff2" as="font" type="font/woff2" crossorigin><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["Organization","ProfessionalService"],"@id":"https://webimpetus.com/#organization","name":"Web Impetus","url":"https://webimpetus.com","logo":{"@type":"ImageObject","url":"https://webimpetus.com/mainlogo.svg"},"description":"Web Impetus is a digital growth agency for D2C brands, manufacturers, and service businesses in India. We specialise in Shopify and WooCommerce stores, D2C performance marketing, CRO, and lead generation websites.","foundingDate":"2017","areaServed":[{"@type":"Country","name":"India"}],"address":{"@type":"PostalAddress","addressLocality":"Noida","addressRegion":"Uttar Pradesh","addressCountry":"IN"},"sameAs":["https://www.linkedin.com/company/webimpetus/","https://www.instagram.com/webimpetus","https://x.com/webimpetus","https://www.facebook.com/webimpetus","https://clutch.co/profile/web-impetus","https://www.designrush.com/agency/profile/web-impetus","https://techbehemoths.com/company/web-impetus","https://inc42.com/company/web-impetus/"],"knowsAbout":["Shopify development","WooCommerce development","D2C ecommerce growth","Conversion rate optimisation","Performance marketing","Meta Ads","Google Ads","SEO","Analytics and attribution","Website design and build","Lead generation for manufacturers","Lead generation for service businesses"]},{"@type":"WebSite","@id":"https://webimpetus.com/#website","url":"https://webimpetus.com","name":"Web Impetus","publisher":{"@id":"https://webimpetus.com/#organization"},"inLanguage":"en"},{"@type":"WebPage","@id":"https://webimpetus.com/web-impetus-global-styles#webpage","url":"https://webimpetus.com/web-impetus-global-styles","name":"Web Impetus — Global Styles","description":"Internal design-style reference for the Web Impetus website.","isPartOf":{"@id":"https://webimpetus.com/#website"},"about":{"@id":"https://webimpetus.com/#organization"},"inLanguage":"en"},{"@type":"BreadcrumbList","@id":"https://webimpetus.com/web-impetus-global-styles#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://webimpetus.com/"},{"@type":"ListItem","position":2,"name":"Web Impetus Global Styles","item":"https://webimpetus.com/web-impetus-global-styles"}]}]}</script><script>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5LNMSLQ');
+    </script><script src="https://unpkg.com/@botpoison/browser" async></script><style is:global>*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --accent: #00A896;
+    --accent-dark: #028C7D;
+    --accent-light: #E0F5F3;
+    --dark: #1A1A1A;
+    --mid: #555555;
+    --soft: #888888;
+    --bg: #FAFAFA;
+    --white: #FFFFFF;
+    --border: rgba(0,0,0,0.08);
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: var(--bg);
+    color: var(--dark);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── NAV ── */
+  .nav {
+    background: rgba(250,250,250,0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 0 48px;
+  }
+  .nav-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+  }
+  .nav-logo {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--dark);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .nav-logo-dot {
+    width: 8px; height: 8px;
+    background: var(--accent);
+    border-radius: 50%;
+  }
+  .nav-steps {
+    display: flex;
+    gap: 4px;
+  }
+  .nav-step {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--soft);
+    padding: 6px 14px;
+    border-radius: 100px;
+    text-decoration: none;
+    transition: background 0.15s, color 0.15s;
+  }
+  .nav-step:hover { background: rgba(0,0,0,0.05); color: var(--dark); }
+
+  /* ── LAYOUT ── */
+  .page { max-width: 1100px; margin: 0 auto; padding: 64px 48px 120px; }
+
+  /* ── HERO ── */
+  .hero {
+    text-align: center;
+    padding: 80px 0 64px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 80px;
+  }
+  .hero-eyebrow {
+    display: inline-block;
+    background: var(--accent-light);
+    color: var(--accent-dark);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    border-radius: 100px;
+    margin-bottom: 24px;
+  }
+  .hero h1 {
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+  .hero h1 em {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--accent-dark);
+  }
+  .hero-sub {
+    font-size: 17px;
+    color: var(--mid);
+    max-width: 560px;
+    margin: 0 auto 32px;
+    line-height: 1.65;
+  }
+  .hero-steps {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .hero-step-pill {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    padding: 8px 18px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--mid);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .step-num {
+    width: 20px; height: 20px;
+    background: var(--accent);
+    color: #fff;
+    border-radius: 50%;
+    font-size: 11px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* ── SECTION ── */
+  .section { margin-bottom: 80px; }
+  .section-header { margin-bottom: 32px; }
+  .section-eyebrow {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--soft);
+    margin-bottom: 8px;
+  }
+  .section-title {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+  }
+  .section-sub {
+    font-size: 15px;
+    color: var(--mid);
+    max-width: 600px;
+  }
+
+  /* ── INSTRUCTION CARD ── */
+  .instruction {
+    background: var(--accent-light);
+    border: 1px solid rgba(0,168,150,0.2);
+    border-radius: 16px;
+    padding: 20px 24px;
+    margin-bottom: 32px;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+  .instruction-icon {
+    width: 32px; height: 32px;
+    background: var(--accent);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .instruction-icon svg { width: 16px; height: 16px; fill: #fff; }
+  .instruction p { font-size: 14px; color: var(--accent-dark); font-weight: 500; line-height: 1.6; }
+  .instruction strong { font-weight: 700; color: var(--dark); }
+  .instruction code {
+    background: rgba(0,168,150,0.15);
+    color: var(--accent-dark);
+    font-family: 'SF Mono', 'Fira Code', monospace;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+
+  /* ── COLOR GROUPS ── */
+  .color-group { margin-bottom: 40px; }
+  .color-group-label {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--soft);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+  }
+  .color-row { display: flex; flex-wrap: wrap; gap: 12px; }
+
+  .color-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    width: 160px;
+    cursor: pointer;
+    transition: box-shadow 0.2s, transform 0.2s;
+    position: relative;
+  }
+  .color-card:hover { box-shadow: 0 6px 20px rgba(0,0,0,0.10); transform: translateY(-2px); }
+  .color-swatch { height: 80px; width: 100%; }
+  .color-swatch.has-border { border-bottom: 1px solid var(--border); }
+  .color-info { padding: 12px 14px; }
+  .color-name { font-size: 12px; font-weight: 700; color: var(--dark); margin-bottom: 4px; line-height: 1.3; }
+  .color-hex {
+    font-size: 12px;
+    font-family: 'SF Mono', 'Fira Code', monospace;
+    color: var(--mid);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .copy-icon { opacity: 0.4; transition: opacity 0.15s; }
+  .color-card:hover .copy-icon { opacity: 1; }
+  .copy-icon svg { width: 11px; height: 11px; display: block; }
+
+  /* copied toast */
+  .copied-toast {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,0.8);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 100px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+    white-space: nowrap;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+  .color-card.copied .copied-toast { opacity: 1; }
+
+  /* ── WIDE COLOR CARDS (for section BG) ── */
+  .color-card.wide { width: 220px; }
+
+  /* ── PASTEL PAIR ── */
+  .pastel-pair {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    width: 180px;
+    cursor: pointer;
+    transition: box-shadow 0.2s, transform 0.2s;
+    position: relative;
+  }
+  .pastel-pair:hover { box-shadow: 0 6px 20px rgba(0,0,0,0.10); transform: translateY(-2px); }
+  .pastel-swatches { display: flex; height: 64px; }
+  .pastel-swatches .swatch-half { flex: 1; }
+  .pastel-info { padding: 12px 14px; }
+  .pastel-label { font-size: 12px; font-weight: 700; color: var(--dark); margin-bottom: 6px; }
+  .pastel-hexes { display: flex; flex-direction: column; gap: 3px; }
+  .pastel-hex-row { display: flex; align-items: center; gap: 5px; }
+  .pastel-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+  .pastel-hex-val {
+    font-size: 11px;
+    font-family: 'SF Mono', 'Fira Code', monospace;
+    color: var(--mid);
+    cursor: pointer;
+    transition: color 0.15s;
+  }
+  .pastel-hex-val:hover { color: var(--accent-dark); }
+
+  /* ── TYPE STYLES ── */
+  .type-table { width: 100%; border-collapse: collapse; }
+  .type-row {
+    border-bottom: 1px solid var(--border);
+    transition: background 0.15s;
+  }
+  .type-row:last-child { border-bottom: none; }
+  .type-row:hover { background: rgba(0,0,0,0.02); }
+  .type-cell { padding: 20px 16px; vertical-align: top; }
+  .type-name-cell { padding: 20px 16px; vertical-align: middle; width: 180px; }
+  .type-style-name {
+    font-size: 12px;
+    font-family: 'SF Mono', 'Fira Code', monospace;
+    background: rgba(0,0,0,0.05);
+    color: var(--dark);
+    padding: 4px 8px;
+    border-radius: 6px;
+    display: inline-block;
+    white-space: nowrap;
+  }
+  .type-specimen-cell { padding: 20px 16px; vertical-align: middle; min-width: 260px; }
+  .type-meta-cell { padding: 20px 16px; vertical-align: middle; }
+  .type-meta { display: flex; flex-wrap: wrap; gap: 6px; }
+  .meta-pill {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 100px;
+    background: rgba(0,0,0,0.05);
+    color: var(--mid);
+    white-space: nowrap;
+  }
+  .type-note { font-size: 12px; color: var(--soft); margin-top: 4px; line-height: 1.5; }
+
+  /* specimen text styles */
+  .specimen-h1 { font-size: 40px; font-weight: 700; letter-spacing: -0.035em; line-height: 1.1; color: var(--dark); }
+  .specimen-h1-serif { font-family: 'Instrument Serif', serif; font-style: italic; font-weight: 400; font-size: 44px; letter-spacing: -0.03em; line-height: 1.1; color: var(--accent-dark); }
+  .specimen-h2 { font-size: 32px; font-weight: 700; letter-spacing: -0.03em; line-height: 1.15; color: var(--dark); }
+  .specimen-h3 { font-size: 19px; font-weight: 700; color: var(--dark); }
+  .specimen-body-lg { font-size: 18px; font-weight: 500; line-height: 1.65; color: var(--mid); }
+  .specimen-body { font-size: 16px; font-weight: 400; line-height: 1.6; color: var(--mid); }
+  .specimen-body-sm { font-size: 15px; font-weight: 400; line-height: 1.6; color: var(--mid); }
+  .specimen-body-xs { font-size: 14px; font-weight: 400; line-height: 1.5; color: var(--mid); }
+  .specimen-eyebrow { font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--soft); }
+  .specimen-label { font-size: 13px; font-weight: 600; color: var(--dark); }
+  .specimen-btn { font-size: 16px; font-weight: 600; color: var(--accent); }
+  .specimen-btn-sm { font-size: 15px; font-weight: 600; color: var(--accent); }
+  .specimen-stat { font-size: 48px; font-weight: 700; letter-spacing: -0.04em; color: var(--dark); }
+
+  /* ── TYPE TABLE HEADER ── */
+  .type-table thead th {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--soft);
+    padding: 0 16px 12px;
+    text-align: left;
+    border-bottom: 2px solid var(--border);
+  }
+
+  /* ── SHADOW CARDS ── */
+  .shadow-grid { display: flex; flex-wrap: wrap; gap: 20px; }
+  .shadow-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 32px;
+    flex: 1;
+    min-width: 200px;
+    max-width: 240px;
+  }
+  .shadow-demo {
+    width: 64px; height: 64px;
+    background: var(--white);
+    border-radius: 12px;
+    margin-bottom: 20px;
+  }
+  .shadow-card-name {
+    font-size: 13px;
+    font-family: 'SF Mono', 'Fira Code', monospace;
+    background: rgba(0,0,0,0.05);
+    padding: 4px 8px;
+    border-radius: 6px;
+    display: inline-block;
+    margin-bottom: 10px;
+    color: var(--dark);
+  }
+  .shadow-values { font-size: 12px; color: var(--soft); line-height: 1.7; font-family: 'SF Mono', 'Fira Code', monospace; }
+
+  /* apply the actual shadows */
+  .sd-btn-primary .shadow-demo { box-shadow: 0 8px 24px rgba(0,168,150,0.30); background: var(--accent); }
+  .sd-btn-primary-hover .shadow-demo { box-shadow: 0 12px 28px rgba(0,168,150,0.35); background: var(--accent); }
+  .sd-card .shadow-demo { box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+  .sd-card-hover .shadow-demo { box-shadow: 0 8px 24px rgba(0,0,0,0.10); }
+  .sd-nav .shadow-demo { box-shadow: 0 1px 0 rgba(0,0,0,0.08); }
+
+  /* ── SETUP ORDER ── */
+  .setup-steps { display: flex; flex-direction: column; gap: 2px; }
+  .setup-step {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px 24px;
+    transition: border-color 0.2s;
+  }
+  .setup-step:hover { border-color: var(--accent); }
+  .setup-step-num {
+    width: 40px; height: 40px;
+    background: var(--accent-light);
+    color: var(--accent-dark);
+    border-radius: 50%;
+    font-size: 16px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .setup-step-content {}
+  .setup-step-title { font-size: 15px; font-weight: 700; color: var(--dark); margin-bottom: 3px; }
+  .setup-step-desc { font-size: 13px; color: var(--mid); }
+  .setup-step-path {
+    font-family: 'SF Mono', 'Fira Code', monospace;
+    font-size: 12px;
+    background: rgba(0,0,0,0.05);
+    color: var(--soft);
+    padding: 2px 7px;
+    border-radius: 4px;
+  }
+  .setup-connector {
+    width: 2px;
+    height: 12px;
+    background: var(--border);
+    margin-left: 39px;
+  }
+
+  /* ── FONT PREVIEW CARDS ── */
+  .font-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .font-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 32px;
+  }
+  .font-card-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--soft);
+    margin-bottom: 20px;
+  }
+  .font-card-specimen {
+    font-size: 36px;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    color: var(--dark);
+  }
+  .font-card-specimen.serif {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--accent-dark);
+  }
+  .font-card-name { font-size: 14px; font-weight: 700; color: var(--dark); margin-bottom: 4px; }
+  .font-card-weights { font-size: 13px; color: var(--soft); }
+  .font-weights-row { display: flex; gap: 12px; margin-top: 16px; flex-wrap: wrap; }
+  .weight-pill {
+    font-size: 13px;
+    padding: 4px 12px;
+    border-radius: 100px;
+    border: 1px solid var(--border);
+    color: var(--mid);
+  }
+
+  /* ── SCROLL ANCHOR ── */
+  .section[id] { scroll-margin-top: 80px; }
+
+  /* ── FOOTER NOTE ── */
+  .page-footer {
+    margin-top: 80px;
+    padding-top: 32px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .page-footer p { font-size: 13px; color: var(--soft); }
+  .footer-badge {
+    background: var(--accent-light);
+    color: var(--accent-dark);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 100px;
+  }</style><style>@font-face{font-family:Plus Jakarta Sans;font-style:normal;font-weight:300 800;font-display:swap;src:url(fonts/plus-jakarta-sans-normal-cyrillic-ext.woff2) format("woff2");unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:Plus Jakarta Sans;font-style:normal;font-weight:300 800;font-display:swap;src:url(fonts/plus-jakarta-sans-normal-vietnamese.woff2) format("woff2");unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB}@font-face{font-family:Plus Jakarta Sans;font-style:normal;font-weight:300 800;font-display:swap;src:url(fonts/plus-jakarta-sans-normal-latin-ext.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:Plus Jakarta Sans;font-style:normal;font-weight:300 800;font-display:swap;src:url(fonts/plus-jakarta-sans-normal-latin.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Plus Jakarta Sans;font-style:italic;font-weight:400;font-display:swap;src:url(fonts/plus-jakarta-sans-italic-cyrillic-ext.woff2) format("woff2");unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:Plus Jakarta Sans;font-style:italic;font-weight:400;font-display:swap;src:url(fonts/plus-jakarta-sans-italic-vietnamese.woff2) format("woff2");unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB}@font-face{font-family:Plus Jakarta Sans;font-style:italic;font-weight:400;font-display:swap;src:url(fonts/plus-jakarta-sans-italic-latin-ext.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:Plus Jakarta Sans;font-style:italic;font-weight:400;font-display:swap;src:url(fonts/plus-jakarta-sans-italic-latin.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:"Instrument Serif";font-style:normal;font-weight:400;font-display:swap;src:url(fonts/instrument-serif-normal-latin-ext.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:"Instrument Serif";font-style:normal;font-weight:400;font-display:swap;src:url(fonts/instrument-serif-normal-latin.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:"Instrument Serif";font-style:italic;font-weight:400;font-display:swap;src:url(fonts/instrument-serif-italic-latin-ext.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:"Instrument Serif";font-style:italic;font-weight:400;font-display:swap;src:url(fonts/instrument-serif-italic-latin.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}*,*:before,*:after{box-sizing:border-box;margin:0;padding:0}:root{--accent: #00A896;--accent-dark: #028C7D;--accent-light: #E0F5F3;--dark: #1A1A1A;--mid: #555555;--soft: #888888;--bg: #FAFAFA;--white: #FFFFFF;--border: rgba(0,0,0,.08)}html{scroll-behavior:smooth;overflow-x:hidden}body{background:var(--bg);font-family:Plus Jakarta Sans,sans-serif;color:var(--dark);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}em{font-family:"Instrument Serif",serif;font-style:italic;font-weight:400}.nav-wrap{background:#fafafaeb;backdrop-filter:blur(12px);position:sticky;top:0;z-index:100;border-bottom:1px solid var(--border)}nav{max-width:1200px;margin:0 auto;padding:14px 48px;display:flex;align-items:center;justify-content:space-between}.nav-logo-link{display:flex;align-items:center;text-decoration:none;flex-shrink:0}.nav-logo-img{height:26px;width:auto;display:block}.nav-links{display:flex;align-items:center;gap:2px}.nav-links>a{font-size:14px;font-weight:500;color:var(--mid);text-decoration:none;padding:8px 12px;border-radius:8px;transition:color .2s;white-space:nowrap}.nav-links>a:hover{color:var(--dark)}.nav-links>a.is-active{color:var(--dark);font-weight:600}.nav-cta{background:var(--accent)!important;color:#fff!important;padding:10px 22px!important;border-radius:100px!important;font-weight:600!important;margin-left:8px;transition:background .2s,transform .2s!important}.nav-cta:hover{background:var(--accent-dark)!important;transform:translateY(-1px)!important}.nav-item{position:relative;display:flex;align-items:center}.nav-item>a{font-size:14px;font-weight:500;color:var(--mid);text-decoration:none;padding:8px 12px;border-radius:8px;display:inline-flex;align-items:center;gap:4px;white-space:nowrap;transition:color .2s}.nav-item:hover>a,.nav-item.is-active>a{color:var(--dark)}.nav-item.is-active>a{font-weight:600}.nav-chevron{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;transition:transform .22s;flex-shrink:0}.nav-item:hover .nav-chevron{transform:rotate(180deg)}.nav-dropdown{position:absolute;top:100%;padding-top:8px;z-index:200;pointer-events:none}.nav-item:hover .nav-dropdown{pointer-events:auto}.nav-dropdown.solutions{left:-12px;width:462px}.nav-dropdown.industries{left:50%;margin-left:-130px;width:260px}.nav-dropdown-inner{background:var(--white);border:1px solid var(--border);border-radius:20px;padding:10px;box-shadow:0 20px 60px #0000001a,0 4px 20px #0000000d;opacity:0;transform:translateY(-8px);transition:opacity .18s,transform .18s}.nav-item:hover .nav-dropdown-inner{opacity:1;transform:translateY(0)}.dropdown-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px}.dropdown-row{display:flex;flex-direction:column;gap:2px}.dd-item{display:flex;align-items:flex-start;gap:11px;padding:12px;border-radius:12px;text-decoration:none;transition:background .15s}.dd-item:hover{background:var(--bg)}.dd-item.is-active{background:var(--accent-light)}.dd-icon{width:34px;height:34px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}.dd-icon svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.dd-name{font-size:13px;font-weight:700;color:var(--dark);margin-bottom:2px;line-height:1.3}.dd-item.is-active .dd-name{color:var(--accent-dark)}.dd-desc{font-size:12px;color:var(--soft);line-height:1.4}.nav-item:after{content:"";position:absolute;top:100%;left:0;right:0;height:12px}footer{background:#111;padding:64px 48px 36px}.footer-inner{max-width:1200px;margin:0 auto}.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:28px}.footer-brand{display:flex;flex-direction:column;gap:16px}.footer-logo-img-dark{height:28px;width:auto;filter:brightness(0) invert(1);display:block}.footer-tagline{font-size:13px;color:#ffffff59;line-height:1.65;max-width:240px}.footer-social{display:flex;gap:10px}.footer-social a{width:34px;height:34px;border-radius:8px;background:#ffffff12;display:flex;align-items:center;justify-content:center;color:#fff6;text-decoration:none;transition:background .2s,color .2s}.footer-social a:hover{background:#ffffff1f;color:#fff}.footer-social a svg{width:15px;height:15px;stroke:currentColor;fill:currentColor}.footer-col-label{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#ffffff40;margin-bottom:16px}.footer-col-links{list-style:none;display:flex;flex-direction:column;gap:10px}.footer-col-links a{font-size:13px;font-weight:500;color:#ffffff73;text-decoration:none;transition:color .2s}.footer-col-links a:hover{color:#fff}.footer-bottom{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}.footer-copy{font-size:12px;color:#fff3}.footer-policy{display:flex;gap:20px;flex-wrap:wrap}.footer-policy a{font-size:12px;color:#fff3;text-decoration:none;transition:color .2s}.footer-policy a:hover{color:#ffffff80}.mobile-nav-toggle,.mobile-nav-panel{display:none}@media(max-width:1024px){body.nav-open{overflow:hidden}.nav-wrap nav,nav{padding:14px 24px!important}.nav-wrap .nav-links,.nav-links{display:none!important}.mobile-nav-toggle{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;width:44px;height:44px;margin-left:auto;border:1px solid rgba(0,0,0,.08);border-radius:12px;background:#fff;color:#1a1a1a;cursor:pointer;box-shadow:0 8px 20px #0000000a}.mobile-nav-toggle span{display:block;width:18px;height:2px;border-radius:999px;background:currentColor;transition:transform .22s ease,opacity .22s ease}.nav-wrap.is-mobile-open .mobile-nav-toggle span:nth-child(1){transform:translateY(6px) rotate(45deg)}.nav-wrap.is-mobile-open .mobile-nav-toggle span:nth-child(2){opacity:0}.nav-wrap.is-mobile-open .mobile-nav-toggle span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}.mobile-nav-panel{display:block;position:fixed;inset:73px 0 0;background:#fafafafa;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .22s ease,visibility .22s ease;z-index:95}.nav-wrap.is-mobile-open .mobile-nav-panel{opacity:1;visibility:visible;pointer-events:auto}.mobile-nav-inner{width:100%;height:calc(100dvh - 73px);padding:0;background:#fafafa;overflow-y:auto;transform:translateY(-12px);transition:transform .24s ease}.nav-wrap.is-mobile-open .mobile-nav-inner{transform:translateY(0)}.mobile-nav-scroll{padding:16px 18px 24px}.mobile-nav-link,.mobile-nav-section-toggle{width:100%;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 14px;border:0;border-radius:16px;background:transparent;color:#1a1a1a;text-decoration:none;font:inherit;font-size:16px;font-weight:600;letter-spacing:-.01em;text-align:left;cursor:pointer}.mobile-nav-link:hover,.mobile-nav-section-toggle:hover,.mobile-nav-group.is-open .mobile-nav-section-toggle{background:#f6f6f6}.mobile-nav-link-cta{margin-top:12px;justify-content:center;background:#00a896;color:#fff;box-shadow:0 12px 24px #00a89638}.mobile-nav-link-cta:hover{background:#028c7d!important;color:#fff!important}.mobile-nav-section-toggle svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s ease;flex-shrink:0}.mobile-nav-group.is-open .mobile-nav-section-toggle svg{transform:rotate(180deg)}.mobile-nav-submenu{display:grid;grid-template-rows:0fr;transition:grid-template-rows .24s ease,margin-top .24s ease}.mobile-nav-group.is-open .mobile-nav-submenu{grid-template-rows:1fr;margin-top:8px}.mobile-nav-submenu-inner{overflow:hidden;display:flex;flex-direction:column;gap:8px}.mobile-nav-sublink{display:flex;align-items:center;gap:12px;padding:12px 16px;border-radius:14px;background:#fafafa;color:#555;text-decoration:none;font-size:14px;font-weight:500;line-height:1.45}.mobile-nav-sublink:hover{background:#f0f7f6;color:#1a1a1a}.mobile-nav-subicon{width:34px;height:34px;border-radius:10px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}.mobile-nav-subicon svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.footer-top{gap:32px!important}}@media(max-width:768px){section{padding-left:24px!important;padding-right:24px!important}.mobile-nav-panel{inset:69px 0 0}.mobile-nav-inner{height:calc(100dvh - 69px)}.mobile-nav-scroll{padding:14px 16px 22px}.mobile-nav-link,.mobile-nav-section-toggle{padding:15px 12px}}@media(max-width:640px){.nav-wrap nav,nav{padding:12px 18px!important}.nav-logo-img{height:24px!important}.footer-top{grid-template-columns:1fr!important;gap:24px!important}.footer-brand{grid-column:auto!important}.footer-bottom{flex-direction:column!important;align-items:flex-start!important}}.btn-primary,.btn-banner,.btn-cta-footer,.form-submit{position:relative;overflow:hidden;isolation:isolate}.btn-primary:before,.btn-banner:before,.btn-cta-footer:before,.form-submit:before{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 35%,rgba(255,255,255,.25) 50%,transparent 65%);transform:translate(-100%);pointer-events:none;z-index:1}.btn-primary:hover:before,.btn-banner:hover:before,.btn-cta-footer:hover:before,.form-submit:hover:before{animation:wi-shimmer .52s ease forwards}@keyframes wi-shimmer{0%{transform:translate(-100%)}to{transform:translate(220%)}}.btn-primary svg,.btn-banner svg,.btn-cta-footer svg{transition:transform .35s cubic-bezier(.34,1.56,.64,1);flex-shrink:0;position:relative;z-index:2}.btn-primary:hover svg,.btn-banner:hover svg,.btn-cta-footer:hover svg{transform:translate(5px)}.btn-primary>*:not(svg),.btn-banner>*:not(svg),.btn-cta-footer>*:not(svg){position:relative;z-index:2}.btn-primary:active,.btn-banner:active,.btn-cta-footer:active,.nav-cta:active,.mobile-nav-link-cta:active,.form-submit:active{transform:translateY(1px) scale(.97)!important;box-shadow:0 2px 10px #00a89640!important;transition-duration:.08s!important}
+</style></head> <body data-astro-cid-37fxchfa> <noscript> <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5LNMSLQ" height="0" width="0" style="display:none;visibility:hidden" data-astro-cid-37fxchfa></iframe> </noscript>   <!-- NAV -->
+<div class="nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="../webimpetus.com/web-impetus-global-styles.html#">
+      <div class="nav-logo-dot"></div>
+      Web Impetus — Global Styles
+    </a>
+    <div class="nav-steps">
+      <a class="nav-step" href="../webimpetus.com/web-impetus-global-styles.html#fonts">Fonts</a>
+      <a class="nav-step" href="../webimpetus.com/web-impetus-global-styles.html#colors">Colors</a>
+      <a class="nav-step" href="../webimpetus.com/web-impetus-global-styles.html#text">Text Styles</a>
+      <a class="nav-step" href="../webimpetus.com/web-impetus-global-styles.html#effects">Effects</a>
+    </div>
+  </div>
+</div>
+
+<div class="page">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-eyebrow">Internal Style Guide</div>
+    <h1>Design styles for<br><em>Web Impetus.</em></h1>
+    <p class="hero-sub">A clean reference for the brand’s typography, color system, text styles, and effects.</p>
+  </div>
+
+  <!-- FONTS -->
+  <div class="section" id="fonts">
+    <div class="section-header">
+      <div class="section-eyebrow">Typography</div>
+      <div class="section-title">Fonts</div>
+      <p class="section-sub">Primary and accent typefaces used across the Web Impetus brand system.</p>
+    </div>
+
+    <div class="font-cards">
+      <div class="font-card">
+        <div class="font-card-label">Primary — All UI</div>
+        <div class="font-card-specimen">The quick brown<br>fox jumps over.</div>
+        <div class="font-card-name">Plus Jakarta Sans</div>
+        <div class="font-card-weights">Used for everything — headings, body, buttons, labels, nav</div>
+        <div class="font-weights-row">
+          <span class="weight-pill" style="font-weight:300">Light 300</span>
+          <span class="weight-pill" style="font-weight:400">Regular 400</span>
+          <span class="weight-pill" style="font-weight:500">Medium 500</span>
+          <span class="weight-pill" style="font-weight:600">SemiBold 600</span>
+          <span class="weight-pill" style="font-weight:700">Bold 700</span>
+          <span class="weight-pill" style="font-weight:800">ExtraBold 800</span>
+        </div>
+      </div>
+      <div class="font-card">
+        <div class="font-card-label">Accent — Hero Payoff Only</div>
+        <div class="font-card-specimen serif">Your revenue<br>isn't.</div>
+        <div class="font-card-name">Instrument Serif</div>
+        <div class="font-card-weights">Italic only. Used exclusively for the emotional payoff phrase in hero and section headlines. Never in body copy or cards.</div>
+        <div class="font-weights-row">
+          <span class="weight-pill" style="font-family:'Instrument Serif',serif;font-style:italic">Italic 400 only</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- COLORS -->
+  <div class="section" id="colors">
+    <div class="section-header">
+      <div class="section-eyebrow">Color System</div>
+      <div class="section-title">Color Styles</div>
+      <p class="section-sub">Click any swatch to copy the hex code to your clipboard.</p>
+    </div>
+
+    <!-- Brand -->
+    <div class="color-group">
+      <div class="color-group-label">Brand Colors</div>
+      <div class="color-row">
+        <div class="color-card" onclick="copyColor(this, '#00A896')">
+          <div class="color-swatch" style="background:#00A896"></div>
+          <div class="color-info">
+            <div class="color-name">Brand / Accent</div>
+            <div class="color-hex">#00A896 <span class="copy-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg></span></div>
+          </div>
+          <div class="copied-toast">Copied!</div>
+        </div>
+        <div class="color-card" onclick="copyColor(this, '#028C7D')">
+          <div class="color-swatch" style="background:#028C7D"></div>
+          <div class="color-info">
+            <div class="color-name">Brand / Accent Dark</div>
+            <div class="color-hex">#028C7D <span class="copy-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg></span></div>
+          </div>
+          <div class="copied-toast">Copied!</div>
+        </div>
+        <div class="color-card" onclick="copyColor(this, '#E0F5F3')">
+          <div class="color-swatch has-border" style="background:#E0F5F3"></div>
+          <div class="color-info">
+            <div class="color-name">Brand / Accent Light</div>
+            <div class="color-hex">#E0F5F3 <span class="copy-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg></span></div>
+          </div>
+          <div class="copied-toast">Copied!</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Neutrals -->
+    <div class="color-group">
+      <div class="color-group-label">Neutrals</div>
+      <div class="color-row">
+        <div class="color-card" onclick="copyColor(this, '#1A1A1A')">
+          <div class="color-swatch" style="background:#1A1A1A"></div>
+          <div class="color-info">
+            <div class="color-name">Neutral / Dark</div>
+            <div class="color-hex">#1A1A1A <span class="copy-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg></span></div>
+          </div>
+          <div class="copied-toast">Copied!</div>
+        </div>
+        <div class="color-card" onclick="copyColor(this, '#555555')">
+          <div class="color-swatch" style="background:#555555"></div>
+          <div class="color-info">
+            <div class="color-name">Neutral / Mid</div>
+            <div class="color-hex">#555555 <span class="copy-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg></span></div>
+          </div>
+          <div class="copied-toast">Copied!</div>
+        </div>
+        <div class="color-card" onclick="copyColor(this, '#888888')">
+          <div class="color-swatch" style="background:#888888"></div>
+          <div class="color-info">
+            <div class="color-name">Neutral / Soft</div>
+            <div class="color-hex">#888888 <span class="copy-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg></span></div>
+          </div>
+          <div class="copied-toast">Copied!</div>
+        </div>
+        <div class="color-card" onclick="copyColor(this, '#FAFAFA')">
+          <div class="color-swatch has-border" style="background:#FAFAFA"></div>
+          <div class="color-info">
+            <div class="color-name">Neutral / BG</div>
+            <div class="color-hex">#FAFAFA <span class="copy-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg></span></div>
+          </div>
+          <div class="copied-toast">Copied!</div>
+        </div>
+        <div class="color-card" onclick="copyColor(this, '#FFFFFF')">
+          <div class="color-swatch has-border" style="background:#FFFFFF"></div>
+          <div class="color-info">
+            <div class="color-name">Neutral / White</div>
+            <div class="color-hex">#FFFFFF <span class="copy-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg></span></div>
+          </div>
+          <div class="copied-toast">Copied!</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section Backgrounds -->
+    <div class="color-group">
+      <div class="color-group-label">Section Backgrounds</div>
+      <div class="color-row">
+        <div class="color-card wide" onclick="copyColor(this, '#FAFAFA')">
+          <div class="color-swatch has-border" style="background:#FAFAFA"></div>
+          <div class="color-info">
+            <div class="color-name">Section / Light</div>
+            <div class="color-hex">#FAFAFA — most sections <span class="copy-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg></span></div>
+          </div>
+          <div class="copied-toast">Copied!</div>
+        </div>
+        <div class="color-card wide" onclick="copyColor(this, '#FFFFFF')">
+          <div class="color-swatch has-border" style="background:#FFFFFF"></div>
+          <div class="color-info">
+            <div class="color-name">Section / White</div>
+            <div class="color-hex">#FFFFFF — alternating white <span class="copy-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg></span></div>
+          </div>
+          <div class="copied-toast">Copied!</div>
+        </div>
+        <div class="color-card wide" onclick="copyColor(this, '#1A1A1A')">
+          <div class="color-swatch" style="background:#1A1A1A"></div>
+          <div class="color-info">
+            <div class="color-name">Section / Dark</div>
+            <div class="color-hex">#1A1A1A — checklist, tech, CTA <span class="copy-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg></span></div>
+          </div>
+          <div class="copied-toast">Copied!</div>
+        </div>
+        <div class="color-card wide" onclick="copyColor(this, '#111111')">
+          <div class="color-swatch" style="background:#111111"></div>
+          <div class="color-info">
+            <div class="color-name">Section / Footer</div>
+            <div class="color-hex">#111111 — footer bar only <span class="copy-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg></span></div>
+          </div>
+          <div class="copied-toast">Copied!</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pastel Service Card Colors -->
+    <div class="color-group">
+      <div class="color-group-label">Pastel Service Card Colors — create all 6 pairs (BG + Icon background)</div>
+      <div class="color-row">
+        <!-- Green -->
+        <div class="pastel-pair">
+          <div class="pastel-swatches">
+            <div class="swatch-half" style="background:#E8F5E9"></div>
+            <div class="swatch-half" style="background:#C8E6C9; border-left:1px solid rgba(0,0,0,0.06)"></div>
+          </div>
+          <div class="pastel-info">
+            <div class="pastel-label">Pastel / Green</div>
+            <div class="pastel-hexes">
+              <div class="pastel-hex-row">
+                <div class="pastel-dot" style="background:#E8F5E9;border:1px solid rgba(0,0,0,0.1)"></div>
+                <span class="pastel-hex-val" onclick="copyText(event,'#E8F5E9')" title="Click to copy">#E8F5E9 BG</span>
+              </div>
+              <div class="pastel-hex-row">
+                <div class="pastel-dot" style="background:#C8E6C9;border:1px solid rgba(0,0,0,0.1)"></div>
+                <span class="pastel-hex-val" onclick="copyText(event,'#C8E6C9')" title="Click to copy">#C8E6C9 Icon</span>
+              </div>
+              <div class="pastel-hex-row">
+                <div class="pastel-dot" style="background:#2E7D32"></div>
+                <span class="pastel-hex-val" onclick="copyText(event,'#2E7D32')" title="Click to copy">#2E7D32 Text</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Blue -->
+        <div class="pastel-pair">
+          <div class="pastel-swatches">
+            <div class="swatch-half" style="background:#E3F2FD"></div>
+            <div class="swatch-half" style="background:#BBDEFB; border-left:1px solid rgba(0,0,0,0.06)"></div>
+          </div>
+          <div class="pastel-info">
+            <div class="pastel-label">Pastel / Blue</div>
+            <div class="pastel-hexes">
+              <div class="pastel-hex-row">
+                <div class="pastel-dot" style="background:#E3F2FD;border:1px solid rgba(0,0,0,0.1)"></div>
+                <span class="pastel-hex-val" onclick="copyText(event,'#E3F2FD')" title="Click to copy">#E3F2FD BG</span>
+              </div>
+              <div class="pastel-hex-row">
+                <div class="pastel-dot" style="background:#BBDEFB;border:1px solid rgba(0,0,0,0.1)"></div>
+                <span class="pastel-hex-val" onclick="copyText(event,'#BBDEFB')" title="Click to copy">#BBDEFB Icon</span>
+              </div>
+              <div class="pastel-hex-row">
+                <div class="pastel-dot" style="background:#0277BD"></div>
+                <span class="pastel-hex-val" onclick="copyText(event,'#0277BD')" title="Click to copy">#0277BD Text</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Orange -->
+        <div class="pastel-pair">
+          <div class="pastel-swatches">
+            <div class="swatch-half" style="background:#FFF3E0"></div>
+            <div class="swatch-half" style="background:#FFE0B2; border-left:1px solid rgba(0,0,0,0.06)"></div>
+          </div>
+          <div class="pastel-info">
+            <div class="pastel-label">Pastel / Orange</div>
+            <div class="pastel-hexes">
+              <div class="pastel-hex-row">
+                <div class="pastel-dot" style="background:#FFF3E0;border:1px solid rgba(0,0,0,0.1)"></div>
+                <span class="pastel-hex-val" onclick="copyText(event,'#FFF3E0')" title="Click to copy">#FFF3E0 BG</span>
+              </div>
+              <div class="pastel-hex-row">
+                <div class="pastel-dot" style="background:#FFE0B2;border:1px solid rgba(0,0,0,0.1)"></div>
+                <span class="pastel-hex-val" onclick="copyText(event,'#FFE0B2')" title="Click to copy">#FFE0B2 Icon</span>
+              </div>
+              <div class="pastel-hex-row">
+                <div class="pastel-dot" style="background:#E65100"></div>
+                <span class="pastel-hex-val" onclick="copyText(event,'#E65100')" title="Click to copy">#E65100 Text</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Purple -->
+        <div class="pastel-pair">
+          <div class="pastel-swatches">
+            <div class="swatch-half" style="background:#F3E5F5"></div>
+            <div class="swatch-half" style="background:#E1BEE7; border-left:1px solid rgba(0,0,0,0.06)"></div>
+          </div>
+          <div class="pastel-info">
+            <div class="pastel-label">Pastel / Purple</div>
+            <div class="pastel-hexes">
+              <div class="pastel-hex-row">
+                <div class="pastel-dot" style="background:#F3E5F5;border:1px solid rgba(0,0,0,0.1)"></div>
+                <span class="pastel-hex-val" onclick="copyText(event,'#F3E5F5')" title="Click to copy">#F3E5F5 BG</span>
+              </div>
+              <div class="pastel-hex-row">
+                <div class="pastel-dot" style="background:#E1BEE7;border:1px solid rgba(0,0,0,0.1)"></div>
+                <span class="pastel-hex-val" onclick="copyText(event,'#E1BEE7')" title="Click to copy">#E1BEE7 Icon</span>
+              </div>
+              <div class="pastel-hex-row">
+                <div class="pastel-dot" style="background:#6A1B9A"></div>
+                <span class="pastel-hex-val" onclick="copyText(event,'#6A1B9A')" title="Click to copy">#6A1B9A Text</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Teal -->
+        <div class="pastel-pair">
+          <div class="pastel-swatches">
+            <div class="swatch-half" style="background:#E0F5F3"></div>
+            <div class="swatch-half" style="background:#B2DFDB; border-left:1px solid rgba(0,0,0,0.06)"></div>
+          </div>
+          <div class="pastel-info">
+            <div class="pastel-label">Pastel / Teal</div>
+            <div class="pastel-hexes">
+              <div class="pastel-hex-row">
+                <div class="pastel-dot" style="background:#E0F5F3;border:1px solid rgba(0,0,0,0.1)"></div>
+                <span class="pastel-hex-val" onclick="copyText(event,'#E0F5F3')" title="Click to copy">#E0F5F3 BG</span>
+              </div>
+              <div class="pastel-hex-row">
+                <div class="pastel-dot" style="background:#B2DFDB;border:1px solid rgba(0,0,0,0.1)"></div>
+                <span class="pastel-hex-val" onclick="copyText(event,'#B2DFDB')" title="Click to copy">#B2DFDB Icon</span>
+              </div>
+              <div class="pastel-hex-row">
+                <div class="pastel-dot" style="background:#028C7D"></div>
+                <span class="pastel-hex-val" onclick="copyText(event,'#028C7D')" title="Click to copy">#028C7D Text</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Yellow -->
+        <div class="pastel-pair">
+          <div class="pastel-swatches">
+            <div class="swatch-half" style="background:#FFF9E6"></div>
+            <div class="swatch-half" style="background:#FFF3C4; border-left:1px solid rgba(0,0,0,0.06)"></div>
+          </div>
+          <div class="pastel-info">
+            <div class="pastel-label">Pastel / Yellow</div>
+            <div class="pastel-hexes">
+              <div class="pastel-hex-row">
+                <div class="pastel-dot" style="background:#FFF9E6;border:1px solid rgba(0,0,0,0.1)"></div>
+                <span class="pastel-hex-val" onclick="copyText(event,'#FFF9E6')" title="Click to copy">#FFF9E6 BG</span>
+              </div>
+              <div class="pastel-hex-row">
+                <div class="pastel-dot" style="background:#FFF3C4;border:1px solid rgba(0,0,0,0.1)"></div>
+                <span class="pastel-hex-val" onclick="copyText(event,'#FFF3C4')" title="Click to copy">#FFF3C4 Icon</span>
+              </div>
+              <div class="pastel-hex-row">
+                <div class="pastel-dot" style="background:#E65100"></div>
+                <span class="pastel-hex-val" onclick="copyText(event,'#E65100')" title="Click to copy">#E65100 Text</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TEXT STYLES -->
+  <div class="section" id="text">
+    <div class="section-header">
+      <div class="section-eyebrow">Typography</div>
+      <div class="section-title">Text Styles</div>
+      <p class="section-sub">Reference styles for headings, body copy, labels, and UI text.</p>
+    </div>
+
+    <table class="type-table">
+      <thead>
+        <tr>
+          <th>Style Name</th>
+          <th>Specimen</th>
+          <th>Specs</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr class="type-row">
+          <td class="type-name-cell"><span class="type-style-name">Heading/H1</span></td>
+          <td class="type-specimen-cell"><div class="specimen-h1">Revenue.</div></td>
+          <td class="type-meta-cell">
+            <div class="type-meta">
+              <span class="meta-pill">Plus Jakarta Sans</span>
+              <span class="meta-pill">64px</span>
+              <span class="meta-pill">Bold 700</span>
+              <span class="meta-pill">−3.5% tracking</span>
+            </div>
+            <div class="type-note">Hero main headline. Scale to ~44px on mobile.</div>
+          </td>
+        </tr>
+
+        <tr class="type-row">
+          <td class="type-name-cell"><span class="type-style-name">Heading/H1 Serif</span></td>
+          <td class="type-specimen-cell"><div class="specimen-h1-serif">Your revenue isn't.</div></td>
+          <td class="type-meta-cell">
+            <div class="type-meta">
+              <span class="meta-pill">Instrument Serif</span>
+              <span class="meta-pill">72px</span>
+              <span class="meta-pill">Italic 400</span>
+              <span class="meta-pill">−3% tracking</span>
+            </div>
+            <div class="type-note">Payoff phrase in hero only. Set font style to Italic after creating.</div>
+          </td>
+        </tr>
+
+        <tr class="type-row">
+          <td class="type-name-cell"><span class="type-style-name">Heading/H2</span></td>
+          <td class="type-specimen-cell"><div class="specimen-h2">Section Heading</div></td>
+          <td class="type-meta-cell">
+            <div class="type-meta">
+              <span class="meta-pill">Plus Jakarta Sans</span>
+              <span class="meta-pill">48px</span>
+              <span class="meta-pill">Bold 700</span>
+              <span class="meta-pill">−3% tracking</span>
+            </div>
+            <div class="type-note">All section titles. Scale to ~32px on mobile.</div>
+          </td>
+        </tr>
+
+        <tr class="type-row">
+          <td class="type-name-cell"><span class="type-style-name">Heading/H3</span></td>
+          <td class="type-specimen-cell"><div class="specimen-h3">Card Title or Sub-heading</div></td>
+          <td class="type-meta-cell">
+            <div class="type-meta">
+              <span class="meta-pill">Plus Jakarta Sans</span>
+              <span class="meta-pill">19px</span>
+              <span class="meta-pill">Bold 700</span>
+            </div>
+            <div class="type-note">Card titles, FAQ questions, dropdown item names.</div>
+          </td>
+        </tr>
+
+        <tr class="type-row">
+          <td class="type-name-cell"><span class="type-style-name">Body/Large</span></td>
+          <td class="type-specimen-cell"><div class="specimen-body-lg">Intro paragraph or hero subheadline text.</div></td>
+          <td class="type-meta-cell">
+            <div class="type-meta">
+              <span class="meta-pill">Plus Jakarta Sans</span>
+              <span class="meta-pill">18px</span>
+              <span class="meta-pill">Medium 500</span>
+              <span class="meta-pill">1.65 line-height</span>
+            </div>
+            <div class="type-note">Hero sub, section intros.</div>
+          </td>
+        </tr>
+
+        <tr class="type-row">
+          <td class="type-name-cell"><span class="type-style-name">Body/Default</span></td>
+          <td class="type-specimen-cell"><div class="specimen-body">Standard body copy for most paragraphs and descriptions.</div></td>
+          <td class="type-meta-cell">
+            <div class="type-meta">
+              <span class="meta-pill">Plus Jakarta Sans</span>
+              <span class="meta-pill">16px</span>
+              <span class="meta-pill">Regular 400</span>
+              <span class="meta-pill">1.6 line-height</span>
+            </div>
+          </td>
+        </tr>
+
+        <tr class="type-row">
+          <td class="type-name-cell"><span class="type-style-name">Body/Small</span></td>
+          <td class="type-specimen-cell"><div class="specimen-body-sm">Card descriptions, secondary body text and FAQ answers.</div></td>
+          <td class="type-meta-cell">
+            <div class="type-meta">
+              <span class="meta-pill">Plus Jakarta Sans</span>
+              <span class="meta-pill">15px</span>
+              <span class="meta-pill">Regular 400</span>
+              <span class="meta-pill">1.6 line-height</span>
+            </div>
+          </td>
+        </tr>
+
+        <tr class="type-row">
+          <td class="type-name-cell"><span class="type-style-name">Body/XSmall</span></td>
+          <td class="type-specimen-cell"><div class="specimen-body-xs">Fine print, small card labels, badge text.</div></td>
+          <td class="type-meta-cell">
+            <div class="type-meta">
+              <span class="meta-pill">Plus Jakarta Sans</span>
+              <span class="meta-pill">14px</span>
+              <span class="meta-pill">Regular 400</span>
+              <span class="meta-pill">1.5 line-height</span>
+            </div>
+          </td>
+        </tr>
+
+        <tr class="type-row">
+          <td class="type-name-cell"><span class="type-style-name">Label/Eyebrow</span></td>
+          <td class="type-specimen-cell"><div class="specimen-eyebrow">What We Do</div></td>
+          <td class="type-meta-cell">
+            <div class="type-meta">
+              <span class="meta-pill">Plus Jakarta Sans</span>
+              <span class="meta-pill">12px</span>
+              <span class="meta-pill">SemiBold 600</span>
+              <span class="meta-pill">12% tracking</span>
+              <span class="meta-pill">Uppercase</span>
+            </div>
+            <div class="type-note">Section eyebrow labels. Color: Neutral/Soft on light, Brand/Accent on dark.</div>
+          </td>
+        </tr>
+
+        <tr class="type-row">
+          <td class="type-name-cell"><span class="type-style-name">Label/Small</span></td>
+          <td class="type-specimen-cell"><div class="specimen-label">Badge text or pill label</div></td>
+          <td class="type-meta-cell">
+            <div class="type-meta">
+              <span class="meta-pill">Plus Jakarta Sans</span>
+              <span class="meta-pill">13px</span>
+              <span class="meta-pill">SemiBold 600</span>
+            </div>
+          </td>
+        </tr>
+
+        <tr class="type-row">
+          <td class="type-name-cell"><span class="type-style-name">Button/Primary</span></td>
+          <td class="type-specimen-cell"><div class="specimen-btn">Get in Touch →</div></td>
+          <td class="type-meta-cell">
+            <div class="type-meta">
+              <span class="meta-pill">Plus Jakarta Sans</span>
+              <span class="meta-pill">16px</span>
+              <span class="meta-pill">SemiBold 600</span>
+            </div>
+            <div class="type-note">Primary CTA buttons.</div>
+          </td>
+        </tr>
+
+        <tr class="type-row">
+          <td class="type-name-cell"><span class="type-style-name">Button/Secondary</span></td>
+          <td class="type-specimen-cell"><div class="specimen-btn-sm">See Our Work</div></td>
+          <td class="type-meta-cell">
+            <div class="type-meta">
+              <span class="meta-pill">Plus Jakarta Sans</span>
+              <span class="meta-pill">15px</span>
+              <span class="meta-pill">SemiBold 600</span>
+            </div>
+            <div class="type-note">Secondary and outline buttons.</div>
+          </td>
+        </tr>
+
+        <tr class="type-row">
+          <td class="type-name-cell"><span class="type-style-name">Stat/Number</span></td>
+          <td class="type-specimen-cell"><div class="specimen-stat">65+</div></td>
+          <td class="type-meta-cell">
+            <div class="type-meta">
+              <span class="meta-pill">Plus Jakarta Sans</span>
+              <span class="meta-pill">72px</span>
+              <span class="meta-pill">Bold 700</span>
+              <span class="meta-pill">−4% tracking</span>
+            </div>
+            <div class="type-note">Homepage big stat numbers only (65+ Projects, 7+ Years, 40+ Businesses).</div>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+  <!-- EFFECTS -->
+  <div class="section" id="effects">
+    <div class="section-header">
+      <div class="section-eyebrow">Step 4</div>
+      <div class="section-title">Effect Styles (Shadows)</div>
+      <p class="section-sub">Reference shadows used across buttons, cards, and interface elements.</p>
+    </div>
+
+    <div class="shadow-grid">
+      <div class="shadow-card sd-btn-primary">
+        <div class="shadow-demo"></div>
+        <div class="shadow-card-name">Shadow/Button Primary</div>
+        <div class="shadow-values">
+          X: 0 · Y: 8px<br>
+          Blur: 24px · Spread: 0<br>
+          Color: #00A896 · 30%
+        </div>
+      </div>
+      <div class="shadow-card sd-btn-primary-hover">
+        <div class="shadow-demo"></div>
+        <div class="shadow-card-name">Shadow/Button Hover</div>
+        <div class="shadow-values">
+          X: 0 · Y: 12px<br>
+          Blur: 28px · Spread: 0<br>
+          Color: #00A896 · 35%
+        </div>
+      </div>
+      <div class="shadow-card sd-card">
+        <div class="shadow-demo"></div>
+        <div class="shadow-card-name">Shadow/Card</div>
+        <div class="shadow-values">
+          X: 0 · Y: 2px<br>
+          Blur: 12px · Spread: 0<br>
+          Color: #000000 · 6%
+        </div>
+      </div>
+      <div class="shadow-card sd-card-hover">
+        <div class="shadow-demo"></div>
+        <div class="shadow-card-name">Shadow/Card Hover</div>
+        <div class="shadow-values">
+          X: 0 · Y: 8px<br>
+          Blur: 24px · Spread: 0<br>
+          Color: #000000 · 10%
+        </div>
+      </div>
+      <div class="shadow-card sd-nav">
+        <div class="shadow-demo"></div>
+        <div class="shadow-card-name">Shadow/Nav</div>
+        <div class="shadow-values">
+          X: 0 · Y: 1px<br>
+          Blur: 0 · Spread: 0<br>
+          Color: #000000 · 8%
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="page-footer">
+    <p>Web Impetus · Internal Style Guide · Values match <code style="font-size:12px;background:rgba(0,0,0,0.05);padding:2px 6px;border-radius:4px">d2c-ecommerce.html</code></p>
+    <span class="footer-badge">Brand Turquoise = #00A896</span>
+  </div>
+
+</div>
+
+<script>
+  function copyColor(card, hex) {
+    navigator.clipboard.writeText(hex).then(function () {
+      card.classList.add('copied');
+      setTimeout(function () { card.classList.remove('copied'); }, 1200);
+    });
+  }
+
+  function copyText(e, hex) {
+    e.stopPropagation();
+    navigator.clipboard.writeText(hex).then(function () {
+      var el = e.target;
+      var original = el.textContent;
+      el.textContent = 'Copied!';
+      el.style.color = 'var(--accent-dark)';
+      setTimeout(function () {
+        el.textContent = original;
+        el.style.color = '';
+      }, 1000);
+    });
+  }
+</script>  <script>
+      (() => {
+        const navWrap = document.querySelector(".nav-wrap");
+        const navToggle = document.querySelector(".mobile-nav-toggle");
+        const navPanel = document.getElementById("mobile-nav-panel");
+        const navGroups = Array.from(document.querySelectorAll(".mobile-nav-group"));
+
+        const closeMobileNav = () => {
+          if (!navWrap || !navToggle || !navPanel) return;
+          navWrap.classList.remove("is-mobile-open");
+          document.body.classList.remove("nav-open");
+          navToggle.setAttribute("aria-expanded", "false");
+          navPanel.setAttribute("hidden", "");
+          navGroups.forEach((group) => {
+            group.classList.remove("is-open");
+            group.querySelector(".mobile-nav-section-toggle")?.setAttribute("aria-expanded", "false");
+          });
+        };
+
+        if (navWrap && navToggle && navPanel) {
+          navToggle.addEventListener("click", () => {
+            const isOpen = navWrap.classList.toggle("is-mobile-open");
+            document.body.classList.toggle("nav-open", isOpen);
+            navToggle.setAttribute("aria-expanded", String(isOpen));
+            if (isOpen) {
+              navPanel.removeAttribute("hidden");
+            } else {
+              navPanel.setAttribute("hidden", "");
+            }
+          });
+
+          navPanel.addEventListener("click", (event) => {
+            if (event.target === navPanel) {
+              closeMobileNav();
+            }
+          });
+
+          navPanel.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", () => {
+              closeMobileNav();
+            });
+          });
+
+          navGroups.forEach((group) => {
+            const trigger = group.querySelector(".mobile-nav-section-toggle");
+            if (!trigger) return;
+            trigger.addEventListener("click", () => {
+              const willOpen = !group.classList.contains("is-open");
+              navGroups.forEach((item) => {
+                item.classList.remove("is-open");
+                item.querySelector(".mobile-nav-section-toggle")?.setAttribute("aria-expanded", "false");
+              });
+              if (willOpen) {
+                group.classList.add("is-open");
+                trigger.setAttribute("aria-expanded", "true");
+              }
+            });
+          });
+
+          window.addEventListener("resize", () => {
+            if (window.innerWidth > 1024) {
+              closeMobileNav();
+            }
+          });
+
+          window.addEventListener("keydown", (event) => {
+            if (event.key === "Escape") {
+              closeMobileNav();
+            }
+          });
+        }
+
+        const forms = Array.from(document.querySelectorAll('form[action*="submit-form.com"]'));
+        forms.forEach((form) => {
+          const ensureHiddenInput = (name, value) => {
+            let input = form.querySelector(`input[name="${name}"]`);
+            if (!input) {
+              input = document.createElement("input");
+              input.type = "hidden";
+              input.name = name;
+              form.appendChild(input);
+            }
+            input.value = value;
+          };
+
+          ensureHiddenInput("_redirect", `${window.location.origin}/thank-you`);
+          ensureHiddenInput("_error", `${window.location.origin}/form-error`);
+          ensureHiddenInput("_append", "false");
+        });
+      })();
+    </script> <vercel-speed-insights data-props="{&#34;data-astro-cid-37fxchfa&#34;:true}" data-params="{}" data-pathname="/web-impetus-global-styles/"></vercel-speed-insights> <script type="module">var f=()=>{window.si||(window.si=function(...r){window.siq=window.siq||[],window.siq.push(r)})},l="@vercel/speed-insights",h="2.0.0";function v(){return typeof window<"u"}function b(){try{const e="production"}catch{}return"production"}function u(){return b()==="development"}function g(e,r){if(!e||!r)return e;let s=e;try{const t=Object.entries(r);for(const[n,o]of t)if(!Array.isArray(o)){const i=d(o);i.test(s)&&(s=s.replace(i,`/[${n}]`))}for(const[n,o]of t)if(Array.isArray(o)){const i=d(o.join("/"));i.test(s)&&(s=s.replace(i,`/[...${n}]`))}return s}catch{return e}}function d(e){return new RegExp(`/${w(e)}(?=[/?#]|$)`)}function w(e){return e.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")}function m(e){return e.scriptSrc?c(e.scriptSrc):u()?"https://va.vercel-scripts.com/v1/speed-insights/script.debug.js":e.dsn?"https://va.vercel-scripts.com/v1/speed-insights/script.js":e.basePath?c(`${e.basePath}/speed-insights/script.js`):"/_vercel/speed-insights/script.js"}function S(e,r){var s;let t=e;if(r)try{t={...(s=JSON.parse(r))==null?void 0:s.speedInsights,...e}}catch{}const n={sdkn:l+(t.framework?`/${t.framework}`:""),sdkv:h};return t.sampleRate&&(n.sampleRate=t.sampleRate.toString()),t.route&&(n.route=t.route),u()&&t.debug===!1&&(n.debug="false"),t.dsn&&(n.dsn=t.dsn),t.endpoint?n.endpoint=c(t.endpoint):t.basePath&&(n.endpoint=c(`${t.basePath}/speed-insights/vitals`)),{src:m(t),beforeSend:t.beforeSend,dataset:n}}function c(e){return e.startsWith("http://")||e.startsWith("https://")||e.startsWith("/")?e:`/${e}`}function y(e={},r){var s;if(!v()||e.route===null)return null;f();const{beforeSend:t,src:n,dataset:o}=S(e,r);if(document.head.querySelector(`script[src*="${n}"]`))return null;t&&((s=window.si)==null||s.call(window,"beforeSend",t));const i=document.createElement("script");i.src=n,i.defer=!0;for(const[a,p]of Object.entries(o))i.dataset[a]=p;return i.onerror=()=>{console.log(`[Vercel Speed Insights] Failed to load script from ${n}. Please check if any content blockers are enabled and try again.`)},document.head.appendChild(i),{setRoute:a=>{i.dataset.route=a??void 0}}}function $(){try{return}catch{}}function k(){try{return'{"analytics":{"scriptSrc":"fc1c301db88a266b/script.js","viewEndpoint":"fc1c301db88a266b/view","eventEndpoint":"fc1c301db88a266b/event","sessionEndpoint":"fc1c301db88a266b/session"},"speedInsights":{"scriptSrc":"0351330045ba79e5/script.js","endpoint":"0351330045ba79e5/vitals"}}'}catch{return}}customElements.define("vercel-speed-insights",class extends HTMLElement{constructor(){super();try{const r=JSON.parse(this.dataset.props??"{}"),s=JSON.parse(this.dataset.params??"{}"),t=g(this.dataset.pathname??"",s);y({route:t,...r,framework:"astro",basePath:$(),beforeSend:window.speedInsightsBeforeSend},k())}catch(r){throw new Error(`Failed to parse SpeedInsights properties: ${r}`)}}});</script> <vercel-analytics data-props="{&#34;data-astro-cid-37fxchfa&#34;:true}" data-params="{}" data-pathname="/web-impetus-global-styles/"></vercel-analytics> <script type="module">var v=()=>{window.va||(window.va=function(...i){window.vaq||(window.vaq=[]),window.vaq.push(i)})},w="@vercel/analytics",b="2.0.1";function f(){return typeof window<"u"}function p(){try{const e="production"}catch{}return"production"}function h(e="auto"){if(e==="auto"){window.vam=p();return}window.vam=e}function y(){return(f()?window.vam:p())||"production"}function d(){return y()==="development"}function m(e,i){if(!e||!i)return e;let n=e;try{const t=Object.entries(i);for(const[r,s]of t)if(!Array.isArray(s)){const o=u(s);o.test(n)&&(n=n.replace(o,`/[${r}]`))}for(const[r,s]of t)if(Array.isArray(s)){const o=u(s.join("/"));o.test(n)&&(n=n.replace(o,`/[...${r}]`))}return n}catch{return e}}function u(e){return new RegExp(`/${g(e)}(?=[/?#]|$)`)}function g(e){return e.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")}function E(e){return e.scriptSrc?a(e.scriptSrc):d()?"https://va.vercel-scripts.com/v1/script.debug.js":e.basePath?a(`${e.basePath}/insights/script.js`):"/_vercel/insights/script.js"}function S(e,i){var n;let t=e;if(i)try{t={...(n=JSON.parse(i))==null?void 0:n.analytics,...e}}catch{}h(t.mode);const r={sdkn:w+(t.framework?`/${t.framework}`:""),sdkv:b};return t.disableAutoTrack&&(r.disableAutoTrack="1"),t.viewEndpoint&&(r.viewEndpoint=a(t.viewEndpoint)),t.eventEndpoint&&(r.eventEndpoint=a(t.eventEndpoint)),t.sessionEndpoint&&(r.sessionEndpoint=a(t.sessionEndpoint)),d()&&t.debug===!1&&(r.debug="false"),t.dsn&&(r.dsn=t.dsn),t.endpoint?r.endpoint=t.endpoint:t.basePath&&(r.endpoint=a(`${t.basePath}/insights`)),{beforeSend:t.beforeSend,src:E(t),dataset:r}}function a(e){return e.startsWith("http://")||e.startsWith("https://")||e.startsWith("/")?e:`/${e}`}function k(e={debug:!0},i){var n;if(!f())return;const{beforeSend:t,src:r,dataset:s}=S(e,i);if(v(),t&&((n=window.va)==null||n.call(window,"beforeSend",t)),document.head.querySelector(`script[src*="${r}"]`))return;const o=document.createElement("script");o.src=r;for(const[c,l]of Object.entries(s))o.dataset[c]=l;o.defer=!0,o.onerror=()=>{const c=d()?"Please check if any ad blockers are enabled and try again.":"Be sure to enable Web Analytics for your project and deploy again. See https://vercel.com/docs/analytics/quickstart for more information.";console.log(`[Vercel Web Analytics] Failed to load script from ${r}. ${c}`)},document.head.appendChild(o)}function $({route:e,path:i}){var n;(n=window.va)==null||n.call(window,"pageview",{route:e,path:i})}function A(){try{return}catch{}}function j(){try{return'{"analytics":{"scriptSrc":"fc1c301db88a266b/script.js","viewEndpoint":"fc1c301db88a266b/view","eventEndpoint":"fc1c301db88a266b/event","sessionEndpoint":"fc1c301db88a266b/session"},"speedInsights":{"scriptSrc":"0351330045ba79e5/script.js","endpoint":"0351330045ba79e5/vitals"}}'}catch{}}customElements.define("vercel-analytics",class extends HTMLElement{constructor(){super();try{const i=JSON.parse(this.dataset.props??"{}"),n=JSON.parse(this.dataset.params??"{}");k({...i,disableAutoTrack:!0,framework:"astro",basePath:A(),beforeSend:window.webAnalyticsBeforeSend},j());const t=this.dataset.pathname;$({route:m(t??"",n),path:t})}catch(i){throw new Error(`Failed to parse WebAnalytics properties: ${i}`)}}});</script> </body></html>

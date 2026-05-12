@@ -1,6 +1,7 @@
 "use client";
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 export default function WhoWeWorkWith() {
   const containerVariants = {
@@ -62,10 +63,10 @@ export default function WhoWeWorkWith() {
                    type === 'mfg' ? "Your leads come from IndiaMart or referrals — no owned presence, no predictability. We build the direct inbound pipeline that gives you control over your own growth." : 
                    "Word of mouth built your business. But it won't scale it. You have a website — it does nothing. We build the digital engine that generates qualified leads predictably."}
                 </p>
-                <a id={`wwww-link-${type}`} href={`/${type === 'd2c' ? 'd2c-ecommerce' : type === 'mfg' ? 'manufacturers' : 'service-businesses'}`} className="wwww-link">
+                <Link id={`wwww-link-${type}`} href={`/${type === 'd2c' ? 'd2c-ecommerce' : type === 'mfg' ? 'manufacturers' : 'service-businesses'}`} className="wwww-link">
                   See how we help 
                   <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
-                </a>
+                </Link>
               </div>
             </motion.div>
           ))}

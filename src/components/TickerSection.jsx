@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 export default function TickerSection() {
   const brands = [
@@ -14,18 +15,18 @@ export default function TickerSection() {
     { name: "Bayars Coffee", src: "/_astro/c6da280774cd987c16c4dbfa5a0f98bfbcd5af7c-400x128_ZDSbLb.png" },
     { name: "Basic Soaps", src: "/_astro/25b744012daf793c8282554ba84f976033629544-412x128_Z1KuAM0.png" },
     { name: "CCTV Wala", src: "/_astro/01d2224d643b174a7b1834584b7a8a43d93588a5-440x128_ZGlYV3.png" },
-    { name: "Kaapi Machines - Web Impetus Clients", src: "/_astro/ea0db4fcf1ec793e591bb782ac774385338571b8-420x160_Z2cbDq.png" },
-    { name: "mopadz logo - web impetus clients", src: "/_astro/65fb307dac695a4f3eab208f936da296ceb11bda-928x257_ZoNh9p.svg" },
-    { name: "US Golf Kids India - Web Impetus Client", src: "/_astro/0f9b823ce1baab1339336e35ae30d14b55420bca-533x330_195dn3.webp" },
+    { name: "Kaapi Machines - raushang4 Clients", src: "/_astro/ea0db4fcf1ec793e591bb782ac774385338571b8-420x160_Z2cbDq.png" },
+    { name: "mopadz logo - raushang4 E-Commerce clients", src: "/_astro/65fb307dac695a4f3eab208f936da296ceb11bda-928x257_ZoNh9p.svg" },
+    { name: "US Golf Kids India - raushang4 Client", src: "/_astro/0f9b823ce1baab1339336e35ae30d14b55420bca-533x330_195dn3.webp" },
     { name: "Auramah Valley", src: "/_astro/6a19c00716ffe64bfd6b8d288ca8c56f10b14f59-440x128_2sATLY.png" },
-    { name: "Red Sirocco - Web Impetus Clients", src: "/_astro/a6c0a5af81bf39ed3623c918f466c6d75edff322-500x271_19EzgA.webp" },
-    { name: "Dream Spark Events - Web Impetus Clients", src: "/_astro/7014d85bf61d7d7652c834f66f87286121cc1641-98x72_ZlM0vL.svg" },
+    { name: "Red Sirocco - raushang4 Clients", src: "/_astro/a6c0a5af81bf39ed3623c918f466c6d75edff322-500x271_19EzgA.webp" },
+    { name: "Dream Spark Events - raushang4 Clients", src: "/_astro/7014d85bf61d7d7652c834f66f87286121cc1641-98x72_ZlM0vL.svg" },
     { name: "Get Right PC", src: "/_astro/abe9b43f4ee9fd5d23a106520c388a20dd49dc89-284x128_Z16Tafi.png" },
     { name: "Imperial Holding", src: "/_astro/a99084933bd8a505001ca512adf4e562f5db7076-260x128_ZMI4kJ.png" },
-    { name: "Timber Hills - Web Impetus Client", src: "/_astro/fd7e945d0e47a8280b06df8010bff74700ef9d05-842x595_ZouKzA.svg" },
+    { name: "Timber Hills - raushang4 Client", src: "/_astro/fd7e945d0e47a8280b06df8010bff74700ef9d05-842x595_ZouKzA.svg" },
     { name: "Balance The Plate", src: "/_astro/43c8ff09954505d8ba996582a8b99581db3ae15e-480x128_KQKON.png" },
-    { name: "hideaway cottage - web impetus client", src: "/_astro/d36c1e944d08374492c3fdd129ea432b9f0f3c4b-1072x554_Z2hrQ3z.png" },
-    { name: "aks - web impetus client", src: "/_astro/0e71356a1c6339c85539e54d65ec7cba68b9742c-460x181_23CJCn.png" },
+    { name: "hideaway cottage - raushang4 E-Commerce client", src: "/_astro/d36c1e944d08374492c3fdd129ea432b9f0f3c4b-1072x554_Z2hrQ3z.png" },
+    { name: "aks - raushang4 E-Commerce client", src: "/_astro/0e71356a1c6339c85539e54d65ec7cba68b9742c-460x181_23CJCn.png" },
     { name: "Future Finvest", src: "/_astro/b19da2b489b58e0d558d70772fa69232e2f09b9e-172x128_2aDcEu.png" },
     { name: "Let's Celebrate", src: "/_astro/68722ee99c17fcd29388671215169aad56662f84-228x128_aWtNz.png" },
     { name: "ps sons", src: "/_astro/e2538a207d3b4b914300aed36d60ac4b29ac30ed-300x97_Z62ajD.png" },
@@ -50,15 +51,13 @@ export default function TickerSection() {
         <div id="ticker-outer" className="ticker-outer">
           <div id="ticker-track" className="ticker-track">
             {repeatedBrands.map((brand, idx) => (
-              <img 
+              <Image 
                 key={`brand-${idx}`} 
                 id={`ticker-brand-img-${idx}`} 
                 src={brand.src} 
                 alt={brand.name} 
-                width="120" 
-                height="64" 
-                loading="lazy" 
-                decoding="async" 
+                width={120} 
+                height={64} 
               />
             ))}
           </div>

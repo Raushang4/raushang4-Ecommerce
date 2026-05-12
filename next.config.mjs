@@ -1,6 +1,22 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  /* config options here */
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'cdn.sanity.io',
+      },
+    ],
+  },
+  async redirects() {
+    return [
+      {
+        source: '/:path*\\.html',
+        destination: '/:path*',
+        permanent: true,
+      },
+    ]
+  },
 };
 
 export default nextConfig;

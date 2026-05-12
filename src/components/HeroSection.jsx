@@ -31,8 +31,7 @@ export default function HeroSection() {
             <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
             <path d="M2 17l10 5 10-5"></path>
             <path d="M2 12l10 5 10-5"></path>
-          </svg>
-          Digital Growth Partner
+          </svg> Digital Growth Partner
         </motion.div>
         
         <motion.h1 id="hero-title" variants={itemVariants}>

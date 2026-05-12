@@ -1,0 +1,8 @@
+{
+  "slug": "propncr",
+  "title": "PropNCR — raushang4 E-Commerce Portfolio",
+  "description": " ",
+  "content": "<section className=\"work-hero\"> <div className=\"work-inner\"> <div className=\"work-breadcrumb\"> <a href=\"/our-work\">Our Work</a> <span>›</span> <span>PropNCR</span> </div> <div className=\"work-meta-pills\"> <span className=\"work-pill\">Web Design</span>  </div> <h1>PropNCR</h1> <p className=\"work-excerpt\"> </p> <div className=\"work-actions\"> <a href=\"https://propncr.com/\" className=\"work-live-link\" target=\"_blank\" rel=\"noreferrer\">\nView Live Site\n<svg viewBox=\"0 0 24 24\"><path d=\"M7 17 17 7M9 7h8v8\"></path></svg> </a> </div> </div> </section> <div className=\"screenshots-strip\"> <div className=\"screenshots-scroll\"> <img src=\"https://cdn.sanity.io/images/zcj1brqz/production/f578482e49809e074223ea1c57be15acae74c82c-2048x1536.heif?w=960&#38;auto=format&#38;fit=max&#38;q=75\" alt=\"PropNCR screenshot\" width=\"960\" height=\"600\" loading=\"lazy\" decoding=\"async\" /> </div> </div><div className=\"work-back\"> <div className=\"work-back-inner\"> <a href=\"/our-work\"> <svg viewBox=\"0 0 24 24\"><path d=\"M19 12H5M12 5l-7 7 7 7\"></path></svg>\nBack to our work\n</a> <a href=\"/contact\">Start a project with us →</a> </div> </div> ",
+  "authorId": "rahul-mehta",
+  "image": "https://cdn.sanity.io/images/zcj1brqz/production/f578482e49809e074223ea1c57be15acae74c82c-2048x1536.heif?w=960&#38;auto=format&#38;fit=max&#38;q=75"
+}

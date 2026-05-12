@@ -1,6 +1,11 @@
 "use client";
 import React from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
+import Link from 'next/link';
+
+const MotionImage = motion(Image);
+const MotionLink = motion(Link);
 
 export default function ClientWork() {
   const containerVariants = {
@@ -41,7 +46,7 @@ export default function ClientWork() {
           viewport={{ once: true, margin: "-50px" }}
           variants={containerVariants}
         >
-          <motion.a 
+          <MotionLink 
             id="case-card-1" 
             href="/case-study/red-sirocco" 
             className="case-card"
@@ -49,11 +54,12 @@ export default function ClientWork() {
             whileHover={{ scale: 1.02, y: -5, transition: { duration: 0.4, ease: "easeOut" } }}
           >
             <div id="case-img-wrap-1" className="case-img case-img--photo overflow-hidden">
-              <motion.img 
+              <MotionImage 
                 id="case-img-1" 
                 src="https://cdn.sanity.io/images/zcj1brqz/production/da53e10d416868c2d046d3b4833a6ee2856042bc-2752x1536.png?w=900&auto=format&fit=max&q=75" 
                 alt="Red Sirocco" 
-                width="900" height="600" loading="lazy" decoding="async" 
+                width={900} height={600} 
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.6 }}
               />
@@ -67,9 +73,9 @@ export default function ClientWork() {
               <h3 id="case-title-1" className="case-title">Red Sirroco — Conversion-Ready WooCommerce Store Redesign</h3>
               <p id="case-desc-1" className="case-desc">A basic WooCommerce store rebuilt with structured product pages, conversion-focused UI, and a mobile-first layout — taken from redesign to full live deployment.</p>
             </div>
-          </motion.a>
+          </MotionLink>
 
-          <motion.a 
+          <MotionLink 
             id="case-card-2" 
             href="/case-study/dream-spark-events" 
             className="case-card"
@@ -77,11 +83,12 @@ export default function ClientWork() {
             whileHover={{ scale: 1.02, y: -5, transition: { duration: 0.4, ease: "easeOut" } }}
           >
             <div id="case-img-wrap-2" className="case-img case-img--photo overflow-hidden">
-              <motion.img 
+              <MotionImage 
                 id="case-img-2" 
                 src="https://cdn.sanity.io/images/zcj1brqz/production/42e3c04f2308665e065473b28a7a9ea708a8dc3b-2752x1536.png?w=900&auto=format&fit=max&q=75" 
                 alt="Dream Spark Events" 
-                width="900" height="600" loading="lazy" decoding="async" 
+                width={900} height={600} 
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.6 }}
               />
@@ -95,7 +102,7 @@ export default function ClientWork() {
               <h3 id="case-title-2" className="case-title">Dream Spark Events — Multi-Vendor Event & Venue Booking Platform</h3>
               <p id="case-desc-2" className="case-desc">A complete multi-vendor event marketplace built from scratch — artist registration, venue listings, date-based booking workflows, and a structured service catalog, all within a single WooCommerce platform.</p>
             </div>
-          </motion.a>
+          </MotionLink>
         </motion.div>
       </div>
     </section>
