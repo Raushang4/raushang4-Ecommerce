@@ -43,7 +43,7 @@ export default function Footer() {
           </div>
         </div>
         <div id="footer-bottom" className="footer-bottom">
-          <p id="footer-copy" className="footer-copy">© 2026 raushang4 E-Commerce. All rights reserved.</p>
+          <p id="footer-copy" className="footer-copy">© 2026 raushang4 E-Commerce. All rights reserved. | Powered by raushang4 Technology</p>
           <div id="footer-policy" className="footer-policy">
             <Link id="policy-privacy" href="/legal/terms-of-use">Privacy Policy</Link>
             <Link id="policy-terms" href="/legal/terms-of-use">Terms of Use</Link>
