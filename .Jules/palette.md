@@ -1,0 +1,3 @@
+## 2024-05-28 - Dynamic aria-describedby for inline validation
+**Learning:** When form validation errors are conditionally rendered (e.g., using AnimatePresence), simply showing the text visually isn't enough for screen readers. The inputs themselves must explicitly link to these error elements using `aria-describedby`, but only when the error elements actually exist in the DOM, to prevent dead references. `aria-invalid` should also be toggled.
+**Action:** When creating or reviewing forms with dynamic inline validation, ensure `<input>` elements include `aria-invalid={!!errors[field.name]}` and a conditional `aria-describedby={errors[field.name] ? \`error-${field.name}\` : undefined}` that correctly targets the ID of the dynamically rendered error message element.
