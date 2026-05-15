@@ -9,7 +9,7 @@ export default function Footer() {
         <div id="footer-top" className="footer-top">
           <div id="footer-brand" className="footer-brand">
             <Link id="footer-logo-link" href="/">
-              <Image id="footer-logo" src="/mainlogo.svg" alt="raushang4 E-Commerce" width={140} height={28} className="footer-logo-img-dark" />
+              <Image id="footer-logo" src="/mainlogo.svg" alt="raushang4 E-Commerce" width={271} height={28} className="footer-logo-img-dark" />
             </Link>
             <p id="footer-tagline" className="footer-tagline">Digital systems for growing businesses. One partner. Full accountability.</p>
             <div id="footer-social-links" className="footer-social">

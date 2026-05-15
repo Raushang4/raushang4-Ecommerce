@@ -27,7 +27,7 @@ export default function GlobalNavigation() {
     <div id="global-nav-wrap" className={`nav-wrap ${isMobileOpen ? 'is-mobile-open' : ''}`}>
       <nav id="global-nav-container">
         <Link id="nav-logo-link" href="/" className="nav-logo-link" aria-label="raushang4 Home">
-          <Image id="nav-logo-img" src="/mainlogo.svg" alt="raushang4 E-Commerce" width={140} height={26} className="nav-logo-img" priority />
+          <Image id="nav-logo-img" src="/mainlogo.svg" alt="raushang4 E-Commerce" width={252} height={26} className="nav-logo-img" priority />
         </Link>
         <button 
           id="mobile-nav-toggle-btn" 
