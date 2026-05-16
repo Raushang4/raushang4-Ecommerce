@@ -124,6 +124,8 @@ export default function UnifiedContactForm({
                   defaultValue={field.defaultValue || ""}
                   required={field.required}
                   disabled={isSubmitting}
+                  aria-invalid={!!errors[field.name]}
+                  aria-describedby={errors[field.name] ? `error-${field.name}` : undefined}
                 >
                   <option value="" disabled>{field.placeholder || "Select an option"}</option>
                   {field.options.map((opt, oIdx) => (
@@ -140,6 +142,8 @@ export default function UnifiedContactForm({
                   placeholder={field.placeholder}
                   required={field.required}
                   disabled={isSubmitting}
+                  aria-invalid={!!errors[field.name]}
+                  aria-describedby={errors[field.name] ? `error-${field.name}` : undefined}
                 />
               ) : (
                 <input 
@@ -152,12 +156,15 @@ export default function UnifiedContactForm({
                   disabled={isSubmitting}
                   autoComplete={field.autoComplete}
                   inputMode={field.inputMode}
+                  aria-invalid={!!errors[field.name]}
+                  aria-describedby={errors[field.name] ? `error-${field.name}` : undefined}
                 />
               )}
 
               <AnimatePresence>
                 {errors[field.name] && (
                   <motion.span 
+                    id={`error-${field.name}`}
                     className="form-error" 
                     variants={errorVariants} 
                     initial="hidden" 
