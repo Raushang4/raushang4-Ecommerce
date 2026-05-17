@@ -9,30 +9,55 @@ export default function CustomModal({ id, isOpen, type, message, onClose }) {
   const iconColor = isError ? '#ef4444' : '#00A896';
   const buttonBg = isError ? '#ef4444' : '#00A896';
 
+  React.useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape' && isOpen) {
+        onClose();
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener('keydown', handleKeyDown);
+      // Auto-focus the close button
+      const closeBtn = document.getElementById(id ? `${id}-close-btn` : undefined);
+      if (closeBtn) {
+        setTimeout(() => closeBtn.focus(), 50);
+      }
+    }
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [isOpen, onClose, id]);
+
   return (
     <AnimatePresence>
       {isOpen && (
         <motion.div 
-          id={`${id}-overlay`} 
+          id={id ? `${id}-overlay` : undefined}
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby={id ? `${id}-title` : undefined}
+          aria-describedby={id ? `${id}-message` : undefined}
         >
           <motion.div 
-            id={`${id}-content`} 
+            id={id ? `${id}-content` : undefined}
             className={`p-8 rounded-3xl max-w-sm w-full text-center ${textColor} ${bgColor} shadow-2xl`}
             initial={{ scale: 0.9, opacity: 0, y: 20 }}
             animate={{ scale: 1, opacity: 1, y: 0 }}
             exit={{ scale: 0.9, opacity: 0, y: 20 }}
             transition={{ type: "spring", damping: 25, stiffness: 300 }}
           >
-            <h3 id={`${id}-title`} className="text-2xl font-bold mb-3" style={{ color: iconColor }}>
+            <h3 id={id ? `${id}-title` : undefined} className="text-2xl font-bold mb-3" style={{ color: iconColor }}>
               {isError ? 'Error' : 'Success'}
             </h3>
-            <p id={`${id}-message`} className="mb-8 opacity-90">{message}</p>
+            <p id={id ? `${id}-message` : undefined} className="mb-8 opacity-90">{message}</p>
             <button 
-              id={`${id}-close-btn`}
+              id={id ? `${id}-close-btn` : undefined}
               onClick={onClose} 
               className="w-full py-3 rounded-full font-bold transition-all text-white hover:opacity-90"
               style={{ background: buttonBg }}

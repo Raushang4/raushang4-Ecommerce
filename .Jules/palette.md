@@ -1,0 +1,3 @@
+## 2024-05-19 - Accessible Modals
+**Learning:** Custom modals (like \`CustomModal.jsx\`) without standard HTML \`<dialog>\` often miss screen-reader structure (\`role="dialog"\`, \`aria-modal\`, \`aria-labelledby\`) and keyboard support (closing via \`Escape\` and initial focus). The generic implementation didn't have these, preventing screen reader users from understanding what popped up.
+**Action:** When working on custom modal implementations, always add \`role="dialog"\`, \`aria-modal="true"\`, and use \`aria-labelledby\`/\`aria-describedby\` pointing to dynamic IDs for the title/content. Also, explicitly handle \`Escape\` key events and set focus into the modal upon opening so keyboard-only users aren't left behind.
