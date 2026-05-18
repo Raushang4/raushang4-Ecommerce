@@ -1,7 +1,8 @@
 "use client";
-import React, { useState } from 'react';
+import React, { useState, useActionState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import CustomModal from './CustomModal';
+import { submitContactForm } from '../app/actions/contact';
 
 export default function UnifiedContactForm({ 
   formName = "General Contact Form", 
@@ -11,84 +12,45 @@ export default function UnifiedContactForm({
   className = ""
 }) {
   const [modalState, setModalState] = useState({ isOpen: false, type: '', message: '' });
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState({});
-  const [statusMessage, setStatusMessage] = useState('');
 
-  const validateEmail = (email) => {
-    return String(email)
-      .toLowerCase()
-      .match(
-        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-      );
-  };
+  const [state, formAction, isPending] = useActionState(submitContactForm, null);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  useEffect(() => {
+    if (state) {
+      if (state.success) {
+        setModalState({ isOpen: true, type: 'success', message: state.message });
+        setErrors({});
+        // Reset form if success
+        const form = document.querySelector(`form[data-form-name="${formName}"]`);
+        if (form) form.reset();
+      } else if (state.error) {
+        setModalState({ isOpen: true, type: 'error', message: state.error });
+      }
+    }
+  }, [state, formName]);
+
+  const handleSubmit = (e) => {
+    // Client-side validation before server action
     const form = e.target;
     const formData = new FormData(form);
     const data = Object.fromEntries(formData.entries());
-    
-    // Client-side validation
     const newErrors = {};
     
-    // Validate required fields
     fields.forEach(field => {
       if (field.required && (!data[field.name] || !data[field.name].trim())) {
         newErrors[field.name] = `${field.label} is required.`;
-      } else if (field.type === 'email' && data[field.name] && !validateEmail(data[field.name].trim())) {
-        newErrors[field.name] = 'Please enter a valid email address.';
       }
     });
 
-    // Special case for honey pot
-    if (data._honeypot) {
-        console.log("Spam detected");
-        return;
-    }
-
-    setErrors(newErrors);
-
     if (Object.keys(newErrors).length > 0) {
-      setStatusMessage('Please fix the errors in the form.');
+      setErrors(newErrors);
+      e.preventDefault(); // Stop the server action if validation fails
       return;
     }
-
-    setIsSubmitting(true);
-    setStatusMessage('Submitting your message...');
     
-    try {
-      const payload = {
-        ...data,
-        form_name: formName,
-        page_source: pageSource,
-        timestamp: new Date().toISOString()
-      };
-
-      const response = await fetch('/api/contact', {
-        method: "POST",
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(payload)
-      });
-
-      if (response.ok) {
-        setModalState({ isOpen: true, type: 'success', message: 'Your message has been received! We will be in touch within 24 hours.' });
-        form.reset();
-        setStatusMessage('Message sent successfully.');
-        setErrors({});
-      } else {
-        const errData = await response.json();
-        setModalState({ isOpen: true, type: 'error', message: errData.error || 'Oops! There was a problem saving your form.' });
-        setStatusMessage('Error sending message.');
-      }
-    } catch (error) {
-      setModalState({ isOpen: true, type: 'error', message: 'Network error. Please check your connection and try again.' });
-      setStatusMessage('Network error occurred.');
-    }
-
-    setIsSubmitting(false);
+    setErrors({});
+    // Server action will be triggered automatically by the form action
   };
 
   const errorVariants = {
@@ -99,17 +61,17 @@ export default function UnifiedContactForm({
 
   return (
     <div className={`unified-contact-form-wrap ${className}`}>
-      <div 
-        aria-live="polite" 
-        className="sr-only" 
-        style={{ position: 'absolute', width: '1px', height: '1px', padding: 0, margin: '-1px', overflow: 'hidden', clip: 'rect(0, 0, 0, 0)', whiteSpace: 'nowrap', borderWidth: 0 }}
+      <form 
+        className="contact-form" 
+        action={formAction} 
+        onSubmit={handleSubmit}
+        data-form-name={formName}
+        noValidate
       >
-        {statusMessage}
-      </div>
-      
-      <form className="contact-form" onSubmit={handleSubmit} noValidate>
         {/* Honeypot for spam protection */}
         <input type="text" name="_honeypot" style={{ display: 'none' }} tabIndex="-1" autoComplete="off" />
+        <input type="hidden" name="form_name" value={formName} />
+        <input type="hidden" name="page_source" value={pageSource} />
         
         <div className="form-fields-grid" style={{ display: 'flex', flexDirection: 'column', gap: '18px' }}>
           {fields.map((field, idx) => (
@@ -123,7 +85,7 @@ export default function UnifiedContactForm({
                   className={`form-select ${errors[field.name] ? 'input-error' : ''}`}
                   defaultValue={field.defaultValue || ""}
                   required={field.required}
-                  disabled={isSubmitting}
+                  disabled={isPending}
                 >
                   <option value="" disabled>{field.placeholder || "Select an option"}</option>
                   {field.options.map((opt, oIdx) => (
@@ -139,7 +101,7 @@ export default function UnifiedContactForm({
                   className={`form-textarea ${errors[field.name] ? 'input-error' : ''}`}
                   placeholder={field.placeholder}
                   required={field.required}
-                  disabled={isSubmitting}
+                  disabled={isPending}
                 />
               ) : (
                 <input 
@@ -149,7 +111,7 @@ export default function UnifiedContactForm({
                   className={`form-input ${errors[field.name] ? 'input-error' : ''}`}
                   placeholder={field.placeholder}
                   required={field.required}
-                  disabled={isSubmitting}
+                  disabled={isPending}
                   autoComplete={field.autoComplete}
                   inputMode={field.inputMode}
                 />
@@ -179,11 +141,11 @@ export default function UnifiedContactForm({
             className="form-submit"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            disabled={isSubmitting}
+            disabled={isPending}
             style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}
           >
-            {isSubmitting ? 'Sending...' : buttonText}
-            {!isSubmitting && (
+            {isPending ? 'Sending...' : buttonText}
+            {!isPending && (
                 <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M5 12h14M12 5l7 7-7 7"></path>
                 </svg>
@@ -208,3 +170,4 @@ export default function UnifiedContactForm({
     </div>
   );
 }
+

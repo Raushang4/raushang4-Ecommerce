@@ -34,8 +34,8 @@ export default function ClientWork() {
           variants={containerVariants}
         >
           <motion.p id="work-eyebrow" className="section-eyebrow" variants={itemVariants}>Client work</motion.p>
-          <motion.h2 id="work-title" className="section-h2" variants={itemVariants}>Work that moved the needle</motion.h2>
-          <motion.p id="work-subtitle" className="section-sub" variants={itemVariants}>Results from real projects — not hypotheticals.</motion.p>
+          <motion.h2 id="work-title" className="section-h2" variants={itemVariants}>Impact over deliverables</motion.h2>
+          <motion.p id="work-subtitle" className="section-sub" variants={itemVariants}>Actual revenue growth and performance improvements engineered for our partners.</motion.p>
         </motion.div>
         
         <motion.div 
@@ -70,8 +70,8 @@ export default function ClientWork() {
                 <span id="case-tag-1" className="case-tag">D2C · Coffee</span>
                 <span id="case-metric-1" className="case-metric-chip">Mobile Usability Score - +65%</span>
               </div>
-              <h3 id="case-title-1" className="case-title">Red Sirroco — Conversion-Ready WooCommerce Store Redesign</h3>
-              <p id="case-desc-1" className="case-desc">A basic WooCommerce store rebuilt with structured product pages, conversion-focused UI, and a mobile-first layout — taken from redesign to full live deployment.</p>
+              <h3 id="case-title-1" className="case-title">Red Sirocco — Conversion-Centric WooCommerce Architecture</h3>
+              <p id="case-desc-1" className="case-desc">We transformed a standard WooCommerce site into a high-converting storefront. Focused on mobile-first navigation and a streamlined checkout journey, resulting in a significant uplift in usable mobile traffic.</p>
             </div>
           </MotionLink>
 
@@ -99,8 +99,8 @@ export default function ClientWork() {
                 <span id="case-tag-2" className="case-tag">Service Marketplace · Events & Venue Booking</span>
                 <span id="case-metric-2" className="case-metric-chip">Custom Built - 100%</span>
               </div>
-              <h3 id="case-title-2" className="case-title">Dream Spark Events — Multi-Vendor Event & Venue Booking Platform</h3>
-              <p id="case-desc-2" className="case-desc">A complete multi-vendor event marketplace built from scratch — artist registration, venue listings, date-based booking workflows, and a structured service catalog, all within a single WooCommerce platform.</p>
+              <h3 id="case-title-2" className="case-title">Dream Spark Events — Custom Multi-Vendor Ecosystem</h3>
+              <p id="case-desc-2" className="case-desc">Engineered a complex, scalable marketplace for event bookings. Implemented custom vendor onboarding and real-time scheduling logic to automate a previously manual reservation process.</p>
             </div>
           </MotionLink>
         </motion.div>

@@ -27,8 +27,8 @@ export default function Testimonials() {
           viewport={{ once: true, margin: "-100px" }}
           variants={containerVariants}
         >
-          <motion.p id="tsc-eyebrow" className="section-eyebrow" variants={itemVariants}>From our clients</motion.p>
-          <motion.h2 id="tsc-title" className="section-h2" variants={itemVariants}>What our clients <em id="tsc-em">say about us</em></motion.h2>
+          <motion.p id="tsc-eyebrow" className="section-eyebrow" variants={itemVariants}>Partnering for the long term</motion.p>
+          <motion.h2 id="tsc-title" className="section-h2" variants={itemVariants}>Honest feedback from founders <em id="tsc-em">we've helped scale</em></motion.h2>
         </motion.div>
         
         <motion.div 

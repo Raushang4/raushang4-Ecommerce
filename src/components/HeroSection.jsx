@@ -35,12 +35,12 @@ export default function HeroSection() {
         </motion.div>
         
         <motion.h1 id="hero-title" variants={itemVariants}>
-          Your website is live.<br/>
-          <em id="hero-title-em">Your revenue isn't.</em>
+          Engineering profitable growth.<br/>
+          <em id="hero-title-em">Not just beautiful websites.</em>
         </motion.h1>
         
         <motion.p id="hero-subtitle" className="hero-sub" variants={itemVariants}>
-          raushang4 E-Commerce builds the digital systems behind growing businesses — stores that convert, campaigns that pay, and the analytics to tell you what's actually working.
+          raushang4 E-Commerce builds high-performance digital ecosystems for D2C brands. We combine custom engineering with conversion data to scale your revenue, not your overhead.
         </motion.p>
         
         <motion.div id="hero-buttons" className="hero-btns" variants={itemVariants}>
@@ -51,7 +51,7 @@ export default function HeroSection() {
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.3 }}
           >
-            Let's Get to Work
+            Launch Your Growth System
             <svg id="hero-btn-primary-icon" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round">
               <path d="M5 12h14M12 5l7 7-7 7"></path>
             </svg>
@@ -63,7 +63,7 @@ export default function HeroSection() {
             whileHover={{ scale: 1.05, backdropFilter: "blur(20px)" }}
             transition={{ duration: 0.3 }}
           >
-            See What We've Built
+            View Case Studies
           </motion.a>
         </motion.div>
       </motion.div>

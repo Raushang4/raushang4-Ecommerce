@@ -3,35 +3,35 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export const metadata = {
-  title: "Tech Stack | The Tools Behind the Growth — raushang4 E-Commerce",
-  description: "Explore the modern e-commerce tech stack we use to build high-performance stores and scalable digital growth systems.",
+  title: "Modern Tech Stack | Engineering the Future of Growth — raushang4",
+  description: "Explore the proprietary engineering stack we use to build high-velocity stores and scalable digital growth systems. From Next.js to Server-Side GTM.",
 };
 
 export default function StackPage() {
   const categories = [
     {
-      title: "E-Commerce Platforms",
+      title: "Core Infrastructure",
       tools: [
-        { name: "Shopify Plus", logo: "/_astro/65fb307dac695a4f3eab208f936da296ceb11bda-928x257_ZoNh9p.svg", desc: "The gold standard for scaling D2C brands." },
-        { name: "WooCommerce", logo: "/_astro/7014d85bf61d7d7652c834f66f87286121cc1641-98x72_ZlM0vL.svg", desc: "Highly customizable for B2B and complex catalogs." },
-        { name: "Next.js", logo: "/next.svg", desc: "For headless e-commerce and ultimate speed." }
+        { name: "Next.js & React", logo: "/next.svg", desc: "Our choice for headless e-commerce and high-intent marketing applications, providing unparalleled speed and SEO leverage." },
+        { name: "Shopify Plus", logo: "/_astro/65fb307dac695a4f3eab208f936da296ceb11bda-928x257_ZoNh9p.svg", desc: "The definitive standard for rapid consumer scale, supporting complex global storefronts." },
+        { name: "WooCommerce PHP", logo: "/_astro/7014d85bf61d7d7652c834f66f87286121cc1641-98x72_ZlM0vL.svg", desc: "Custom-built PHP architectures for brands demanding total code sovereignty and complex B2B logic." }
       ]
     },
     {
-      title: "Marketing & Retention",
+      title: "Acquisition & Retention",
       tools: [
-        { name: "Meta Ads", logo: "", desc: "Driving high-intent discovery and scaled acquisition." },
-        { name: "Google Ads", logo: "", desc: "Capturing search intent and shopping demand." },
-        { name: "Klaviyo", logo: "", desc: "The engine for email and SMS retention." },
-        { name: "WhatsApp Business", logo: "", desc: "Real-time conversational commerce in the Delhi NCR region." }
+        { name: "High-Intent Meta Ads", logo: "", desc: "Engineering targeted discovery and scaled acquisition based on behavioral intent modeling." },
+        { name: "Google Search (LSA)", logo: "", desc: "Capturing high-authority demand through precise keyword engineering and bidding logic." },
+        { name: "Klaviyo Automation", logo: "", desc: "The behavioral engine for email and SMS retention, turning one-time buyers into lifetime advocates." },
+        { name: "WhatsApp Business API", logo: "", desc: "Real-time conversational commerce architecture, essential for the modern Indian D2C landscape." }
       ]
     },
     {
-      title: "Analytics & CRO",
+      title: "Analytics & Empirical Data",
       tools: [
-        { name: "GA4", logo: "", desc: "Deep event tracking and attribution modeling." },
-        { name: "Microsoft Clarity", logo: "", desc: "Heatmaps and session recording to find friction." },
-        { name: "VWO", logo: "", desc: "Advanced A/B testing and split URL deployments." }
+        { name: "GA4 Server-Side", logo: "", desc: "Neutralizing platform bias with server-side GTM containers for maximum attribution accuracy." },
+        { name: "Microsoft Clarity", logo: "", desc: "Utilizing heatmaps and session intelligence to identify and eliminate conversion friction." },
+        { name: "Looker Studio", logo: "", desc: "Custom profit dashboards that focus on Contribution Margin (CM2) and true unit economics." }
       ]
     }
   ];
@@ -40,9 +40,9 @@ export default function StackPage() {
     <div className="stack-page-container">
       <section className="hero-wrap" style={{ minHeight: 'auto', paddingBottom: '80px' }}>
         <div className="hero" style={{ maxWidth: '1000px' }}>
-          <div className="hero-eyebrow">The Tech Stack</div>
-          <h1> Modern tools for<em> High-Performance Brands</em></h1>
-          <p className="hero-sub">We don't use 'off-the-shelf' templates. We build bespoke systems using the best technology available in 2026.</p>
+          <div className="hero-eyebrow">The Engineering Stack</div>
+          <h1> Senior-level tools for<em> high-performance entities</em></h1>
+          <p className="hero-sub">We don't rely on 'off-the-shelf' templates or fragile plugins. We engineer bespoke systems utilizing the most advanced technology available in 2026.</p>
         </div>
       </section>
 
@@ -71,17 +71,17 @@ export default function StackPage() {
 
       <section className="journey-section" style={{ background: 'var(--white)' }}>
         <div className="section-inner" style={{ textAlign: 'center' }}>
-          <p className="section-eyebrow">The Heads-up</p>
-          <h2 className="section-h2">The tool is only as good<br /><em> as the person holding it.</em></h2>
-          <p className="section-sub" style={{ maxWidth: '700px', margin: '0 auto' }}>We don't just 'install' these tools. We integrate them into a unified system where your ads talk to your inventory, and your CRM talks to your analytics.</p>
+          <p className="section-eyebrow">Technical Stewardship</p>
+          <h2 className="section-h2">The platform is the foundation,<br /><em> not the ceiling.</em></h2>
+          <p className="section-sub" style={{ maxWidth: '700px', margin: '0 auto' }}>We don't just 'install' tools. We engineer a cohesive digital ecosystem where your acquisition data informs your inventory, and your CRM drives your search authority.</p>
         </div>
       </section>
 
       <section className="footer-cta-section">
         <div className="footer-cta-inner">
-          <h2> Ready to upgrade your system?<em> Stop using yesterday's tech.</em></h2>
-          <p> Let's audit your current stack and show you where your technology is holding back your growth.</p>
-          <Link href="/contact" className="btn-cta-footer">Audit My Tech Stack</Link>
+          <h2> Ready to upgrade your digital engine?<em> Stop using yesterday's templates.</em></h2>
+          <p> Let's audit your current stack and show you exactly where your technology is restricting your growth.</p>
+          <Link href="/contact" className="btn-cta-footer">Request a Technical Stack Audit</Link>
         </div>
       </section>
     </div>

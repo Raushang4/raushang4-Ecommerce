@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 
 export default async function sitemap() {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.raushang4.com';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ecommerce.raushang4.tech';
 
   // Static routes
   const staticRoutes = [

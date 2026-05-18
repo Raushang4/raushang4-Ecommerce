@@ -36,8 +36,8 @@ export default function ContactSection() {
         <div className="contact-grid">
           <div id="contact-left" className="contact-left">
             <motion.p id="contact-eyebrow" className="section-eyebrow" variants={itemVariants}>Let's Talk</motion.p>
-            <motion.h2 id="contact-title" className="contact-h2" variants={itemVariants}>Tell us what's not working.<br />We'll tell you if we can fix it.</motion.h2>
-            <motion.p id="contact-subtitle" className="contact-sub" variants={itemVariants}>No pitch decks. No hard sell. Just an honest conversation about your business and where we can genuinely help.</motion.p>
+            <motion.h2 id="contact-title" className="contact-h2" variants={itemVariants}>Stop guessing. Start growing.<br />Let's build your growth system.</motion.h2>
+            <motion.p id="contact-subtitle" className="contact-sub" variants={itemVariants}>Skip the generic discovery call. Share your challenges, and we'll provide a high-level roadmap of how we'd engineer a solution for your brand.</motion.p>
           </div>
           
           <motion.div id="contact-right" className="contact-right" variants={itemVariants}>
@@ -45,7 +45,7 @@ export default function ContactSection() {
               <UnifiedContactForm 
                 formName="Homepage Contact Form"
                 pageSource="homepage"
-                buttonText="Start the Conversation"
+                buttonText="Request Your Growth Roadmap"
                 fields={mainFormFields}
               />
             </div>

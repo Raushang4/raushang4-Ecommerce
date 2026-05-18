@@ -9,54 +9,54 @@ export default function ServicesGrid() {
   const services = [
     {
       id: "svc-ecommerce",
-      name: "Ecommerce Design & Build",
-      desc: "Shopify and WooCommerce stores designed and built to convert — not just look good. CRO-first, mobile-first, fast-loading, and accountable post-launch for results.",
-      bullets: ["Shopify & WooCommerce development", "CRO-first design & product pages", "Speed, performance & checkout optimisation"],
+      name: "High-Performance Ecommerce Builds",
+      desc: "We engineer Shopify and WooCommerce stores that prioritize speed, conversion, and architectural integrity. Every store is built to handle scale without compromising on performance or user experience.",
+      bullets: ["Shopify & WooCommerce Engineering", "Conversion-Centric UI/UX", "Mobile-First Performance"],
       url: "/ecommerce-design-build",
       className: "s1",
       icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line></svg>
     },
     {
       id: "svc-web-design",
-      name: "Web Design & Development",
-      desc: "Websites and web applications that generate leads, load fast, and give you control over your content. WordPress, Framer, Webflow, and React — designed in Figma, built to Lighthouse 90+.",
-      bullets: ["WordPress, Framer, Webflow, React", "UI/UX design & Figma prototyping", "Performance, accessibility & lead generation"],
+      name: "Strategic Web Design & Engineering",
+      desc: "Websites that function as high-intent lead generation machines. We leverage Next.js, Framer, and React to build accessible, lightning-fast digital presences that rank and convert.",
+      bullets: ["Next.js & React Web Apps", "Performance-Led Design", "Framer & Webflow Expertise"],
       url: "/web-design",
       className: "s6",
       icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
     },
     {
       id: "svc-perf-marketing",
-      name: "Performance Marketing",
-      desc: "Meta and Google campaigns built around contribution margin — not vanity ROAS. We structure your account so you can see what's actually profitable.",
-      bullets: ["Campaign strategy and setup", "Creative briefing and direction", "Profitability-first reporting"],
+      name: "Data-Driven Performance Marketing",
+      desc: "Campaigns built on unit economics and incremental growth. We move beyond vanity ROAS to focus on the actual profit each customer brings to your business.",
+      bullets: ["Profitability-Centric Scaling", "Algorithmic Ad Management", "Creative Strategy & Audits"],
       url: "/performance-marketing",
       className: "s2",
       icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
     },
     {
       id: "svc-cro",
-      name: "Conversion Rate Optimisation",
-      desc: "Every friction point costs you money. We find them using your own data — and fix them in the right order so every change compounds on the last.",
-      bullets: ["Site and checkout audits", "A/B test design and execution", "Trust signals and UX improvements"],
+      name: "Iterative Conversion Engineering",
+      desc: "Systematic optimization of your entire buyer journey. We identify high-friction points using behavior analytics and eliminate them through data-validated experiments.",
+      bullets: ["Behavioral Data Audits", "Full-Funnel Experimentation", "UX & Trust Signal Optimization"],
       url: "/cro-optimisation",
       className: "s3",
       icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
     },
     {
       id: "svc-analytics",
-      name: "Analytics & Attribution",
-      desc: "The tracking foundation everything else relies on. Built once, correctly — so every decision you make from that point forward is based on accurate data.",
-      bullets: ["GA4 and server-side tracking", "Multi-touch attribution", "Revenue and unit economics dashboards"],
+      name: "Advanced Analytics & Attribution",
+      desc: "Establish a 'source of truth' for your business data. We implement robust GA4 and server-side tracking to ensure every marketing rupee is accurately accounted for.",
+      bullets: ["Server-Side Tracking Setup", "Attribution Modeling", "Custom Profit Dashboards"],
       url: "/analytics-attribution",
       className: "s4",
       icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
     },
     {
       id: "svc-seo",
-      name: "SEO, AEO & GEO",
-      desc: "Rank on Google, appear in AI Overviews, and get cited by ChatGPT and Perplexity. We build the technical and content foundation so your brand shows up everywhere buyers are searching.",
-      bullets: ["Technical SEO and topical authority", "Answer-first content for AI visibility", "Schema markup and AI citation building"],
+      name: "AI-First Search Visibility (SEO/AEO)",
+      desc: "Don't just rank on page one; be the answer AI engines provide. We optimize for Google's algorithm and the retrieval systems behind ChatGPT and Perplexity.",
+      bullets: ["Entity-Based SEO Strategy", "AI Search Visibility (AEO)", "Technical Foundation & Schema"],
       url: "/seo-organic",
       className: "s5",
       icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
@@ -89,8 +89,8 @@ export default function ServicesGrid() {
           variants={containerVariants}
         >
           <motion.p id="services-eyebrow" className="section-eyebrow" variants={itemVariants}>What we do</motion.p>
-          <motion.h2 id="services-title" className="section-h2" variants={itemVariants}>Services built around <em id="services-em">your growth</em></motion.h2>
-          <motion.p id="services-subtitle" className="section-sub" variants={itemVariants}>We scope tight because that's what works. Every service is built to connect to the next — so the store, the traffic, the tracking, and the optimisation reinforce each other.</motion.p>
+          <motion.h2 id="services-title" className="section-h2" variants={itemVariants}>Services engineered for <em id="services-em">digital dominance</em></motion.h2>
+          <motion.p id="services-subtitle" className="section-sub" variants={itemVariants}>We don't offer generic packages. We provide a cohesive growth stack where every element is engineered to amplify the others—from the backend architecture to the frontend conversion experience.</motion.p>
         </motion.div>
         
         <motion.div 

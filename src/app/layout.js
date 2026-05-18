@@ -5,34 +5,33 @@ import Footer from "../components/Footer";
 import SchemaMarkup from "../components/SchemaMarkup";
 
 export const metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://www.raushang4.com'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://ecommerce.raushang4.tech'),
   title: {
-    default: "Digital Growth Agency in Delhi NCR (Noida & Gurgaon) | raushang4 E-Commerce",
+    default: "raushang4 E-Commerce | Digital Growth Systems for D2C & Service Brands",
     template: "%s | raushang4 E-Commerce"
   },
-  description: "raushang4 E-Commerce builds digital growth systems for D2C brands, manufacturers, and service businesses in the Delhi NCR region.",
-  keywords: ["Digital Growth", "E-Commerce", "D2C Brands", "India Agency", "raushang4"],
+  description: "raushang4 E-Commerce engineers high-performance digital growth systems. We specialize in Shopify 2.0, WooCommerce, and conversion-led marketing for D2C brands and manufacturers in India.",
+  keywords: ["raushang4", "Ecommerce Growth", "D2C Brand Systems", "Digital Engineering India", "Shopify Experts India"],
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://www.raushang4.com",
+    url: "https://ecommerce.raushang4.tech",
     siteName: "raushang4 E-Commerce",
-    title: "Digital Growth Agency in Delhi NCR (Noida & Gurgaon) | raushang4 E-Commerce",
-    description: "raushang4 E-Commerce builds digital growth systems for D2C brands, manufacturers, and service businesses in the Delhi NCR region.",
+    title: "raushang4 E-Commerce | Digital Growth Systems for D2C & Service Brands",
+    description: "Engineering high-performance digital growth systems for D2C brands, manufacturers, and service businesses.",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "raushang4 E-Commerce Digital Agency",
-      }
+        alt: "raushang4 E-Commerce — Digital growth for serious businesses",
+      },
     ],
   },
-  manifest: '/manifest.json',
   twitter: {
     card: "summary_large_image",
-    title: "Digital Growth Agency in Delhi NCR (Noida & Gurgaon) | raushang4 E-Commerce",
-    description: "raushang4 E-Commerce builds digital growth systems for D2C brands.",
+    title: "raushang4 E-Commerce | Digital Growth Systems for D2C & Service Brands",
+    description: "Engineering high-performance digital growth systems for D2C brands.",
     images: ["/og-image.jpg"],
   },
   robots: {
@@ -60,8 +59,8 @@ export default function RootLayout({ children }) {
     "@type": "Organization",
     "name": "raushang4 E-Commerce",
     "alternateName": "Raushang4 Technology",
-    "url": "https://www.raushang4.com",
-    "logo": "https://www.raushang4.com/mainlogo.svg",
+    "url": "https://ecommerce.raushang4.tech",
+    "logo": "https://ecommerce.raushang4.tech/mainlogo.svg",
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+919304995677",
@@ -70,6 +69,7 @@ export default function RootLayout({ children }) {
       "availableLanguage": "en"
     },
     "sameAs": [
+      "https://raushang4.tech",
       "https://www.linkedin.com/company/raushang4/"
     ]
   };
@@ -78,9 +78,9 @@ export default function RootLayout({ children }) {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "name": "raushang4 E-Commerce",
-    "image": "https://www.raushang4.com/mainlogo.svg",
-    "@id": "https://www.raushang4.com",
-    "url": "https://www.raushang4.com",
+    "image": "https://ecommerce.raushang4.tech/mainlogo.svg",
+    "@id": "https://ecommerce.raushang4.tech",
+    "url": "https://ecommerce.raushang4.tech",
     "telephone": "+919304995677",
     "address": {
       "@type": "PostalAddress",

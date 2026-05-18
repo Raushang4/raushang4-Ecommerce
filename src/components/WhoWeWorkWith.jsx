@@ -31,10 +31,10 @@ export default function WhoWeWorkWith() {
         >
           <motion.p id="wwww-eyebrow" className="section-eyebrow" variants={itemVariants}>Who we work with</motion.p>
           <motion.h2 id="wwww-title" className="section-h2" variants={itemVariants}>
-            Built for founders serious<br /><em id="wwww-title-em">about growing online</em>
+            Built for founders who demand<br /><em id="wwww-title-em">measurable digital performance</em>
           </motion.h2>
           <motion.p id="wwww-subtitle" className="section-sub" variants={itemVariants}>
-            We work best with businesses that want outcomes — not just deliverables. Here's where we specialise.
+            We partner with businesses that prioritize results over vanity metrics. We focus on the high-leverage areas where our engineering makes the biggest impact.
           </motion.p>
         </motion.div>
         
@@ -59,9 +59,9 @@ export default function WhoWeWorkWith() {
                   {type === 'd2c' ? 'D2C & Ecommerce Brands' : type === 'mfg' ? 'Manufacturers' : 'Service Businesses'}
                 </p>
                 <p id={`wwww-copy-${type}`} className="wwww-copy">
-                  {type === 'd2c' ? "You're spending on ads but the store isn't converting. Traffic comes in — revenue doesn't follow. You need someone who understands the full revenue loop, not just one piece of it." : 
-                   type === 'mfg' ? "Your leads come from IndiaMart or referrals — no owned presence, no predictability. We build the direct inbound pipeline that gives you control over your own growth." : 
-                   "Word of mouth built your business. But it won't scale it. You have a website — it does nothing. We build the digital engine that generates qualified leads predictably."}
+                  {type === 'd2c' ? "You've scaled your traffic, but your margins are being squeezed by a low conversion rate. We fix the leaks in your funnel and optimize your store for maximum customer lifetime value." : 
+                   type === 'mfg' ? "You're ready to bypass middle-men and build a direct relationship with your customers. We create the robust digital infrastructure needed to launch and scale your D2C arm." : 
+                   "You provide a premium service, but your website looks like an afterthought. We build the authority-driven digital systems that attract and convert your ideal high-ticket clients."}
                 </p>
                 <Link id={`wwww-link-${type}`} href={`/${type === 'd2c' ? 'd2c-ecommerce' : type === 'mfg' ? 'manufacturers' : 'service-businesses'}`} className="wwww-link">
                   See how we help 
