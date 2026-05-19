@@ -12,64 +12,48 @@ export const metadata = {
 
 export default function ManufacturersPage() {
   const formFields = [
-  {
-    "name": "name",
-    "label": "Name",
-    "type": "text",
-    "placeholder": "Your name",
-    "required": true
-  },
-  {
-    "name": "email",
-    "label": "Email",
-    "type": "email",
-    "placeholder": "you@company.com",
-    "required": true
-  },
-  {
-    "name": "phone",
-    "label": "Phone",
-    "type": "tel",
-    "placeholder": "9304995677",
-    "required": true
-  },
-  {
-    "name": "product_category",
-    "label": "Product Category",
-    "type": "text",
-    "placeholder": "What do you manufacture?"
-  },
-  {
-    "name": "lead_source",
-    "label": "Primary Lead Source",
-    "type": "select",
-    "placeholder": "Current primary source",
-    "options": [
-      "IndiaMart/TradeIndia",
-      "Referrals/Network",
-      "Organic Website",
-      "Paid Search"
-    ]
-  },
-  {
-    "name": "message",
-    "label": "What is your growth roadblock?",
-    "type": "textarea",
-    "placeholder": "e.g., Lead quality is low, or we're too dependent on IndiaMart.",
-    "required": true
-  }
-];
+    { name: "name", label: "Name", type: "text", placeholder: "Your name", required: true },
+    { name: "email", label: "Email", type: "email", placeholder: "you@company.com", required: true },
+    { name: "phone", label: "Phone", type: "tel", placeholder: "9304995677", required: true },
+    { name: "product_category", label: "Product Category", type: "text", placeholder: "What do you manufacture?" },
+    { name: "lead_source", label: "Primary Lead Source", type: "select", placeholder: "Current primary source", options: ["IndiaMart/TradeIndia", "Referrals/Network", "Organic Website", "Paid Search"] },
+    { name: "message", label: "What is your growth roadblock?", type: "textarea", placeholder: "e.g., Lead quality is low, or we're too dependent on IndiaMart.", required: true }
+  ];
+
   return (
     <>
-      <div className="hero-wrap"> <div className="hero"> <div className="eyebrow"> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"></rect><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"></path></svg>
-Manufacturers & Exporters
-</div> <h1>Stop renting your visibility.<br /><em>Start owning your pipeline.</em></h1> <p className="hero-sub">If your primary lead sources were disabled today, would your business survive? Most manufacturers rely on 'landlord' platforms they don't control. we engineer direct digital acquisition systems that generate high-intent inquiries you own permanently.</p> <div className="hero-btns"> <a href="/manufacturers#contact" className="btn-primary">
-Engineer My Pipeline
-<svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"></path></svg> </a> <a href="/manufacturers#cases" className="btn-secondary">View Manufacturing Proof</a> </div> </div> </div> <TickerSection />  <section className="checklist-section" id="checklist"> <div className="section-inner"> <div className="split-feature-grid"> <div className="checklist-intro"> <p className="section-eyebrow" style={{"color":"var(--accent)"}}>Signs of Platform Dependency</p> <h2 className="section-h2">Is your growth fragile?</h2> <p className="section-sub" style={{"textAlign":"left","margin":"0","color":"rgba(255,255,255,0.6)"}}>Industrial brands often hit a ceiling when they rely solely on referrals and third-party marketplaces. If these signs look familiar, you're ready for a direct acquisition engine.</p> </div> <div> <div className="checklist-grid"> <div className="checklist-item"> <div className="check-box"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div> <p>Enquiries are inconsistent and dependent on third-party marketplace algorithms</p> </div> <div className="checklist-item"> <div className="check-box"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div> <p>Your website is a static 'brochure' that fails to generate serious B2B inquiries</p> </div> <div className="checklist-item"> <div className="check-box"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div> <p>You lack visibility on Google for your core product categories and technical specs</p> </div> <div className="checklist-item"> <div className="check-box"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div> <p>Lead quality is low, forcing your sales team to waste time on unqualified prospects</p> </div> <div className="checklist-item"> <div className="check-box"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div> <p>You have no first-party data to retarget previous visitors or potential buyers</p> </div> <div className="checklist-item"> <div className="check-box"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div> <p>Global exporters are bypassing you because your digital authority is non-existent</p> </div> </div> </div> </div> </div> </section> <section className="platforms-section" style={{"background":"var(--white)"}}> <div className="section-inner"> <div className="section-center" style={{"marginBottom":"52px"}}> <p className="section-eyebrow">The Strategy</p> <h2 className="section-h2">Building a direct inbound engine</h2> <p className="section-sub">We combine technical architecture with industrial buyer psychology to create a predictable flow of inquiries.</p> </div> <div className="tech-grid"> <div className="tech-card"> <div className="tech-header"> <div className="tech-logo wp" aria-hidden="true"><i className="fa-brands fa-wordpress"></i></div> <div className="tech-badge">Enterprise CMS</div> </div> <p className="tech-desc">We build high-authority content hubs using custom WordPress architecture. This allows your team to publish technical specs and case studies that rank and build trust with procurement managers.</p> <div className="tech-features"> <div className="tech-feature"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Technical Product Catalog Engineering</span></div> <div className="tech-feature"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Custom Post Types for Specs & ISO Data</span></div> <div className="tech-feature"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Lead-Generation Focused UI Hierarchy</span></div> <div className="tech-feature"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Advanced Form Logic & CRM Integration</span></div> </div> </div> <div className="tech-card"> <div className="tech-header"> <div className="tech-logo ads" aria-hidden="true"><i className="fa-solid fa-chart-line"></i></div> <div className="tech-badge">Precision Performance</div> </div> <p className="tech-desc">B2B search behavior is different. We engineer targeted Google Search campaigns that capture buyers at the research and procurement stages, ensuring high lead quality.</p> <div className="tech-features"> <div className="tech-feature"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Search Intent Modeling for Industry Terms</span></div> <div className="tech-feature"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Negative Keyword Engineering to Filter Waste</span></div> <div className="tech-feature"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg><span>High-Authority Landing Page Deployment</span></div> <div className="tech-feature"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Conversion Attribution Tracking (GA4)</span></div> </div> </div> </div> </div> </section> <section id="cases" className="work-section"> <div className="section-inner"> <div className="section-center" style={{"marginBottom":"52px"}}> <p className="section-eyebrow">Manufacturing Success</p> <h2 className="section-h2">Engineered lead pipelines</h2> <p className="section-sub">Actual results from industrial partners who moved beyond platform dependency.</p> </div> <div className="cases-grid"> <a href="/case-study/kaapi-machines" className="case-card"> <div className="case-img case-img--photo"> <Image src="https://cdn.sanity.io/images/zcj1brqz/production/2240fcfb18ebad328f1e8520824a026bdbf5212b-2752x1536.png?w=900&auto=format&fit=max&q=75" alt="Kaapi Machines" width={900} height={600} /> <span className="case-img-label">B2B WooCommerce</span> </div> <div className="case-body"> <div className="case-meta"> <span className="case-tag">Industrial · Coffee Equipment</span> <span className="case-metric-chip">Navigation - 3x Cleaner</span> </div> <h3 className="case-title">Kaapi Machines — Enterprise B2B Catalog Re-Engineering</h3> <p className="case-desc">We transformed a complex equipment catalog into a high-intent lead generation engine, focusing on technical specs and clear procurement paths.</p> <div className="case-outcomes"> <span className="case-outcome"> <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg> Dynamic Spec Filtering </span><span className="case-outcome"> <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg> Lead Pipeline Integrated </span> </div> </div> </a><a href="/case-study/red-sirocco" className="case-card"> <div className="case-img case-img--photo"> <Image src="https://cdn.sanity.io/images/zcj1brqz/production/da53e10d416868c2d046d3b4833a6ee2856042bc-2752x1536.png?w=900&auto=format&fit=max&q=75" alt="Red Sirocco" width={900} height={600}   /> <span className="case-img-label">Ecommerce Build</span> </div> <div className="case-body"> <div className="case-meta"> <span className="case-tag">Exports · Coffee</span> <span className="case-metric-chip">Lighthouse Performance - 92</span> </div> <h3 className="case-title">Red Sirocco — Global Export Store Re-Architecture</h3> <p className="case-desc">Migrating a legacy stack to a high-velocity PHP architecture to support global export inquiries and high-volume direct sales.</p> <div className="case-outcomes"> <span className="case-outcome"> <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg> Core Web Vitals Passed </span><span className="case-outcome"> <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg> Zero SEO Loss </span> </div> </div> </a> </div> </div> </section>  <Testimonials />    <section className="compare-section" id="compare"> <div className="section-inner"> <div className="section-center" style={{"marginBottom":"48px"}}> <p className="section-eyebrow">Strategic Alignment</p> <h2 className="section-h2">Two ways to approach<br /><em>industrial marketing</em></h2> <p className="section-sub">The difference lies in understanding the long-tail procurement cycle versus impulse consumer behavior.</p> </div> <div className="compare-inner-grid"> <div className="compare-col other"> <div className="compare-header">Standard Digital Agency</div> <div className="compare-item"><span className="ci-icon">&#10005;</span> Campaigns built on consumer impulse</div> <div className="compare-item"><span className="ci-icon">&#10005;</span> Reporting based on clicks, not lead quality</div> <div className="compare-item"><span className="ci-icon">&#10005;</span> SEO based on volume, ignoring intent</div> <div className="compare-item"><span className="ci-icon">&#10005;</span> Website built for looks, ignoring specs</div> <div className="compare-item"><span className="ci-icon">&#10005;</span> Zero focus on CRM or sales cycle alignment</div> </div> <div className="compare-col us"> <div className="compare-header">raushang4 Manufacturing</div> <div className="compare-item"><span className="ci-icon">&#10003;</span> Campaigns mapped to procurement research</div> <div className="compare-item"><span className="ci-icon">&#10003;</span> Manual lead scoring & quality analysis</div> <div className="compare-item"><span className="ci-icon">&#10003;</span> High-intent long-tail technical SEO</div> <div className="compare-item"><span className="ci-icon">&#10003;</span> Spec-heavy, authority-driven UX</div> <div className="compare-item"><span className="ci-icon">&#10003;</span> Pipeline engineering tied to your sales team</div> </div> </div> </div> </section> <section className="diagnosis-section"> <div className="section-inner"> <div className="discovery-box"> <div className="discovery-header">
-Manufacturing Pipeline Audit — What you'll walk away with
-</div> <div className="discovery-3col"> <div className="disc-item"><strong>Risk Assessment</strong><span>A direct read on your business's platform dependency and how to mitigate it.</span></div> <div className="disc-item"><strong>Technical Roadmap</strong><span>The specific architectural changes needed to turn your site into a lead generator.</span></div> <div className="disc-item"><strong>Zero Obligation</strong><span>No follow-up sales pitch. If we're not a fit for your niche, we'll tell you honestly.</span></div> </div> </div> </div> </section>  <section className="faq-section"> <div className="faq-inner"> <h2 className="faq-h2">Manufacturing Engineering FAQs</h2> <div className="faq-item"> <p className="faq-q">Why shouldn't we just stick with IndiaMart/TradeIndia?</p> <p className="faq-a">Marketplaces are excellent as a secondary source, but dangerous as a primary one. You don't own the data, you don't own the customer relationship, and you're always one algorithm change away from losing your pipeline. owning your own digital asset ensures permanent authority and a lower long-term cost per lead.</p> </div> <div className="faq-item"> <p className="faq-q">Can you integrate with our existing CRM or ERP?</p> <p className="faq-a">Yes. Our engineering background means we specialize in technical wiring. We can ensure your web inquiries flow directly into Salesforce, HubSpot, or custom ERP systems, ensuring no lead is dropped by your sales team.</p> </div> </div> </div> </section> <section id="contact" className="cta-bottom"> <div className="section-inner"> <h2>Stop renting your business future.<br /><em>Start engineering your sovereignty.</em></h2> <p className="hero-sub" style={{"fontSize":"18px","marginBottom":"32px"}}>Get a technical assessment of your current pipeline. No fluff, just a prioritized roadmap.</p> <div className="contact-form-card" style={{"maxWidth":"600px","margin":"0 auto","textAlign":"left"}}> <UnifiedContactForm formName="Manufacturing Playbook Contact Form" pageSource="manufacturers" buttonText="Request My Pipeline Audit" fields={formFields} /> </div> <div className="form-trust" style={{"justifyContent":"center","marginTop":"24px"}}> <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-Secure · Direct Response · expert Technical Review
-</div> </div> </section>
+      <div className="hero-wrap"> 
+        <div className="hero"> 
+          <div className="eyebrow">Manufacturers & Exporters</div> 
+          <h1>Stop renting your visibility.<br /><em>Start owning your pipeline.</em></h1> 
+          <div className="hero-btns"> 
+            <a href="/manufacturers#contact" className="btn-primary">Engineer My Pipeline</a> 
+            <a href="/manufacturers#checklist" className="btn-secondary">View Manufacturing Proof</a> 
+          </div> 
+        </div> 
+      </div> 
+      
+      <TickerSection />
+
+      <section id="checklist" className="checklist-section"> 
+        <div className="section-inner"> 
+          <h2 className="section-h2">Is your growth fragile?</h2> 
+          <div className="checklist-grid"> 
+            <div className="checklist-item"><p>Enquiries are inconsistent and dependent on third-party marketplaces</p></div> 
+          </div> 
+        </div> 
+      </section>
+
+      <Testimonials />
+
+      <section id="contact" className="cta-bottom"> 
+        <div className="section-inner"> 
+          <h2>Stop renting your business future.<br /><em>Start engineering your sovereignty.</em></h2> 
+          <div className="contact-form-card" style={{maxWidth: "600px", margin: "0 auto"}}> 
+            <UnifiedContactForm formName="Manufacturing Playbook Contact Form" pageSource="manufacturers" buttonText="Request My Pipeline Audit" fields={formFields} /> 
+          </div> 
+        </div> 
+      </section>
     </>
   );
 }

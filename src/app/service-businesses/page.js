@@ -12,64 +12,48 @@ export const metadata = {
 
 export default function ServiceBusinessesPage() {
   const formFields = [
-  {
-    "name": "name",
-    "label": "Name",
-    "type": "text",
-    "placeholder": "Your name",
-    "required": true
-  },
-  {
-    "name": "email",
-    "label": "Email",
-    "type": "email",
-    "placeholder": "you@company.com",
-    "required": true
-  },
-  {
-    "name": "phone",
-    "label": "Phone",
-    "type": "tel",
-    "placeholder": "9304995677",
-    "required": true
-  },
-  {
-    "name": "service_type",
-    "label": "Service Category",
-    "type": "text",
-    "placeholder": "e.g., Interior Design, Architecture, Enterprise Software..."
-  },
-  {
-    "name": "client_source",
-    "label": "Primary Client Source",
-    "type": "select",
-    "placeholder": "How do clients find you?",
-    "options": [
-      "Word of Mouth / Referrals",
-      "Organic Google Search",
-      "Paid Ads",
-      "Social Media"
-    ]
-  },
-  {
-    "name": "message",
-    "label": "What is your primary growth goal?",
-    "type": "textarea",
-    "placeholder": "e.g., We need more high-ticket leads from outside our immediate network.",
-    "required": true
-  }
-];
+    { name: "name", label: "Name", type: "text", placeholder: "Your name", required: true },
+    { name: "email", label: "Email", type: "email", placeholder: "you@company.com", required: true },
+    { name: "phone", label: "Phone", type: "tel", placeholder: "9304995677", required: true },
+    { name: "service_type", label: "Service Category", type: "text", placeholder: "e.g., Interior Design, Enterprise Software..." },
+    { name: "client_source", label: "Primary Client Source", type: "select", placeholder: "How do clients find you?", options: ["Word of Mouth", "Search", "Social Media"] },
+    { name: "message", label: "What is your primary growth goal?", type: "textarea", placeholder: "e.g., We need more high-ticket leads.", required: true }
+  ];
+
   return (
     <>
-      <div className="hero-wrap"> <div className="hero"> <div className="eyebrow"> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"></path></svg>
-Service-Based Brands
-</div> <h1>Referrals built your reputation.<br /><em>Engineering builds your scale.</em></h1> <p className="hero-sub">Word-of-mouth is a sign of quality, but it's not a growth strategy. raushang4 E-Commerce builds authority-driven digital systems that generate high-ticket leads predictably, ensuring your business never depends on a single referral source.</p> <div className="hero-btns"> <a href="/service-businesses#contact" className="btn-primary">
-Engineer My Pipeline
-<svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"></path></svg> </a> <a href="/service-businesses#cases" className="btn-secondary">View Service Proof</a> </div> </div> </div> <TickerSection />  <section className="checklist-section" id="checklist"> <div className="section-inner"> <div className="split-feature-grid"> <div className="checklist-intro"> <p className="section-eyebrow" style={{"color":"var(--accent)"}}>Signs You've Capped Your Growth</p> <h2 className="section-h2">Is your network too small for your goals?</h2> <p style={{"fontSize":"17px","color":"rgba(255,255,255,0.6)","lineHeight":"1.65","marginTop":"16px"}}>Premium service providers often reach a plateau where referrals can't support further expansion. If these signs look familiar, you need a digital authority engine.</p> </div> <div> <div className="checklist-grid"> <div className="checklist-item"> <div className="check-box"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div> <p>More than 70% of new business relies on personal network mentions</p> </div> <div className="checklist-item"> <div className="check-box"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div> <p>Your website feels like a 'set-and-forget' asset that generates zero leads</p> </div> <div className="checklist-item"> <div className="check-box"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div> <p>Potential clients search for your service locally and find your competitors first</p> </div> <div className="checklist-item"> <div className="check-box"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div> <p>You have deep expertise but your digital presence doesn't reflect your premium status</p> </div> <div className="checklist-item"> <div className="check-box"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div> <p>Enquiries are unqualified, forcing you to waste time on low-budget prospects</p> </div> <div className="checklist-item"> <div className="check-box"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div> <p>You have no system for automating the transition from visitor to discovery call</p> </div> </div> </div> </div> </div> </section> <section className="platforms-section" style={{"background":"var(--white)"}}> <div className="section-inner"> <div className="section-center" style={{"marginBottom":"52px"}}> <p className="section-eyebrow">The Methodology</p> <h2 className="section-h2">Building digital authority</h2> <p className="section-sub">We don't just 'make a website'. We engineer a high-trust system that qualifies leads and converts them into clients.</p> </div> <div className="tech-grid"> <div className="tech-card"> <div className="tech-header"> <div className="tech-logo next" aria-hidden="true"><i className="fa-solid fa-code"></i></div> <div className="tech-badge">Authority Architecture</div> </div> <p className="tech-desc">We build lightning-fast web presences using Next.js and custom React architectures. This ensures your brand feels premium and responsive, providing an immediate trust signal to high-ticket clients.</p> <div className="tech-features"> <div className="tech-feature"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Conversion-Led UI/UX Engineering</span></div> <div className="tech-feature"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Authority-Building Content Frameworks</span></div> <div className="tech-feature"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Frictionless Booking & Lead Capture</span></div> <div className="tech-feature"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Performance Benchmarking (Lighthouse 90+)</span></div> </div> </div> <div className="tech-card"> <div className="tech-header"> <div className="tech-logo search" aria-hidden="true"><i className="fa-solid fa-magnifying-glass"></i></div> <div className="tech-badge">Intent Engineering</div> </div> <p className="tech-desc">We target buyers at the moment of peak intent. By combining technical SEO with precision Google Search strategy, we ensure your brand is the definitive answer when a client needs your service.</p> <div className="tech-features"> <div className="tech-feature"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Hyper-Targeted Local SEO & Schema</span></div> <div className="tech-feature"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg><span>High-Intent Google Search Campaigns</span></div> <div className="tech-feature"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Search Logic & Sentiment Modeling</span></div> <div className="tech-feature"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Precise Lead Attribution (GA4/GTM)</span></div> </div> </div> </div> </div> </section> <section id="cases" className="work-section"> <div className="section-inner"> <div className="section-center" style={{"marginBottom":"52px"}}> <p className="section-eyebrow">Service Brand Case Studies</p> <h2 className="section-h2">From network-only to lead-heavy</h2> <p className="section-sub">Actual impact engineered for our professional service partners.</p> </div> <div className="cases-grid"> <a href="/case-study/dream-spark-events" className="case-card"> <div className="case-img case-img--photo"> <Image src="https://cdn.sanity.io/images/zcj1brqz/production/42e3c04f2308665e065473b28a7a9ea708a8dc3b-2752x1536.png?w=900&auto=format&fit=max&q=75" alt="Dream Spark Events" width={900} height={600} /> <span className="case-img-label">Service Marketplace</span> </div> <div className="case-body"> <div className="case-meta"> <span className="case-tag">Events · Booking Infrastructure</span> <span className="case-metric-chip">Custom Fields - 40+</span> </div> <h3 className="case-title">Dream Spark Events — Custom Vendor Booking Ecosystem</h3> <p className="case-desc">We engineered a complex multi-vendor marketplace from scratch, streamlining the booking journey and automating high-value client acquisitions.</p> <div className="case-outcomes"> <span className="case-outcome"> <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg> 100% Bespoke Architecture </span><span className="case-outcome"> <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg> Automated Workflow </span> </div> </div> </a><a href="/case-study/kaapi-machines" className="case-card"> <div className="case-img case-img--photo"> <Image src="https://cdn.sanity.io/images/zcj1brqz/production/2240fcfb18ebad328f1e8520824a026bdbf5212b-2752x1536.png?w=900&auto=format&fit=max&q=75" alt="Kaapi Machines" width={900} height={600}   /> <span className="case-img-label">B2B Platform</span> </div> <div className="case-body"> <div className="case-meta"> <span className="case-tag">B2B · Equipment Services</span> <span className="case-metric-chip">Search Efficiency - 3x Cleaner</span> </div> <h3 className="case-title">Kaapi Machines — Authority-Driven Catalog Re-Engineering</h3> <p className="case-desc">Redesigning a B2B service and equipment hub to emphasize technical authority and facilitate high-trust procurement inquiries.</p> <div className="case-outcomes"> <span className="case-outcome"> <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg> Technical SEO Foundation </span><span className="case-outcome"> <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg> Enhanced User Pathing </span> </div> </div> </a> </div> </div> </section>  <Testimonials />    <section className="compare-section" id="compare"> <div className="section-inner"> <div className="section-center" style={{"marginBottom":"48px"}}> <p className="section-eyebrow">Strategic Alignment</p> <h2 className="section-h2">Standard agency support vs.<br /><em>Strategic engineering</em></h2> <p className="section-sub">Service brands need trust architecture, not just awareness campaigns.</p> </div> <div className="compare-inner-grid"> <div className="compare-col other"> <div className="compare-header">Standard Marketing Agency</div> <div className="compare-item"><span className="ci-icon">&#10005;</span> Broad awareness ads with no path to lead</div> <div className="compare-item"><span className="ci-icon">&#10005;</span> Generic PPC setup with high-waste keywords</div> <div className="compare-item"><span className="ci-icon">&#10005;</span> Websites built for aesthetics only</div> <div className="compare-item"><span className="ci-icon">&#10005;</span> Fragmented local strategy</div> <div className="compare-item"><span className="ci-icon">&#10005;</span> Reporting based on vanity impressions</div> </div> <div className="compare-col us"> <div className="compare-header">raushang4 Service Playbook</div> <div className="compare-item"><span className="ci-icon">&#10003;</span> High-intent capture via Search Engineering</div> <div className="compare-item"><span className="ci-icon">&#10003;</span> Negative keyword logic to filter waste</div> <div className="compare-item"><span className="ci-icon">&#10003;</span> Authority-driven, trust-anchored UX</div> <div className="compare-item"><span className="ci-icon">&#10003;</span> Advanced Local SEO & Entity Schema</div> <div className="compare-item"><span className="ci-icon">&#10003;</span> Reporting based on qualified discovery calls</div> </div> </div> </div> </section> <section className="diagnosis-section"> <div className="section-inner"> <div className="discovery-box"> <div className="discovery-header">
-Service Pipeline Audit — What we deliver in 48 hours
-</div> <div className="discovery-3col"> <div className="disc-item"><strong>Network Assessment</strong><span>An analysis of your current client sources and the risk profile of your referral dependency.</span></div> <div className="disc-item"><strong>Authority Check</strong><span>A technical review of your digital presence and how well it communicates premium status.</span></div> <div className="disc-item"><strong>Roadmap to Scale</strong><span>The specific architectural and search fixes needed to generate leads from outside your circle.</span></div> </div> </div> </div> </section>  <section className="faq-section"> <div className="faq-inner"> <h2 className="faq-h2">Service Engineering FAQs</h2> <div className="faq-item"> <p className="faq-q">Does digital marketing really work for local, high-trust services?</p> <p className="faq-a">Digital works best for services where the buyer has a high-intent need. When someone searches for your specific expertise in your city, they are already at the bottom of the funnel. We ensure your brand is the authority they find and trust immediately.</p> </div> <div className="faq-item"> <p className="faq-q">Can you help if we already have a marketing team?</p> <p className="faq-a">Yes. We often act as the technical layer for established teams. We engineer the high-performance website and the precise data tracking that your team uses to run more effective campaigns.</p> </div> </div> </div> </section> <section id="contact" className="cta-bottom"> <div className="section-inner"> <h2>Stop depending on the next referral.<br /><em>Start engineering your own demand.</em></h2> <p className="hero-sub" style={{"fontSize":"18px","marginBottom":"32px"}}>Get an engineer's assessment of your service brand's digital pipeline. No obligation.</p> <div className="contact-form-card" style={{"maxWidth":"600px","margin":"0 auto","textAlign":"left"}}> <UnifiedContactForm formName="Service Playbook Contact Form" pageSource="service-businesses" buttonText="Request My Pipeline Audit" fields={formFields} /> </div> <div className="form-trust" style={{"justifyContent":"center","marginTop":"24px"}}> <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-Secure · Expert Response · 24-hr Turnaround
-</div> </div> </section>
+      <div className="hero-wrap"> 
+        <div className="hero"> 
+          <div className="eyebrow">Service-Based Brands</div> 
+          <h1>Referrals built your reputation.<br /><em>Engineering builds your scale.</em></h1> 
+          <div className="hero-btns"> 
+            <a href="/service-businesses#contact" className="btn-primary">Engineer My Pipeline</a> 
+            <a href="/service-businesses#checklist" className="btn-secondary">View Service Proof</a> 
+          </div> 
+        </div> 
+      </div> 
+      
+      <TickerSection />
+
+      <section id="checklist" className="checklist-section"> 
+        <div className="section-inner"> 
+          <h2 className="section-h2">Is your network too small for your goals?</h2> 
+          <div className="checklist-grid"> 
+            <div className="checklist-item"><p>More than 70% of new business relies on personal network mentions</p></div> 
+          </div> 
+        </div> 
+      </section>
+
+      <Testimonials />
+
+      <section id="contact" className="cta-bottom"> 
+        <div className="section-inner"> 
+          <h2>Stop depending on the next referral.<br /><em>Start engineering your own demand.</em></h2> 
+          <div className="contact-form-card" style={{maxWidth: "600px", margin: "0 auto"}}> 
+            <UnifiedContactForm formName="Service Playbook Contact Form" pageSource="service-businesses" buttonText="Request My Pipeline Audit" fields={formFields} /> 
+          </div> 
+        </div> 
+      </section>
     </>
   );
 }
