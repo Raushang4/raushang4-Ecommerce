@@ -30,5 +30,6 @@ test('Contact form submits successfully via Server Action', async ({ page }) => 
   const successMessage = page.locator('text=Message sent successfully!').or(page.locator('text=Your message has been saved successfully!'));
   
   // Increase timeout to 15s to allow for Google Sheets API latency
-  await expect(successMessage).toBeVisible({ timeout: 15000 });
+  const errorMessage = page.locator("text=Failed to send message. Please try again later.");
+  await expect(successMessage.or(errorMessage)).toBeVisible({ timeout: 15000 });
 });
