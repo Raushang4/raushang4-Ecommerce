@@ -19,34 +19,34 @@ export default function Footer() {
             </div>
           </div>
           <div id="footer-col-solutions" className="footer-col">
-            <div id="label-solutions" className="footer-col-label">Solutions</div>
+            <div id="label-solutions" className="footer-col-label" style={{ color: '#E0E0E0' }}>Solutions</div>
             <ul id="links-solutions" className="footer-col-links">
-              <li><Link id="link-sol-1" href="/ecommerce-design-build">Ecommerce Design & Build</Link></li>
-              <li><Link id="link-sol-2" href="/web-design">Web Design & Development</Link></li>
-              <li><Link id="link-sol-3" href="/performance-marketing">Performance Marketing</Link></li>
+              <li><Link id="link-sol-1" href="/ecommerce-design-build" style={{ color: '#A0A0A0' }}>Ecommerce Design & Build</Link></li>
+              <li><Link id="link-sol-2" href="/web-design" style={{ color: '#A0A0A0' }}>Web Design & Development</Link></li>
+              <li><Link id="link-sol-3" href="/performance-marketing" style={{ color: '#A0A0A0' }}>Performance Marketing</Link></li>
             </ul>
           </div>
           <div id="footer-col-industries" className="footer-col">
-            <div id="label-industries" className="footer-col-label">Industries</div>
+            <div id="label-industries" className="footer-col-label" style={{ color: '#E0E0E0' }}>Industries</div>
             <ul id="links-industries" className="footer-col-links">
-              <li><Link id="link-ind-1" href="/d2c-ecommerce">D2C & Ecommerce</Link></li>
-              <li><Link id="link-ind-2" href="/manufacturers">Manufacturers</Link></li>
+              <li><Link id="link-ind-1" href="/d2c-ecommerce" style={{ color: '#A0A0A0' }}>D2C & Ecommerce</Link></li>
+              <li><Link id="link-ind-2" href="/manufacturers" style={{ color: '#A0A0A0' }}>Manufacturers</Link></li>
             </ul>
           </div>
           <div id="footer-col-company" className="footer-col">
-            <div id="label-company" className="footer-col-label">Company</div>
+            <div id="label-company" className="footer-col-label" style={{ color: '#E0E0E0' }}>Company</div>
             <ul id="links-company" className="footer-col-links">
-              <li><Link id="link-cmp-1" href="/about">About</Link></li>
-              <li><Link id="link-cmp-3" href="/stack">Tech Stack</Link></li>
-              <li><Link id="link-cmp-2" href="/contact">Contact</Link></li>
+              <li><Link id="link-cmp-1" href="/about" style={{ color: '#A0A0A0' }}>About</Link></li>
+              <li><Link id="link-cmp-3" href="/stack" style={{ color: '#A0A0A0' }}>Tech Stack</Link></li>
+              <li><Link id="link-cmp-2" href="/contact" style={{ color: '#A0A0A0' }}>Contact</Link></li>
             </ul>
           </div>
         </div>
         <div id="footer-bottom" className="footer-bottom">
-          <p id="footer-copy" className="footer-copy">© 2026 raushang4 E-Commerce. All rights reserved. | Powered by raushang4 Technology</p>
+          <p id="footer-copy" className="footer-copy" style={{ color: '#A0A0A0' }}>© 2026 raushang4 E-Commerce. All rights reserved. | Powered by raushang4 Technology</p>
           <div id="footer-policy" className="footer-policy">
-            <Link id="policy-privacy" href="/legal/terms-of-use">Privacy Policy</Link>
-            <Link id="policy-terms" href="/legal/terms-of-use">Terms of Use</Link>
+            <Link id="policy-privacy" href="/legal/terms-of-use" style={{ color: '#A0A0A0' }}>Privacy Policy</Link>
+            <Link id="policy-terms" href="/legal/terms-of-use" style={{ color: '#A0A0A0' }}>Terms of Use</Link>
           </div>
         </div>
       </div>

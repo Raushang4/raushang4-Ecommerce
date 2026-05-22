@@ -73,7 +73,7 @@ export default function UnifiedContactForm({
         <input type="hidden" name="form_name" value={formName} />
         <input type="hidden" name="page_source" value={pageSource} />
         
-        <div className="form-fields-grid" style={{ display: 'flex', flexDirection: 'column', gap: '18px' }}>
+        <div className="form-fields-grid" role="group" aria-label="Form Fields" style={{ display: 'flex', flexDirection: 'column', gap: '18px' }}>
           {fields.map((field, idx) => (
             <div key={idx} className={`form-group ${field.fullWidth ? 'full-width' : ''}`}>
               <label className="form-label" htmlFor={field.name}>{field.label}</label>
