@@ -86,6 +86,8 @@ export default function UnifiedContactForm({
                   defaultValue={field.defaultValue || ""}
                   required={field.required}
                   disabled={isPending}
+                  aria-invalid={!!errors[field.name]}
+                  aria-describedby={errors[field.name] ? `error-${field.name}` : undefined}
                 >
                   <option value="" disabled>{field.placeholder || "Select an option"}</option>
                   {field.options.map((opt, oIdx) => (
@@ -102,6 +104,8 @@ export default function UnifiedContactForm({
                   placeholder={field.placeholder}
                   required={field.required}
                   disabled={isPending}
+                  aria-invalid={!!errors[field.name]}
+                  aria-describedby={errors[field.name] ? `error-${field.name}` : undefined}
                 />
               ) : (
                 <input 
@@ -114,12 +118,16 @@ export default function UnifiedContactForm({
                   disabled={isPending}
                   autoComplete={field.autoComplete}
                   inputMode={field.inputMode}
+                  aria-invalid={!!errors[field.name]}
+                  aria-describedby={errors[field.name] ? `error-${field.name}` : undefined}
                 />
               )}
 
               <AnimatePresence>
                 {errors[field.name] && (
                   <motion.span 
+                    id={`error-${field.name}`}
+                    role="alert"
                     className="form-error" 
                     variants={errorVariants} 
                     initial="hidden" 
@@ -142,9 +150,18 @@ export default function UnifiedContactForm({
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             disabled={isPending}
+            aria-busy={isPending}
             style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}
           >
-            {isPending ? 'Sending...' : buttonText}
+            {isPending ? (
+              <>
+                <svg className="animate-spin" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2">
+                  <circle cx="12" cy="12" r="10" stroke="currentColor" strokeOpacity="0.25"></circle>
+                  <path d="M12 2v4M12 18v4M2 12h4M18 12h4" stroke="currentColor" strokeOpacity="0.75" strokeLinecap="round"></path>
+                </svg>
+                Sending...
+              </>
+            ) : buttonText}
             {!isPending && (
                 <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M5 12h14M12 5l7 7-7 7"></path>
