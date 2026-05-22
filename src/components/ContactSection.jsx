@@ -24,7 +24,7 @@ export default function ContactSection() {
   ];
 
   return (
-    <section id="contact-section" className="contact-section" role="region" aria-label="Contact Us">
+    <section id="contact-section" className="contact-section">
       <motion.div 
         id="contact-container" 
         className="section-inner"
