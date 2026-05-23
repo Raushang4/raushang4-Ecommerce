@@ -1,0 +1,3 @@
+## 2024-05-23 - Form Validation Accessibility Pattern
+**Learning:** Screen readers won't automatically read out dynamically appearing validation errors if they aren't explicitly linked to the input fields. React 19 / framer-motion setups like `UnifiedContactForm` with conditional `errors[field.name]` states need explicit ARIA ties to be accessible.
+**Action:** When implementing client-side validation, always dynamically add `aria-invalid={!!errors[field.name]}` to the input, and link the error message using a conditional `aria-describedby` paired with a unique `id` on the error element itself.
