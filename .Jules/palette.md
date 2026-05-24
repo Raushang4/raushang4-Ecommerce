@@ -1,0 +1,3 @@
+## 2026-05-23 - Focus Trapping & Accessibility in Custom Modals
+**Learning:** For custom modals that don't rely on the native `<dialog>` element, applying `role="dialog"` and `aria-modal="true"` isn't enough; managing auto-focus via a `useRef` targeting the actionable item (like the Close button) and implementing an `Escape` keydown handler are essential to ensure a functional and compliant keyboard navigation experience.
+**Action:** When auditing or building custom pop-overs or modals, enforce the combination of standard ARIA tags alongside an explicit Escape key listener and an auto-focus target to streamline screen-reader workflows.
