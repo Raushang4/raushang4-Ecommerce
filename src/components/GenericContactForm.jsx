@@ -51,7 +51,7 @@ export default function GenericContactForm({ formName = "Main Contact Form", pag
           <label className="form-label" htmlFor="message">How can we help?</label>
           <textarea className="form-textarea" id="message" name="message" placeholder="Tell us about your project..." required disabled={isPending}></textarea>
         </div>
-        <button type="submit" className="form-submit" disabled={isPending}>
+        <button type="submit" className="form-submit" disabled={isPending} aria-busy={isPending}>
           {isPending ? 'Sending...' : 'Send Message'}
         </button>
       </form>
