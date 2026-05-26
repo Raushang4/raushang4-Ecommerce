@@ -145,6 +145,7 @@ export default function RootLayout({ children }) {
         )}
       </head>
       <body className="min-h-full antialiased">
+
         {GTM_ID && (
           <noscript>
             <iframe 
@@ -154,7 +155,8 @@ export default function RootLayout({ children }) {
           </noscript>
         )}
         <GlobalNavigation />
-        {children}
+        <main id="main-content" role="main">{children}</main>
+
         <Footer />
       </body>
     </html>
