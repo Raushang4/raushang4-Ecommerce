@@ -154,7 +154,7 @@ export default function RootLayout({ children }) {
           </noscript>
         )}
         <GlobalNavigation />
-        {children}
+        <main>{children}</main>
         <Footer />
       </body>
     </html>
