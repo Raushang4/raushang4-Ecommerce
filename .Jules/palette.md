@@ -1,0 +1,3 @@
+## 2024-05-28 - Custom Modal Accessibility
+**Learning:** When implementing custom modals in this project (e.g., `CustomModal.jsx`) without standard HTML `<dialog>` tags, ensure screen-reader and keyboard accessibility by explicitly adding `role="dialog"`, `aria-modal="true"`, `aria-labelledby`/`aria-describedby` pointing to dynamic IDs, an `Escape` key event listener (cleanup on unmount), and initial focus management (auto-focusing an element upon opening).
+**Action:** Consistently apply these ARIA attributes and focus/keyboard management patterns whenever creating or modifying custom overlay components instead of relying purely on visual styling.
