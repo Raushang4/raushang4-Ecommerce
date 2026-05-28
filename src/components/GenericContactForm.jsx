@@ -56,6 +56,7 @@ export default function GenericContactForm({ formName = "Main Contact Form", pag
         </button>
       </form>
       <CustomModal 
+        id={`modal-${formName.replace(/\s+/g, '-').toLowerCase()}`}
         isOpen={modalState.isOpen} 
         type={modalState.type} 
         message={modalState.message} 

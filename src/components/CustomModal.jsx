@@ -1,8 +1,30 @@
 "use client";
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function CustomModal({ id, isOpen, type, message, onClose }) {
+  const closeBtnRef = useRef(null);
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape' && isOpen) {
+        onClose();
+      }
+    };
+
+    let timeoutId;
+    if (isOpen) {
+      document.addEventListener('keydown', handleKeyDown);
+      timeoutId = setTimeout(() => {
+        if (closeBtnRef.current) closeBtnRef.current.focus();
+      }, 100);
+    }
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      if (timeoutId) clearTimeout(timeoutId);
+    };
+  }, [isOpen, onClose]);
   const isError = type === 'error';
   const bgColor = isError ? 'bg-red-50' : 'bg-teal-50';
   const textColor = isError ? 'text-red-900' : 'text-teal-900';
@@ -26,6 +48,10 @@ export default function CustomModal({ id, isOpen, type, message, onClose }) {
             animate={{ scale: 1, opacity: 1, y: 0 }}
             exit={{ scale: 0.9, opacity: 0, y: 20 }}
             transition={{ type: "spring", damping: 25, stiffness: 300 }}
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby={`${id}-title`}
+            aria-describedby={`${id}-message`}
           >
             <h3 id={`${id}-title`} className="text-2xl font-bold mb-3" style={{ color: iconColor }}>
               {isError ? 'Error' : 'Success'}
@@ -33,8 +59,9 @@ export default function CustomModal({ id, isOpen, type, message, onClose }) {
             <p id={`${id}-message`} className="mb-8 opacity-90">{message}</p>
             <button 
               id={`${id}-close-btn`}
+              ref={closeBtnRef}
               onClick={onClose} 
-              className="w-full py-3 rounded-full font-bold transition-all text-white hover:opacity-90"
+              className="w-full py-3 rounded-full font-bold transition-all text-white hover:opacity-90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600"
               style={{ background: buttonBg }}
             >
               {isError ? 'Try Again' : 'Close'}
