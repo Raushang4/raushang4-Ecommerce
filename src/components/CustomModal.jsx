@@ -1,8 +1,26 @@
 "use client";
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function CustomModal({ id, isOpen, type, message, onClose }) {
+  const buttonRef = useRef(null);
+
+  useEffect(() => {
+    if (isOpen && buttonRef.current) {
+      buttonRef.current.focus();
+    }
+  }, [isOpen]);
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape' && isOpen) {
+        onClose();
+      }
+    };
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [isOpen, onClose]);
+
   const isError = type === 'error';
   const bgColor = isError ? 'bg-red-50' : 'bg-teal-50';
   const textColor = isError ? 'text-red-900' : 'text-teal-900';
@@ -22,6 +40,10 @@ export default function CustomModal({ id, isOpen, type, message, onClose }) {
           <motion.div 
             id={`${id}-content`} 
             className={`p-8 rounded-3xl max-w-sm w-full text-center ${textColor} ${bgColor} shadow-2xl`}
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby={`${id}-title`}
+            aria-describedby={`${id}-message`}
             initial={{ scale: 0.9, opacity: 0, y: 20 }}
             animate={{ scale: 1, opacity: 1, y: 0 }}
             exit={{ scale: 0.9, opacity: 0, y: 20 }}
@@ -32,9 +54,10 @@ export default function CustomModal({ id, isOpen, type, message, onClose }) {
             </h3>
             <p id={`${id}-message`} className="mb-8 opacity-90">{message}</p>
             <button 
+              ref={buttonRef}
               id={`${id}-close-btn`}
               onClick={onClose} 
-              className="w-full py-3 rounded-full font-bold transition-all text-white hover:opacity-90"
+              className="w-full py-3 rounded-full font-bold transition-all text-white hover:opacity-90 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-teal-500/50"
               style={{ background: buttonBg }}
             >
               {isError ? 'Try Again' : 'Close'}
