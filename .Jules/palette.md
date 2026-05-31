@@ -1,0 +1,3 @@
+## 2026-05-30 - Form Error Validation ARIA Links
+**Learning:** Form validation errors are dynamically rendered in `AnimatePresence` with Framer Motion, which means error messages frequently enter and leave the DOM. Simply using `input-error` classes isn't enough for screen readers when standard HTML validation attributes (like `required`) are bypassed by client-side logic handling server actions.
+**Action:** When implementing custom form validation logic, dynamically apply `aria-invalid={!!errors[field]}` to the input and conditionally apply `aria-describedby` pointing to an explicit ID on the error span (e.g., `<motion.span id="error-name">`). This ensures screen readers announce errors immediately upon field focus.
