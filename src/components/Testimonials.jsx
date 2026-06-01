@@ -54,12 +54,12 @@ export default function Testimonials() {
             <motion.article 
               id="tsc-card-1" 
               className="tsc-card" 
-              role="listitem"
+
               variants={itemVariants}
             >
               <div id="tsc-top-1" className="tsc-card-top">
                 <div id="tsc-logo-1" className="tsc-logo-placeholder" aria-hidden="true">Malens Pharmaceuticals</div>
-                <div id="tsc-stars-1" className="tsc-stars" aria-label="5 out of 5 stars">
+                <div id="tsc-stars-1" className="tsc-stars" role="img" aria-label="5 out of 5 stars">
                   {[1,2,3,4,5].map(i => <svg key={i} viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>)}
                 </div>
               </div>
