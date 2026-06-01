@@ -1,0 +1,3 @@
+## 2026-06-01 - Custom Modal Accessibility Enhancement
+**Learning:** Custom modals implemented without standard HTML `<dialog>` elements suffer significantly in accessibility and UX. They trap screen readers outside the intended scope and lack native key-handling (like Esc to close) and focus management, causing severe usability drops for keyboard-only users.
+**Action:** When implementing custom modals, always enforce accessibility baselines: use `role="dialog"`, `aria-modal="true"`, ensure `aria-labelledby`/`aria-describedby` reference correct IDs, implement an 'Escape' key listener to close, and explicitly auto-focus the most relevant interactive element (e.g., the close button) upon mount.
