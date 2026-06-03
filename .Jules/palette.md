@@ -1,0 +1,3 @@
+## 2026-06-03 - Form Input Accessibility
+**Learning:** React form inputs that display validation errors using Framer Motion (`AnimatePresence`) require explicit ARIA linking. If the error text block dynamically renders but lacks `id`, `role="alert"`, and conditional `aria-describedby` wiring on the input itself, screen readers will not announce the specific validation failure correctly when focus shifts or submission fails.
+**Action:** Always pair conditionally rendered validation text spans with `id` and `role="alert"`, and wire the triggering input element using `aria-invalid` and a conditional `aria-describedby`.
