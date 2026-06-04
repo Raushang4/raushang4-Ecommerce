@@ -98,7 +98,49 @@
     color: var(--dark);
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
-  }
+    }
+
+    /* WhatsApp Widget */
+    .wa-widget {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366;
+    color: white !important;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 16px rgba(37, 211, 102, 0.4);
+    z-index: 9999;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.2s;
+    }
+
+    .wa-widget:hover {
+    background-color: #20BA56;
+    transform: scale(1.1);
+    }
+
+    .wa-widget:active {
+    transform: scale(0.95);
+    }
+
+    @media (max-width: 768px) {
+    .wa-widget {
+      bottom: 20px;
+      right: 20px;
+      width: 54px;
+      height: 54px;
+    }
+    .wa-widget svg {
+      width: 28px;
+      height: 28px;
+    }
+    }
 
   /* ── NAV ── */
   .nav {

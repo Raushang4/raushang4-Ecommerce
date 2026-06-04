@@ -41,7 +41,7 @@ export default function ContactSection() {
           </div>
           
           <motion.div id="contact-right" className="contact-right" variants={itemVariants}>
-            <div id="contact-form-card" className="contact-form-card" style={{ backdropFilter: 'blur(12px)', border: '1px solid rgba(255,255,255,0.05)' }}>
+            <div id="contact-form-card" className="contact-form-card">
               <UnifiedContactForm 
                 formName="Homepage Contact Form"
                 pageSource="homepage"

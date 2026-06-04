@@ -50,7 +50,7 @@ export default function ContactPage() {
               <h2 className="form-intro-heading">Send us a message.</h2> 
               <p className="form-intro-sub">We review every message within 24 hours. If it looks like a fit, we'll reach out to book a call. If we're not the right people, we'll tell you that too.</p> 
               
-              <div className="contact-form-card" style={{ padding: '32px', background: 'var(--white)', borderRadius: '12px', boxShadow: '0 4px 20px rgba(0,0,0,0.05)' }}>
+              <div className="contact-form-card">
                 <UnifiedContactForm 
                   formName="Contact Page Main Form"
                   pageSource="contact_page"
