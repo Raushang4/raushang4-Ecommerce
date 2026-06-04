@@ -86,6 +86,8 @@ export default function UnifiedContactForm({
                   defaultValue={field.defaultValue || ""}
                   required={field.required}
                   disabled={isPending}
+                  aria-invalid={!!errors[field.name]}
+                  aria-describedby={errors[field.name] ? `error-${field.name}` : undefined}
                 >
                   <option value="" disabled>{field.placeholder || "Select an option"}</option>
                   {field.options.map((opt, oIdx) => (
@@ -102,6 +104,8 @@ export default function UnifiedContactForm({
                   placeholder={field.placeholder}
                   required={field.required}
                   disabled={isPending}
+                  aria-invalid={!!errors[field.name]}
+                  aria-describedby={errors[field.name] ? `error-${field.name}` : undefined}
                 />
               ) : (
                 <input 
@@ -114,12 +118,15 @@ export default function UnifiedContactForm({
                   disabled={isPending}
                   autoComplete={field.autoComplete}
                   inputMode={field.inputMode}
+                  aria-invalid={!!errors[field.name]}
+                  aria-describedby={errors[field.name] ? `error-${field.name}` : undefined}
                 />
               )}
 
               <AnimatePresence>
                 {errors[field.name] && (
                   <motion.span 
+                    id={`error-${field.name}`}
                     className="form-error" 
                     variants={errorVariants} 
                     initial="hidden" 
@@ -142,6 +149,7 @@ export default function UnifiedContactForm({
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             disabled={isPending}
+            aria-busy={isPending}
             style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}
           >
             {isPending ? 'Sending...' : buttonText}
@@ -152,7 +160,7 @@ export default function UnifiedContactForm({
             )}
           </motion.button>
           
-          <div className="form-trust" style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '12px', color: '#888', marginTop: '12px', justifyContent: 'center' }}>
+          <div className="form-trust" style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '12px', color: '#646464', marginTop: '12px', justifyContent: 'center' }}>
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#00a896" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
             </svg> No spam · No obligation · Reply within 24 hrs

@@ -1,0 +1,3 @@
+## 2026-06-03 - [UnifiedContactForm Accessible Validation]
+**Learning:** Adding validation aria attributes to all dynamic inputs within a form without coupling the `aria-describedby` effectively ensures screen readers will read "invalid" along with an error message dynamically injected underneath it.
+**Action:** When adding form validation accessibility, make `aria-describedby` conditional (e.g., `aria-describedby={errors[field.name] ? \`error-${field.name}\` : undefined}`) so it is only applied when the corresponding error element actually exists in the DOM, and ensure `aria-invalid={!!errors[field.name]}` is toggled.
