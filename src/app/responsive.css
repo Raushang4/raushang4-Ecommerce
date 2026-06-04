@@ -1,0 +1,224 @@
+/* 
+  Responsive Overrides for raushang4 E-Commerce
+  This file overrides the desktop-first styles in globals.css and globals-extracted.css
+*/
+
+@media (max-width: 1024px) {
+  /* Tablet Adjustments */
+  nav {
+    padding: 14px 24px;
+  }
+
+  .hero, .section-inner, .careers-inner, .page-hero, .portfolio-section, .work-section, .cs-inner, .job-inner, .post-inner {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .hero-grid, .contact-grid, .careers-grid, .job-layout, .featured-post, .cs-layout {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Mobile Adjustments */
+  
+  /* Layout & Spacing */
+  section, .hero, .page-hero, .blog-hero, .careers-hero, .job-hero, .post-hero, .contact-section {
+    padding: 60px 20px;
+  }
+
+  .hero-wrap {
+    padding-top: 0;
+  }
+
+  /* Navigation - Stack on mobile */
+  nav {
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px 20px;
+    align-items: center;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .nav-cta {
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 12px 24px !important;
+  }
+
+  /* Grids to Single Column */
+  .hero-grid, 
+  .contact-grid, 
+  .careers-grid, 
+  .job-layout, 
+  .portfolio-grid, 
+  .featured-post, 
+  .cs-layout, 
+  .metrics-grid,
+  .hero-stats,
+  .field-group,
+  .post-layout,
+  .post-layout.has-toc,
+  .badge-strip-inner,
+  .footer-grid,
+  .footer-top,
+  .footer-bottom,
+  .font-cards,
+  .services-grid-3,
+  .wwww-grid {
+    grid-template-columns: 1fr !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 32px;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    gap: 16px;
+  }
+
+  .footer-policy {
+    justify-content: center;
+  }
+
+  /* Fix for flex-based grids */
+  .hero-stats, .badge-strip-inner, .metrics-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center;
+    text-align: center;
+  }
+
+  .metric-item {
+    width: 100%;
+    border-right: none !important;
+    border-bottom: 1px solid rgba(255,255,255,.1);
+    padding: 24px 0 !important;
+  }
+
+  /* Specific Component Fixes */
+  .hero-h1, .hero h1 {
+    font-size: clamp(32px, 8vw, 42px) !important;
+  }
+
+  .hero-sub, .section-sub {
+    font-size: 16px;
+    margin-bottom: 32px;
+    text-align: center;
+  }
+
+  .hero-btns {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .hero-btns > a {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .ticker-track img {
+    height: 20px !important;
+  }
+
+  .platform-badge {
+    width: 100%;
+    justify-content: center;
+  }
+
+  img, video, iframe {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .hero-stats {
+    margin-top: 40px;
+    padding: 32px 0;
+  }
+
+  .hero-stat {
+    padding: 16px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .hero-stat:last-child {
+    border-bottom: none;
+  }
+
+  .form-col {
+    position: static;
+  }
+
+  .metrics-band {
+    padding: 40px 20px;
+  }
+
+  .metric-item {
+    border-right: none;
+    border-bottom: 1px solid rgba(255,255,255,.1);
+    padding: 24px 0;
+  }
+
+  .metric-item:last-child {
+    border-bottom: none;
+  }
+
+  /* Testimonials/TSC Adjustments */
+  .tsc-viewport {
+    padding: 0 20px;
+  }
+
+  .tsc-card {
+    flex: 0 0 100%;
+    padding: 24px;
+  }
+
+  /* Careers / Blog / Portfolio Lists */
+  .featured-post {
+    min-height: auto;
+  }
+
+  .featured-img-wrap {
+    aspect-ratio: 16/9;
+  }
+
+  .featured-body {
+    padding: 24px;
+  }
+
+  .careers-note {
+    position: static;
+    margin-bottom: 24px;
+  }
+
+  .job-sidebar {
+    position: static;
+  }
+
+  .portfolio-section {
+    padding: 40px 20px;
+  }
+
+  /* Typography Scale-down */
+  h1 { font-size: 36px !important; }
+  h2 { font-size: 28px !important; }
+}
+
+@media (max-width: 480px) {
+  /* Small Mobile */
+  .hero-h1, .hero h1 {
+    font-size: 30px !important;
+  }
+
+  .btn-primary, .btn-secondary, .btn-ghost {
+    padding: 14px 24px;
+    font-size: 15px;
+  }
+}

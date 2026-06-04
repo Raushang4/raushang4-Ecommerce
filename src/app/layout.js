@@ -1,6 +1,7 @@
 import { Outfit, Bricolage_Grotesque } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
+import "./responsive.css";
 
 const outfit = Outfit({
   subsets: ["latin"],
