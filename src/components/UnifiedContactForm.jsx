@@ -160,7 +160,7 @@ export default function UnifiedContactForm({
             )}
           </motion.button>
           
-          <div className="form-trust" style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '12px', color: '#737373', marginTop: '12px', justifyContent: 'center' }}>
+          <div className="form-trust" style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '12px', color: '#646464', marginTop: '12px', justifyContent: 'center' }}>
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#00a896" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
             </svg> No spam · No obligation · Reply within 24 hrs
