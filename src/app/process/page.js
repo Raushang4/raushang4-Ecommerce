@@ -57,7 +57,7 @@ export default function ProcessPage() {
               <div key={step.id} className="process-step" style={{ display: 'flex', gap: '48px', marginBottom: '80px', position: 'relative' }}>
                 <div className="step-number" style={{ 
                   fontSize: '48px', 
-                  fontFamily: '"Instrument Serif", serif', 
+                  fontFamily: '"var(--font-bricolage)", serif', 
                   fontStyle: 'italic', 
                   color: 'var(--accent)', 
                   opacity: 0.3,

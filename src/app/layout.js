@@ -1,5 +1,18 @@
+import { Outfit, Bricolage_Grotesque } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
+
+const outfit = Outfit({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-outfit",
+});
+
+const bricolage = Bricolage_Grotesque({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-bricolage",
+});
 import GlobalNavigation from "../components/GlobalNavigation";
 import Footer from "../components/Footer";
 import SchemaMarkup from "../components/SchemaMarkup";
@@ -51,7 +64,6 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
   const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
 
   const orgSchema = {
@@ -128,23 +140,8 @@ export default function RootLayout({ children }) {
             `}
           </Script>
         )}
-        
-        {/* Google Analytics - if NEXT_PUBLIC_GA_ID is provided */}
-        {GA_ID && (
-          <>
-            <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="afterInteractive" />
-            <Script id="google-analytics" strategy="afterInteractive">
-              {`
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', '${GA_ID}');
-              `}
-            </Script>
-          </>
-        )}
       </head>
-      <body className="min-h-full antialiased">
+      <body className={`${outfit.variable} ${bricolage.variable} min-h-full antialiased`}>
         {GTM_ID && (
           <noscript>
             <iframe 

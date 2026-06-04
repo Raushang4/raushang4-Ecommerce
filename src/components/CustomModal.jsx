@@ -4,10 +4,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 export default function CustomModal({ id, isOpen, type, message, onClose }) {
   const isError = type === 'error';
-  const bgColor = isError ? 'bg-red-50' : 'bg-teal-50';
-  const textColor = isError ? 'text-red-900' : 'text-teal-900';
-  const iconColor = isError ? '#ef4444' : '#00A896';
-  const buttonBg = isError ? '#ef4444' : '#00A896';
+  const bgColor = isError ? 'bg-red-50' : 'bg-orange-50';
+  const textColor = isError ? 'text-red-900' : 'text-orange-900';
+  const iconColor = isError ? '#ef4444' : '#EA580C';
+  const buttonBg = isError ? '#ef4444' : '#EA580C';
 
   return (
     <AnimatePresence>

@@ -7,9 +7,12 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "metrics": "node scripts/get-metrics.js",
     "test:auto": "node scripts/run-tests-auto.js"
   },
   "dependencies": {
+    "@google-analytics/data": "^4.9.0",
+    "dotenv": "^16.4.5",
     "firebase": "^12.12.1",
     "framer-motion": "^12.38.0",
     "google-auth-library": "^10.6.2",
