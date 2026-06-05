@@ -142,13 +142,24 @@ export default function UnifiedContactForm({
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             disabled={isPending}
+            aria-busy={isPending}
             style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}
           >
-            {isPending ? 'Sending...' : buttonText}
-            {!isPending && (
+            {isPending ? (
+              <>
+                <svg className="animate-spin" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="12" r="10" strokeOpacity="0.25"></circle>
+                  <path d="M12 2a10 10 0 0 1 10 10" strokeOpacity="0.75"></path>
+                </svg>
+                Sending...
+              </>
+            ) : (
+              <>
+                {buttonText}
                 <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M5 12h14M12 5l7 7-7 7"></path>
                 </svg>
+              </>
             )}
           </motion.button>
           
