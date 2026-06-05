@@ -51,8 +51,18 @@ export default function GenericContactForm({ formName = "Main Contact Form", pag
           <label className="form-label" htmlFor="message">How can we help?</label>
           <textarea className="form-textarea" id="message" name="message" placeholder="Tell us about your project..." required disabled={isPending}></textarea>
         </div>
-        <button type="submit" className="form-submit" disabled={isPending}>
-          {isPending ? 'Sending...' : 'Send Message'}
+        <button type="submit" className="form-submit" disabled={isPending} aria-busy={isPending} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
+          {isPending ? (
+            <>
+              <svg className="animate-spin" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="12" cy="12" r="10" strokeOpacity="0.25"></circle>
+                <path d="M12 2a10 10 0 0 1 10 10" strokeOpacity="0.75"></path>
+              </svg>
+              Sending...
+            </>
+          ) : (
+            'Send Message'
+          )}
         </button>
       </form>
       <CustomModal 
