@@ -45,8 +45,8 @@ export default function Footer() {
         <div id="footer-bottom" className="footer-bottom">
           <p id="footer-copy" className="footer-copy">© 2026 raushang4 E-Commerce. All rights reserved. | Powered by raushang4 Technology</p>
           <div id="footer-policy" className="footer-policy">
-            <Link id="policy-privacy" href="/legal/terms-of-use">Privacy Policy</Link>
-            <Link id="policy-terms" href="/legal/terms-of-use">Terms of Use</Link>
+            <Link id="policy-privacy" href="/legal/terms-of-use" style={{ color: "#d1d5db" }}>Privacy Policy</Link>
+            <Link id="policy-terms" href="/legal/terms-of-use" style={{ color: "#d1d5db" }}>Terms of Use</Link>
           </div>
         </div>
       </div>

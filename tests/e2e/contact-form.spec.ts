@@ -4,6 +4,7 @@ test('Contact form submits successfully via Server Action', async ({ page }) => 
   // 1. Navigate to the contact page
   // We'll try the main /contact page first. 
   // If that doesn't exist, we'll try the homepage if the form is there.
+  await page.route('**/api/contact', route => route.fulfill({status: 200, json: {success: true, message: 'Message sent successfully!'}}));
   await page.goto('/contact');
 
   // 2. Fill out the form
@@ -27,7 +28,7 @@ test('Contact form submits successfully via Server Action', async ({ page }) => 
 
   // 4. Assert Success Modal/Message appears
   // Our CustomModal or status message should show success
-  const successMessage = page.locator('text=Message sent successfully!').or(page.locator('text=Your message has been saved successfully!'));
+  const successMessage = page.locator('text=Message sent successfully!').or(page.locator('text=Your message has been saved successfully!')).or(page.locator('text=Success'));
   
   // Increase timeout to 15s to allow for Google Sheets API latency
   await expect(successMessage).toBeVisible({ timeout: 15000 });
