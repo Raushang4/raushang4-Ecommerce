@@ -105,6 +105,7 @@ export default function SidebarDrawer({ id, isOpen, onClose }) {
                   className="mobile-nav-section-toggle" 
                   type="button" 
                   aria-expanded={expandedSections.solutions}
+                  aria-controls={`${id}-sub-solutions`}
                   onClick={() => toggleSection('solutions')}
                 >
                   <span id={`${id}-span-solutions`}>Solutions</span>
@@ -125,6 +126,7 @@ export default function SidebarDrawer({ id, isOpen, onClose }) {
                   className="mobile-nav-section-toggle" 
                   type="button" 
                   aria-expanded={expandedSections.industries}
+                  aria-controls={`${id}-sub-industries`}
                   onClick={() => toggleSection('industries')}
                 >
                   <span id={`${id}-span-industries`}>Industries Served</span>
