@@ -34,12 +34,21 @@ export default function HeroSection() {
           </svg> Digital Growth Partner
         </motion.div>
         
-        <motion.h1 id="hero-title" variants={itemVariants}>
+        <motion.h1 
+          id="hero-title" 
+          variants={itemVariants}
+          style={{ letterSpacing: '-0.05em', lineHeight: '1.05' }}
+        >
           Engineering profitable growth.<br/>
-          <em id="hero-title-em">Not just beautiful websites.</em>
+          <em id="hero-title-em" style={{ color: 'var(--accent)', fontStyle: 'italic', fontWeight: '400' }}>Not just beautiful websites.</em>
         </motion.h1>
         
-        <motion.p id="hero-subtitle" className="hero-sub" variants={itemVariants}>
+        <motion.p 
+          id="hero-subtitle" 
+          className="hero-sub" 
+          variants={itemVariants}
+          style={{ fontSize: '1.15rem', color: 'var(--mid)', fontWeight: '500', maxWidth: '680px' }}
+        >
           raushang4 E-Commerce builds high-performance digital ecosystems for D2C brands. We combine custom engineering with conversion data to scale your revenue, not your overhead.
         </motion.p>
         

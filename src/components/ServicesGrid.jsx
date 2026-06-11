@@ -77,20 +77,20 @@ export default function ServicesGrid() {
   };
 
   return (
-    <section id="services" className="services-section">
+    <section id="services" className="services-section" style={{ background: '#fff', padding: '120px 0' }}>
       <div id="services-inner" className="section-inner">
         <motion.div 
           id="services-header" 
           className="section-center" 
-          style={{ marginBottom: '52px' }}
+          style={{ marginBottom: '64px' }}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
           variants={containerVariants}
         >
-          <motion.p id="services-eyebrow" className="section-eyebrow" variants={itemVariants}>What we do</motion.p>
-          <motion.h2 id="services-title" className="section-h2" variants={itemVariants}>Services engineered for <em id="services-em">digital dominance</em></motion.h2>
-          <motion.p id="services-subtitle" className="section-sub" variants={itemVariants}>We don't offer generic packages. We provide a cohesive growth stack where every element is engineered to amplify the others—from the backend architecture to the frontend conversion experience.</motion.p>
+          <motion.p id="services-eyebrow" className="section-eyebrow" variants={itemVariants}>Expertise</motion.p>
+          <motion.h2 id="services-title" className="section-h2" variants={itemVariants}>Services engineered for <br/><em id="services-em" style={{ color: 'var(--accent)', fontStyle: 'normal' }}>Digital Dominance</em></motion.h2>
+          <motion.p id="services-subtitle" className="section-sub" variants={itemVariants} style={{ maxWidth: '720px', margin: '0 auto' }}>We don't offer generic packages. We provide a cohesive growth stack where every element is engineered to amplify the others—from backend architecture to the frontend conversion experience.</motion.p>
         </motion.div>
         
         <motion.div 
@@ -108,16 +108,20 @@ export default function ServicesGrid() {
               href={svc.url} 
               className={`svc-card ${svc.className}`}
               variants={itemVariants}
-              whileHover={{ scale: 1.02, y: -5, transition: { duration: 0.3 } }}
+              whileHover={{ y: -8, transition: { duration: 0.4, ease: "easeOut" } }}
+              style={{ display: 'flex', flexDirection: 'column', gap: '20px', textDecoration: 'none', color: 'inherit' }}
             >
-              <div id={`${svc.id}-icon`} className="svc-icon-wrap">
-                {svc.icon}
+              <div id={`${svc.id}-icon`} className="svc-icon-wrap" style={{ width: '48px', height: '48px', background: 'var(--accent-light)', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyCenter: 'center', color: 'var(--accent)' }}>
+                <div style={{ width: '24px', height: '24px', margin: 'auto' }}>{svc.icon}</div>
               </div>
-              <div id={`${svc.id}-name`} className="svc-name">{svc.name}</div>
-              <p id={`${svc.id}-desc`} className="svc-desc">{svc.desc}</p>
-              <ul id={`${svc.id}-bullets`} className="svc-bullets">
+              <div id={`${svc.id}-name`} className="svc-name" style={{ fontSize: '1.25rem', fontWeight: '700', color: 'var(--dark)' }}>{svc.name}</div>
+              <p id={`${svc.id}-desc`} className="svc-desc" style={{ fontSize: '0.95rem', color: 'var(--mid)', lineHeight: '1.6' }}>{svc.desc}</p>
+              <ul id={`${svc.id}-bullets`} className="svc-bullets" style={{ marginTop: 'auto', listStyle: 'none', padding: 0 }}>
                 {svc.bullets.map((bullet, bIdx) => (
-                  <li key={bIdx} id={`${svc.id}-bullet-${bIdx}`}>{bullet}</li>
+                  <li key={bIdx} id={`${svc.id}-bullet-${bIdx}`} style={{ fontSize: '0.85rem', color: 'var(--soft)', display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px' }}>
+                    <span style={{ width: '4px', height: '4px', background: 'var(--accent)', borderRadius: '50%' }}></span>
+                    {bullet}
+                  </li>
                 ))}
               </ul>
             </MotionLink>

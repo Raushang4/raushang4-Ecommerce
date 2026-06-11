@@ -83,13 +83,13 @@
   :root {
     --accent: #EA580C;
     --accent-dark: #C2410C;
-    --accent-light: #FFEDD5;
-    --dark: #1A1A1A;
-    --mid: #555555;
-    --soft: #888888;
-    --bg: #FAFAFA;
+    --accent-light: #FFF7ED; /* Softer tint */
+    --dark: #0F172A; /* Deeper slate for more premium feel */
+    --mid: #475569; /* Slate 600 for better readability */
+    --soft: #94A3B8; /* Slate 400 */
+    --bg: #F8FAFC; /* Softer off-white background */
     --white: #FFFFFF;
-    --border: rgba(0,0,0,0.08);
+    --border: rgba(15, 23, 42, 0.08);
   }
 
   body {
@@ -97,9 +97,37 @@
     background: var(--bg);
     color: var(--dark);
     line-height: 1.6;
+    font-size: 17px; /* Bumped for better readability */
+    letter-spacing: -0.01em;
     -webkit-font-smoothing: antialiased;
-    }
+  }
 
+  h1, h2, h3, h4, h5, h6 {
+    letter-spacing: -0.04em; /* Tighter heading spacing */
+    line-height: 1.1;
+    font-weight: 800;
+  }
+
+  .btn-primary {
+    background: var(--accent);
+    color: #fff;
+    padding: 16px 32px;
+    border-radius: 100px;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 10px 25px -5px rgba(234, 88, 12, 0.4); /* Modern glow shadow */
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .btn-primary:hover {
+    background: var(--accent-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px -5px rgba(234, 88, 12, 0.5);
+  }
     /* WhatsApp Widget */
     .wa-widget {
     position: fixed;

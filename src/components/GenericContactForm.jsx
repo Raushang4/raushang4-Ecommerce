@@ -51,9 +51,26 @@ export default function GenericContactForm({ formName = "Main Contact Form", pag
           <label className="form-label" htmlFor="message">How can we help?</label>
           <textarea className="form-textarea" id="message" name="message" placeholder="Tell us about your project..." required disabled={isPending}></textarea>
         </div>
-        <button type="submit" className="form-submit" disabled={isPending}>
+        <motion.button 
+          type="submit" 
+          className="form-submit" 
+          disabled={isPending}
+          whileHover={{ scale: 1.02 }}
+          whileTap={{ scale: 0.98 }}
+          style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}
+        >
           {isPending ? 'Sending...' : 'Send Message'}
-        </button>
+          {!isPending && (
+            <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          )}
+        </motion.button>
+        <div className="form-trust" style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '12px', color: '#888', marginTop: '12px', justifyContent: 'center' }}>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#EA580C" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          </svg> Your data is secure · 24hr response time
+        </div>
       </form>
       <CustomModal 
         isOpen={modalState.isOpen} 
