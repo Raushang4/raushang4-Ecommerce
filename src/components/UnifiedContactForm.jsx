@@ -86,6 +86,8 @@ export default function UnifiedContactForm({
                   defaultValue={field.defaultValue || ""}
                   required={field.required}
                   disabled={isPending}
+                  aria-invalid={!!errors[field.name]}
+                  aria-describedby={errors[field.name] ? `error-${field.name}` : undefined}
                 >
                   <option value="" disabled>{field.placeholder || "Select an option"}</option>
                   {field.options.map((opt, oIdx) => (
@@ -102,6 +104,8 @@ export default function UnifiedContactForm({
                   placeholder={field.placeholder}
                   required={field.required}
                   disabled={isPending}
+                  aria-invalid={!!errors[field.name]}
+                  aria-describedby={errors[field.name] ? `error-${field.name}` : undefined}
                 />
               ) : (
                 <input 
@@ -114,12 +118,15 @@ export default function UnifiedContactForm({
                   disabled={isPending}
                   autoComplete={field.autoComplete}
                   inputMode={field.inputMode}
+                  aria-invalid={!!errors[field.name]}
+                  aria-describedby={errors[field.name] ? `error-${field.name}` : undefined}
                 />
               )}
 
               <AnimatePresence>
                 {errors[field.name] && (
                   <motion.span 
+                    id={`error-${field.name}`}
                     className="form-error" 
                     variants={errorVariants} 
                     initial="hidden" 
@@ -142,6 +149,7 @@ export default function UnifiedContactForm({
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             disabled={isPending}
+            aria-busy={isPending}
             style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}
           >
             {isPending ? 'Sending...' : buttonText}
