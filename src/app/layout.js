@@ -152,7 +152,9 @@ export default function RootLayout({ children }) {
           </noscript>
         )}
         <GlobalNavigation />
-        {children}
+        <main id="main-content">
+          {children}
+        </main>
         <Footer />
         <a 
           href="https://wa.me/919304995677?text=Hello!%20I'm%20interested%20in%20your%20services." 
