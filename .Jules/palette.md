@@ -1,0 +1,3 @@
+## 2026-06-02 - Custom Modal Accessibility (Keyboard & Screen Reader)
+**Learning:** Custom modal components (not using native `<dialog>`) in Framer Motion setups often lack fundamental accessibility constraints, such as explicit `role="dialog"`, trapped focus, or `Escape` key listeners to dismiss.
+**Action:** When working on custom modals, verify they have an `Escape` key event listener (and cleanup), `role="dialog"`, `aria-modal="true"`, `aria-labelledby`, and ensure the initial focus jumps to a focusable element (like the close button) upon rendering so keyboard and screen-reader users aren't stranded.
