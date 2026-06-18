@@ -26,6 +26,10 @@ export default function CustomModal({ id, isOpen, type, message, onClose }) {
             animate={{ scale: 1, opacity: 1, y: 0 }}
             exit={{ scale: 0.9, opacity: 0, y: 20 }}
             transition={{ type: "spring", damping: 25, stiffness: 300 }}
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby={`${id}-title`}
+            aria-describedby={`${id}-message`}
           >
             <h3 id={`${id}-title`} className="text-2xl font-bold mb-3" style={{ color: iconColor }}>
               {isError ? 'Error' : 'Success'}
