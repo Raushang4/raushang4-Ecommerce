@@ -29,7 +29,7 @@ export default function ContactPage() {
 
   return (
     <>
-      <div className="hero-wrap"> 
+      <div className="hero-wrap">
         <div className="hero"> 
           <div className="hero-eyebrow"> 
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -45,7 +45,7 @@ export default function ContactPage() {
       <section className="contact-section"> 
         <div className="section-inner"> 
           <div className="contact-grid">  
-            <div className="form-col"> 
+            <div className="form-col">
               <p className="form-intro-eyebrow">Get in touch</p> 
               <h2 className="form-intro-heading">Send us a message.</h2> 
               <p className="form-intro-sub">We review every message within 24 hours. If it looks like a fit, we'll reach out to book a call. If we're not the right people, we'll tell you that too.</p> 
@@ -60,7 +60,7 @@ export default function ContactPage() {
               </div>
             </div>  
             
-            <div className="contact-right">  
+            <div className="contact-right">
               <div> 
                 <p className="process-heading">What happens after you reach out</p> 
                 <div className="process-steps"> 
@@ -114,7 +114,7 @@ export default function ContactPage() {
         </div> 
       </section>  
       
-      <section className="footer-cta-section"> 
+      <section className="footer-cta-section">
         <div className="footer-cta-inner"> 
           <h2>Not ready to reach out yet?<em>Read about how we work.</em></h2> 
           <p>Seven years and one consistent model: stay accountable for the outcome, not just the deliverable.</p> 

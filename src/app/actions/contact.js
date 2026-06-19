@@ -44,45 +44,48 @@ export async function submitContactForm(prevState, formData) {
       return { success: false, error: 'Valid email is required' };
     }
 
-    // Initialize auth
-    const serviceAccountAuth = new JWT({
-      email: process.env.GOOGLE_CLIENT_EMAIL,
-      key: process.env.GOOGLE_PRIVATE_KEY?.replace(/\\n/g, '\n'),
-      scopes: ['https://www.googleapis.com/auth/spreadsheets'],
-    });
+    // Only attempt Google Sheets integration if keys are provided
+    if (process.env.GOOGLE_CLIENT_EMAIL && process.env.GOOGLE_PRIVATE_KEY) {
+      // Initialize auth
+      const serviceAccountAuth = new JWT({
+        email: process.env.GOOGLE_CLIENT_EMAIL,
+        key: process.env.GOOGLE_PRIVATE_KEY?.replace(/\\n/g, '\n'),
+        scopes: ['https://www.googleapis.com/auth/spreadsheets'],
+      });
 
-    const doc = new GoogleSpreadsheet(process.env.GOOGLE_SHEET_ID, serviceAccountAuth);
+      const doc = new GoogleSpreadsheet(process.env.GOOGLE_SHEET_ID, serviceAccountAuth);
 
-    await doc.loadInfo();
-    
-    // Determine the worksheet title based on page_source
-    const sheetTitle = data.page_source ? 
-      data.page_source.charAt(0).toUpperCase() + data.page_source.slice(1).replace(/-/g, ' ') : 
-      'General Leads';
+      await doc.loadInfo();
 
-    // Find existing sheet or create a new one
-    let sheet = doc.sheetsByTitle[sheetTitle];
-    if (!sheet) {
-      sheet = await doc.addSheet({ title: sheetTitle, headerValues: MASTER_HEADERS });
+      // Determine the worksheet title based on page_source
+      const sheetTitle = data.page_source ?
+        data.page_source.charAt(0).toUpperCase() + data.page_source.slice(1).replace(/-/g, ' ') :
+        'General Leads';
+
+      // Find existing sheet or create a new one
+      let sheet = doc.sheetsByTitle[sheetTitle];
+      if (!sheet) {
+        sheet = await doc.addSheet({ title: sheetTitle, headerValues: MASTER_HEADERS });
+      }
+
+      try {
+          // If sheet existed but had no headers, set them
+          await sheet.loadHeaderRow();
+      } catch (e) {
+          await sheet.setHeaderRow(MASTER_HEADERS);
+      }
+
+      const rowData = {
+        Date: new Date().toLocaleString(),
+        ...data,
+        name: data.name || displayName
+      };
+
+      // Remove honeypot from row data
+      delete rowData._honeypot;
+
+      await sheet.addRow(rowData);
     }
-
-    try {
-        // If sheet existed but had no headers, set them
-        await sheet.loadHeaderRow();
-    } catch (e) {
-        await sheet.setHeaderRow(MASTER_HEADERS);
-    }
-
-    const rowData = {
-      Date: new Date().toLocaleString(),
-      ...data,
-      name: data.name || displayName
-    };
-
-    // Remove honeypot from row data
-    delete rowData._honeypot;
-
-    await sheet.addRow(rowData);
 
     return { success: true, message: 'Message sent successfully!' };
   } catch (error) {
